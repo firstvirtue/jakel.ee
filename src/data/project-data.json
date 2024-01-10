@@ -1,0 +1,38 @@
+[
+  {
+    "id": "202312",
+    "nm": "삼성물산",
+    "keywords": ["react"]
+  },
+  {
+    "id": "202310",
+    "nm": "삼성액티브자산운용",
+    "keywords": ["react", "typescript", "zustand"]
+  },
+  {
+    "id": "202307",
+    "nm": "카스 쿨",
+    "keywords": ["next.js", "webgl", "CSS"]
+  },
+  {
+    "id": "202303",
+    "pin": true,
+    "nm": "삼성자산운용",
+    "keywords": ["react", "awards", "zustand"]
+  },
+  {
+    "id": "202210",
+    "nm": "카스 월드컵",
+    "keywords": ["next.js", "webgl", "CSS"]
+  },
+  {
+    "id": "202205",
+    "nm": "한화디펜스",
+    "keywords": ["webgl"]
+  },
+  {
+    "id": "20223",
+    "nm": "한국타이어",
+    "keywords": ["webgl", "webpack", "awards"]
+  }
+]

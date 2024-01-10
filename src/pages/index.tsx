@@ -43,7 +43,12 @@ export default function Home() {
           He feels deeply, he feels tenderly
         </a>
         <div style={{ position: 'absolute', bottom: 40, right: 40, fontSize: '13px' }}>
-          { `Published ${dd}` }
+          
+          {/* 
+            [TODO] get last published
+            https://github.com/orgs/vercel/discussions/587 
+          */}
+          { `Last published ${dd}` }
         </div>
       </div>{' '}
 

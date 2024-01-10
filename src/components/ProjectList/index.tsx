@@ -1,3 +1,6 @@
+import Menu from "./Menu"
+import ItemList from "./ItemList"
+
 function ProjectList() {
   return (
     <>
@@ -6,6 +9,11 @@ function ProjectList() {
         <img src='/assets/img/menu.png' width={'24%'} height={'auto'} />
         <img src='/assets/img/sc-no-menu.png' width={'70%'} />
       </div>
+    </div>
+
+    <div className="flex w-full">
+      <Menu />
+      <ItemList />
     </div>
     </>
   )
