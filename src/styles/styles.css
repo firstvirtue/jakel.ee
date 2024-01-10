@@ -1,0 +1,186 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-size: 62.5%;
+}
+
+body {
+  background: #f0f0f0;
+  /* background-color: black; */
+  color: black;
+  font-family: 'Mori', 'Pretendard', sans-serif;
+}
+
+a {
+  color: black;
+}
+
+a {
+  pointer-events: all;
+  color: black;
+  text-decoration: none;
+}
+
+svg {
+  fill: black;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+canvas {
+  touch-action: none;
+  opacity: 0;
+  animation: fade-in 5s ease 1s forwards;
+}
+
+#freg canvas {
+  opacity: 1;
+  animation: none;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+header .left a {
+  display: block;
+  position: relative;
+  top: 2rem;
+  left: 5rem;
+  width: fit-content;
+  font-size: 1.8rem;
+  letter-spacing: -0.04em;
+  line-height: 1;
+
+  border-bottom: 5px solid #000;
+}
+
+header .left strong {
+  display: block;
+  position: relative;
+  font-weight: 700;
+}
+
+header .left .dot {
+  position: relative;
+  font-size: 4rem;
+  color: #EE536B;
+  color: #222;
+  color: rgb(224, 109, 114);
+  line-height: 0;
+  margin-left: 0.12em;
+  bottom: 1px;
+  /* letter-spacing: 0.02em; */
+}
+
+header .left span {
+  color: #222;
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+
+.menu-container {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  width: fit-content;
+  position: absolute;
+  right: 5rem;
+  top: 2rem;
+  /* border: 1px solid black; */
+  border-radius: 35px;
+  padding: 1.5rem 5rem 1.5rem 3rem;
+  background-color: rgba(255, 255, 255, 0.5);
+  font-size: 1.6rem;
+  backdrop-filter: blur(25px);
+}
+
+.menu-container .contact {
+  position: relative;
+}
+
+.menu-container .contact::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(130%, -55%) rotate(-45deg);
+  width: 2.4rem;
+  height: 2.4rem;
+
+  border-radius: 50%;
+  background: #B6F172 url(../icons/arrow-circle-lined.svg) no-repeat center;
+}
+
+.slogan {
+  font-weight: 700;
+  font-size: 10rem;
+  text-align: center;
+  padding-top: 5rem;
+  padding-bottom: 10rem;
+}
+
+.spacer {
+  height: 5vh;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 0 8rem;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+}
+
+.contact-wrap {
+  display: flex;
+  flex-direction: column;
+  font-size: 2rem;
+}
+
+.contact-wrap a small {
+  display: block;
+  font-size: 1.3rem;
+  padding-top: 2em;
+}
+
+.social-wrap {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.social-wrap a {
+  display: block;
+  background: #E8E8E8;
+  padding: 1rem;
+  border-radius: 50%;
+}
+
+.social-wrap img {
+  display: block;
+}
+
+.social-icon {
+  width: 2.4rem;
+}
