@@ -15,11 +15,9 @@ export default function ItemList() {
       when: "beforeChildren",
       staggerChildren: 0.1,
       delayChildren: 0.14,
-      }, 
+      },
     },
-    leaving: { opacity: 0, y: -10, transition: {
-      when: "afterChildren",
-    } },
+    leaving: { opacity: 0, y: -10 },
   };
 
   const boxChildVariants = {
@@ -50,7 +48,8 @@ export default function ItemList() {
   return (
     <>
     <div className="item-container w-3/4">
-      <motion.ul className="item-list"
+      <motion.ul 
+        className="item-list flex flex-wrap -ml-3 -mr-3"
         variants={boxVariants}
         initial="initial"
         animate="visible"
@@ -58,7 +57,9 @@ export default function ItemList() {
         >
           
         { selectedItems.map((item, i) => {
-          return <li className="menu__item" key={`project-${item.id}`}>
+          return <li 
+            className="menu__item w-1/4 pl-3 pr-3"
+            key={`project-${item.id}`}>
               <motion.div
                 variants={boxChildVariants}
               >

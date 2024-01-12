@@ -11,7 +11,7 @@ export default function Home() {
         className=""
         src="/1.jpeg" 
         style={{
-          'viewTransitionName': 'expand',
+          'viewTransitionName': 'p_202307',
         }} 
         alt="" />
         dds

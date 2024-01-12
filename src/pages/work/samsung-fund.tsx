@@ -12,7 +12,7 @@ export default function Home() {
         autoPlay muted loop
         className=""
         style={{
-          'viewTransitionName': 'expand',
+          'viewTransitionName': 'p_202303',
         }}
         />
         dds

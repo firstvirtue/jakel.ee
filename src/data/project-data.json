@@ -1,38 +1,39 @@
 [
   {
-    "id": "202312",
+    "id": "p_202312",
     "nm": "삼성물산",
     "keywords": ["react"]
   },
   {
-    "id": "202310",
+    "id": "p_202310",
     "nm": "삼성액티브자산운용",
     "keywords": ["react", "zustand"]
   },
   {
-    "id": "202307",
+    "id": "p_202307",
+    "link": "/dds",
     "nm": "카스 쿨",
     "keywords": ["react", "CSS"]
   },
   {
-    "id": "202303",
+    "id": "p_202303",
     "link": "/work/samsung-fund",
     "pin": true,
     "nm": "삼성자산운용",
     "keywords": ["react", "awards", "zustand", "typescript"]
   },
   {
-    "id": "202210",
+    "id": "p_202210",
     "nm": "카스 월드컵",
     "keywords": ["next.js", "webgl", "CSS"]
   },
   {
-    "id": "202205",
+    "id": "p_202205",
     "nm": "한화디펜스",
     "keywords": ["webgl"]
   },
   {
-    "id": "20223",
+    "id": "p_20223",
     "nm": "한국타이어",
     "keywords": ["webgl", "webpack", "awards"]
   }
