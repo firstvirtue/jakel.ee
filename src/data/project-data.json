@@ -7,18 +7,19 @@
   {
     "id": "202310",
     "nm": "삼성액티브자산운용",
-    "keywords": ["react", "typescript", "zustand"]
+    "keywords": ["react", "zustand"]
   },
   {
     "id": "202307",
     "nm": "카스 쿨",
-    "keywords": ["next.js", "webgl", "CSS"]
+    "keywords": ["react", "CSS"]
   },
   {
     "id": "202303",
+    "link": "/work/samsung-fund",
     "pin": true,
     "nm": "삼성자산운용",
-    "keywords": ["react", "awards", "zustand"]
+    "keywords": ["react", "awards", "zustand", "typescript"]
   },
   {
     "id": "202210",

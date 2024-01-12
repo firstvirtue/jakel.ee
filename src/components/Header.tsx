@@ -1,8 +1,10 @@
+import Link from "next/link"
+
 export function Header() {
   return (
     <header className="header">
       <div className="left">
-        <a href="/">
+        <Link href="/">
           {/* <img src="/assets/img/j-logo2.png" alt="" /> */}
           <strong>
             Jake
@@ -12,10 +14,10 @@ export function Header() {
             <span className="dot">.</span>
             {/* <span>Contact</span> */}
           </strong>
-        </a>
+        </Link>
       </div>
       <div className="menu-container">
-        <a href="#" className="">Work</a>
+        <Link href="/work" className="">Work</Link>
         <a href="#" className="">Lab</a>
         <a href="#" className="contact">Contact</a>
       </div>
