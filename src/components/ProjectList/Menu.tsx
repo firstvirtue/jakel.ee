@@ -8,37 +8,46 @@ export default function Menu() {
 
   return (
     <>
-    <div className="menu w-1/4 sticky top-20 h-fit">
-      <button type='button' onClick={e => setCurrentProject('')}>
-        All
-      </button>
-      <hr />
-      <span className="text-xs">Skills</span>
-      <ul className="menu__list text-base">
-        { skills.map((item, i) => {
-          return <li className="menu__item" key={`project-${i}`}>
-            <button type='button' onClick={e => setCurrentProject(item)}>
-            { item }
-            </button>
-          </li>
-        })}
-      </ul>
-      <hr />
-      <span className="text-xs">Software Designs</span>
-      <ul className="menu__list text-base text-base">
-        { softwareDesigns.map((item, i) => {
-          return <li className="menu__item" key={`project-${i}`}>
-            <button type='button' onClick={e => setCurrentProject(item)}>
-            { item }
-            </button>
-          </li>
-        })}
-      </ul>
-      <hr />
-      <button type='button' onClick={e => setCurrentProject('Lab')}>
-        Lab <br/>
-        <span>Side Project</span>
-      </button>
+    <div className="pt-10 pl-8 pr-8 pb-10 backdrop-blur-xl"
+    // style={{ 'backgroundColor': 'rgba(0, 0, 0, 0.34)' }}
+    style={{ 'backgroundColor': 'rgba(255, 255, 255, 1)' }}
+    >
+      <div className="menu sticky h-full rounded-lg"
+      style={{ 'backgroundColor': 'rgba(0, 0, 0, 1)' }}
+      >
+        <div className="text-white p-4">
+          <h2 className="text-3xl uppercase font-bold pb-11">Project</h2>
+          <button className="text-lg pt-2 pb-2" type='button' onClick={e => setCurrentProject('')}>
+            All
+          </button>
+          <hr className="opacity-30 my-2" />
+          <span className="text-xs opacity-40">Skills</span>
+          <ul className="menu__list text-lg pt-2 pb-2">
+            { skills.map((item, i) => {
+              return <li className="menu__item" key={`project-${i}`}>
+                <button className="pt-1 pb-1" type='button' onClick={e => setCurrentProject(item)}>
+                { item }
+                </button>
+              </li>
+            })}
+          </ul>
+          <hr className="opacity-30 my-2" />
+          <span className="text-xs opacity-40">Software Designs</span>
+          <ul className="menu__list text-lg pt-2 pb-2">
+            { softwareDesigns.map((item, i) => {
+              return <li className="menu__item" key={`project-${i}`}>
+                <button className="pt-1 pb-1" type='button' onClick={e => setCurrentProject(item)}>
+                { item }
+                </button>
+              </li>
+            })}
+          </ul>
+          <hr className="opacity-30 my-2" />
+          <button className="text-lg text-left" type='button' onClick={e => setCurrentProject('Lab')}>
+            <span> Side Project</span>
+          </button>
+        </div>
+      </div>
     </div>
     </>
   )

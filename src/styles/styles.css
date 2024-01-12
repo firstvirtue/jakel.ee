@@ -9,7 +9,7 @@ body,
   height: 100%;
   margin: 0;
   padding: 0;
-  font-size: 62.5%;
+  /* font-size: 62.5%; */
 }
 
 body {
@@ -67,7 +67,7 @@ header .left a {
   top: 2rem;
   left: 5rem;
   width: fit-content;
-  font-size: 1.8rem;
+  font-size: 1.125rem;
   letter-spacing: -0.04em;
   line-height: 1;
 
@@ -82,7 +82,7 @@ header .left strong {
 
 header .left .dot {
   position: relative;
-  font-size: 4rem;
+  font-size: 2.5rem;
   color: #EE536B;
   color: #222;
   color: rgb(224, 109, 114);
@@ -101,16 +101,16 @@ header .left span {
 .menu-container {
   display: flex;
   align-items: center;
-  gap: 3rem;
+  gap: 1.8rem;
   width: fit-content;
   position: absolute;
   right: 5rem;
   top: 2rem;
   /* border: 1px solid black; */
   border-radius: 35px;
-  padding: 1.5rem 5rem 1.5rem 3rem;
+  padding: 0.9rem 3rem 0.9rem 1.8rem;
   background-color: rgba(255, 255, 255, 0.5);
-  font-size: 1.6rem;
+  font-size: 1rem;
   backdrop-filter: blur(25px);
 }
 
@@ -125,8 +125,8 @@ header .left span {
   right: 0;
   top: 50%;
   transform: translate(130%, -55%) rotate(-45deg);
-  width: 2.4rem;
-  height: 2.4rem;
+  width: 1.5rem;
+  height: 1.5rem;
 
   border-radius: 50%;
   background: #B6F172 url(../icons/arrow-circle-lined.svg) no-repeat center;

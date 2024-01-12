@@ -47,9 +47,12 @@ export default function ItemList() {
   
   return (
     <>
-    <div className="item-container w-3/4">
+    <div className="item-container flex-1 pr-8 pl-8 backdrop-blur-xl"
+    // style={{ 'backgroundColor': 'rgba(255, 255, 255, 0.2)' }}
+    style={{ 'backgroundColor': 'rgba(255, 255, 255, 1)' }}
+    >
       <motion.ul 
-        className="item-list flex flex-wrap -ml-3 -mr-3"
+        className="item-list flex flex-wrap -ml-3 -mr-3 pt-24"
         variants={boxVariants}
         initial="initial"
         animate="visible"
@@ -58,7 +61,7 @@ export default function ItemList() {
           
         { selectedItems.map((item, i) => {
           return <li 
-            className="menu__item w-1/4 pl-3 pr-3"
+            className="menu__item w-1/4"
             key={`project-${item.id}`}>
               <motion.div
                 variants={boxChildVariants}
