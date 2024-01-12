@@ -18,7 +18,8 @@ export function Header() {
       </div>
       <div className="menu-container">
         <Link href="/work" className="">Work</Link>
-        <a href="#" className="">Lab</a>
+        <a href="#" className="">About</a>
+        <a href="#" className="">Articles</a>
         <a href="#" className="contact">Contact</a>
       </div>
     </header>

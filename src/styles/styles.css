@@ -149,32 +149,32 @@ header .left span {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  padding: 0 8rem;
-  padding-top: 8rem;
-  padding-bottom: 8rem;
+  padding: 0 5rem;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
 }
 
 .contact-wrap {
   display: flex;
   flex-direction: column;
-  font-size: 2rem;
+  font-size: 1.25rem;
 }
 
 .contact-wrap a small {
   display: block;
-  font-size: 1.3rem;
+  font-size: 0.8rem;
   padding-top: 2em;
 }
 
 .social-wrap {
   display: flex;
-  gap: 1.5rem;
+  gap: 1.1rem;
 }
 
 .social-wrap a {
   display: block;
   background: #E8E8E8;
-  padding: 1rem;
+  padding: 0.65rem;
   border-radius: 50%;
 }
 
@@ -183,5 +183,5 @@ header .left span {
 }
 
 .social-icon {
-  width: 2.4rem;
+  width: 1.5rem;
 }
