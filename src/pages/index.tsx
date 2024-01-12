@@ -18,14 +18,15 @@ export default function Home() {
       <ProjectList />
 
       {/* <Link href="/work/samsung-fund">
-        <img 
-        src="/1.jpeg" 
+        <video 
+        src="/prj.mp4" 
+        autoPlay muted loop
         style={{
           'viewTransitionName': 'expand',
           width: '200px',
           height: 'auto',
-        }} 
-        alt="" />
+        }}
+        />
         dds
       </Link> */}
 

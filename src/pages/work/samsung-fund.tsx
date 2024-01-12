@@ -7,13 +7,14 @@ export default function Home() {
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
 
       <Link href="/contact">
-        <img 
+      <video 
+        src="/prj.mp4" 
+        autoPlay muted loop
         className=""
-        src="/1.jpeg" 
         style={{
           'viewTransitionName': 'expand',
-        }} 
-        alt="" />
+        }}
+        />
         dds
       </Link>
 
