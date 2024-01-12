@@ -8,7 +8,7 @@ export default function Menu() {
 
   return (
     <>
-    <div className="menu w-1/4">
+    <div className="menu w-1/4 sticky top-20 h-fit">
       <button type='button' onClick={e => setCurrentProject('')}>
         All
       </button>

@@ -43,6 +43,14 @@ body {
   to { transform: translateY(-30px); }
 }
 
+@keyframes slide-from-left {
+  from { transform: translateX(30px); }
+}
+
+@keyframes slide-to-right {
+  to { transform: translateX(-30px); }
+}
+
 ::view-transition-old(root) {
   /* animation: 90ms cubic-bezier(0.4, 0, 1, 1) both fade-out, */
     /* 300ms cubic-bezier(0.4, 0, 0.2, 1) both slide-to-top; */
@@ -68,3 +76,13 @@ body {
   animation: 390ms cubic-bezier(0, 0, 0.2, 1) forwards fade-in,
     300ms cubic-bezier(0.4, 0, 0.2, 1) forwards slide-from-bottom;
 }
+/* 
+::view-transition-old(menu) {
+  animation: 390ms cubic-bezier(0.4, 0, 1, 1) both fade-out,
+    300ms cubic-bezier(0.4, 0, 0.2, 1) both slide-to-right;
+}
+
+::view-transition-new(menu) {
+  animation: 390ms cubic-bezier(0, 0, 0.2, 1) forwards fade-in,
+    300ms cubic-bezier(0.4, 0, 0.2, 1) forwards slide-from-left;
+} */

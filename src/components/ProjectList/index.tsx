@@ -11,7 +11,7 @@ function ProjectList() {
       </div>
     </div>
 
-    <div className="flex w-full">
+    <div className="flex w-full max-w-screen-2xl">
       <Menu />
       <ItemList />
     </div>
