@@ -10,7 +10,7 @@ export default function Item(props) {
     <>
     <Link
       href={project.link ? project.link : '#'}
-      className='block relative text-black pl-10 pr-10 pt-10 pb-28 rounded-xl overflow-hidden'
+      className='block relative text-black pl-10 pr-10 pt-10 pb-28 rounded-xl overflow-hidden hover:bg-black'
       style={{
         'viewTransitionName': project.id ? project.id : '',
         'backgroundColor': project.cardColor ?? '#ffffff',
@@ -38,7 +38,7 @@ export default function Item(props) {
           { project.nm }
       </div>
       <div className=' text-lg pt-2'>
-          { '역대급 프로젝트' }
+          { '역대급 프로젝트 추억 그 기억 아련함' }
       </div>
       <div className='absolute text-white left-0 -bottom-14 text-10xl leading-none text font-bold pt-2 text-center w-full'
       style={{

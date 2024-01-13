@@ -1,5 +1,6 @@
 import Menu from "./Menu"
 import ItemList from "./ItemList"
+import Link from 'next/link'
 
 function ProjectList() {
   return (
@@ -22,6 +23,10 @@ function ProjectList() {
     <div className="flex w-full max-w-screen-2xl rounded-3xl shadow-xl overflow-hidden">
       <Menu />
       <ItemList />
+    </div>
+
+    <div className="mt-16">
+      <Link className="bg-white px-12 py-4 rounded-full overflow-hidden shadow-xl" href="/work">More</Link>
     </div>
     </>
   )

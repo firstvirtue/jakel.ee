@@ -5,13 +5,13 @@
     "keywords": ["react"],
     "keyImage": "/3.jpeg",
     "cardColor": "#F5DB28",
-    "aspect": "1"
+    "aspect": "0.8"
   },
   {
     "id": "p_202310",
     "nm": "삼성액티브자산운용",
     "keywords": ["react", "zustand"],
-    "aspect": "0.7"
+    "aspect": "1.1"
   },
   {
     "id": "p_202307",
@@ -30,12 +30,19 @@
     "keywords": ["react", "awards", "zustand", "typescript"],
     "cardColor": "#5820E6",
     "textColor": "#ffffff",
-    "aspect": "1.4"
+    "aspect": "1.5"
   },
   {
     "id": "p_202210",
     "nm": "카스 월드컵",
     "keywords": ["next.js", "webgl", "CSS"],
+    "cardColor": "#CFE4FF",
+    "aspect": "0.8"
+  },
+  {
+    "id": "p_202209",
+    "nm": "롯데백화점 웹 메인",
+    "keywords": ["jacascript", "CSS"],
     "cardColor": "#F5DB28",
     "aspect": "1"
   },

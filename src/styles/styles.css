@@ -185,3 +185,20 @@ header .left span {
 .social-icon {
   width: 1.5rem;
 }
+
+.card a {
+  transition: background-color 0.34s ease-out;
+}
+
+.card a:hover {
+  background-color: black !important;
+  color: white !important;
+}
+
+.card a img {
+  transition: all 0.34s ease-out;
+}
+
+.card a:hover img {
+  transform: scale(1.05);
+}

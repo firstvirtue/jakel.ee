@@ -3,6 +3,7 @@ import projectData from '../../data/project-data.json'
 import { useProjectStore } from "./store"
 import Item from './Item'
 import { AnimatePresence, motion } from 'framer-motion'
+
 import MasonryLayout from '../MasonryLayout'
 
 export default function ItemList() {
@@ -45,6 +46,51 @@ export default function ItemList() {
 
     // console.log(currentProject, refine)
   }, [currentProject])
+
+  function arrangeMasonryLayout(items, containerWidth, columnWidth) {
+    const numColumns = Math.floor(containerWidth / columnWidth);
+    let columnHeights = new Array(numColumns).fill(0);
+    let h = 0
+
+    items.forEach((item, index) => {
+        // Find the shortest column
+        let shortestColumn = 0;
+        for (let i = 1; i < numColumns; i++) {
+            if (columnHeights[i] < columnHeights[shortestColumn]) {
+                shortestColumn = i;
+            }
+        }
+
+        // Calculate position for the item
+        const top = columnHeights[shortestColumn];
+        const left = shortestColumn * columnWidth;
+        item.style.position = 'absolute';
+        item.style.top = top + 'px';
+        item.style.left = left + 'px';
+
+        // Update the height of the shortest column
+        columnHeights[shortestColumn] += item.offsetHeight;
+
+        if(index === items.length - 1) {
+          h = columnHeights[shortestColumn]
+        }
+    });
+
+    return h
+  }
+
+  useEffect(() => {
+    
+    const h = arrangeMasonryLayout(
+      document.querySelectorAll('.card'),
+      document.querySelector('.item-container')?.clientWidth,
+      document.querySelector('.card')?.clientWidth
+    )
+
+    document.querySelector('.item-container').parentNode.style.height = `${h + 96 + 96}px`
+    console.log(h)
+
+  }, [selectedItems])
   
   return (
     <>
@@ -53,7 +99,7 @@ export default function ItemList() {
     style={{ 'backgroundColor': 'rgba(255, 255, 255, 1)' }}
     >
       <motion.ul 
-        className="item-list flex flex-wrap pt-24 pb-24"
+        className="relative item-list flex flex-wrap mt-24 mb-24"
         variants={boxVariants}
         initial="initial"
         animate="visible"
@@ -62,7 +108,7 @@ export default function ItemList() {
         
         { selectedItems.map((item, i) => {
           return <li 
-            className="menu__item w-1/3 p-2"
+            className="card w-1/3 p-2"
             key={`project-${item.id}`}>
               <motion.div
                 variants={boxChildVariants}
