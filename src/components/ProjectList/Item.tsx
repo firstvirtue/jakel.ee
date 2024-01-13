@@ -40,7 +40,7 @@ export default function Item(props) {
       <div className=' text-lg pt-2'>
           { '역대급 프로젝트 추억 그 기억 아련함' }
       </div>
-      <div className='absolute text-white left-0 -bottom-14 text-10xl leading-none text font-bold pt-2 text-center w-full'
+      <div className='num absolute text-white left-0 -bottom-14 text-10xl leading-none text font-bold pt-2 text-center w-full'
       style={{
         'color': project.cardColor ? '' : '#f3f3f3'
       }}
