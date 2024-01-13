@@ -3,40 +3,52 @@
     "id": "p_202312",
     "nm": "삼성물산",
     "keywords": ["react"],
-    "keyImage": "/3.jpeg"
+    "keyImage": "/3.jpeg",
+    "cardColor": "#F5DB28",
+    "aspect": "1"
   },
   {
     "id": "p_202310",
     "nm": "삼성액티브자산운용",
-    "keywords": ["react", "zustand"]
+    "keywords": ["react", "zustand"],
+    "aspect": "0.7"
   },
   {
     "id": "p_202307",
     "link": "/dds",
     "nm": "카스 쿨",
     "keywords": ["react", "CSS"],
-    "keyImage": "/cover-lg.png"
+    "keyImage": "/cover-lg.png",
+    "cardColor": "#CFE4FF",
+    "aspect": "0.7"
   },
   {
     "id": "p_202303",
     "link": "/work/samsung-fund",
     "pin": true,
     "nm": "삼성자산운용",
-    "keywords": ["react", "awards", "zustand", "typescript"]
+    "keywords": ["react", "awards", "zustand", "typescript"],
+    "cardColor": "#5820E6",
+    "textColor": "#ffffff",
+    "aspect": "1.4"
   },
   {
     "id": "p_202210",
     "nm": "카스 월드컵",
-    "keywords": ["next.js", "webgl", "CSS"]
+    "keywords": ["next.js", "webgl", "CSS"],
+    "cardColor": "#F5DB28",
+    "aspect": "1"
   },
   {
     "id": "p_202205",
     "nm": "한화디펜스",
-    "keywords": ["webgl"]
+    "keywords": ["webgl"],
+    "aspect": "0.7"
   },
   {
     "id": "p_20223",
     "nm": "한국타이어",
-    "keywords": ["webgl", "webpack", "awards"]
+    "keywords": ["webgl", "webpack", "awards"],
+    "aspect": "1.4"
   }
 ]

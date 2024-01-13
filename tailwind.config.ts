@@ -17,6 +17,9 @@ const config: Config = {
       aspectRatio: {
         '4/3': '4 / 3',
       },
+      fontSize: {
+        '10xl': '140px',
+      }
     },
   },
   plugins: [
