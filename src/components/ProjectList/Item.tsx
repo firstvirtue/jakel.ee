@@ -13,19 +13,27 @@ export default function Item(props) {
       //   e.target.style.viewTransitionName = 'expand'
       // }}
       href={project.link ? project.link : '#'}
+      className='block pl-10 pr-10 pt-3 pb-3 mb-5 rounded-xl'
+    >
+      <div className='aspect-[4/3] rounded-2xl overflow-hidden'
       style={{
         'viewTransitionName': project.id ? project.id : '',
       }}
-      className='block pl-2 pr-2 pt-3 pb-3 mb-5 rounded-xl'
-    >
-      <div className='aspect-square rounded-2xl overflow-hidden'>
+      >
         {/* <video src="/prj.mp4" autoPlay muted loop playsInline></video> */}
-        <img className='object-cover h-full w-full' src="/1.jpeg" alt=''></img>
+        <img className='object-cover h-full w-full' src={project.keyImage ?? "/1.jpeg"} alt=''></img>
       </div>
-      <div className="w-64 text-gray-900 pt-4">
+
+      <div className='mt-5 text-gray-500'>
+        { project.keywords.map((x, i) => {
+          return <span key={`tag-${i}`}>{`#${x}`} </span>
+        }) }
+      </div>
+
+      <div className="text-gray-900 pt-1 text-3xl">
           { project.nm }
       </div>
-      <div className='text-gray-900 text-xs pt-2'>
+      <div className='text-gray-900 text-lg pt-2'>
           { '역대급 프로젝트' }
       </div>
     </Link>

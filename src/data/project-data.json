@@ -2,7 +2,8 @@
   {
     "id": "p_202312",
     "nm": "삼성물산",
-    "keywords": ["react"]
+    "keywords": ["react"],
+    "keyImage": "/3.jpeg"
   },
   {
     "id": "p_202310",
@@ -13,7 +14,8 @@
     "id": "p_202307",
     "link": "/dds",
     "nm": "카스 쿨",
-    "keywords": ["react", "CSS"]
+    "keywords": ["react", "CSS"],
+    "keyImage": "/cover-lg.png"
   },
   {
     "id": "p_202303",

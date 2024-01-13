@@ -8,8 +8,8 @@ export default function Home() {
 
       <Link href="/contact">
         <img 
-        className=""
-        src="/1.jpeg" 
+        className="object-cover h-full w-full max-w-5xl aspect-[4/3]"
+        src="/cover-lg.png" 
         style={{
           'viewTransitionName': 'p_202307',
         }} 

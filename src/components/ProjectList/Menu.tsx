@@ -12,16 +12,16 @@ export default function Menu() {
     // style={{ 'backgroundColor': 'rgba(0, 0, 0, 0.34)' }}
     style={{ 'backgroundColor': 'rgba(255, 255, 255, 1)' }}
     >
-      <div className="menu sticky h-full rounded-lg"
+      <div className="menu sticky rounded-lg"
       style={{ 'backgroundColor': 'rgba(0, 0, 0, 1)' }}
       >
         <div className="text-white p-4">
-          <h2 className="text-3xl uppercase font-bold pb-11">Project</h2>
+          <h2 className="text-3xl uppercase font-bold pb-11">Projects</h2>
           <button className="text-lg pt-2 pb-2" type='button' onClick={e => setCurrentProject('')}>
             All
           </button>
           <hr className="opacity-30 my-2" />
-          <span className="text-xs opacity-40">Skills</span>
+          <span className="text-xs opacity-40">Tech</span>
           <ul className="menu__list text-lg pt-2 pb-2">
             { skills.map((item, i) => {
               return <li className="menu__item" key={`project-${i}`}>
