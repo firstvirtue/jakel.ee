@@ -22,7 +22,7 @@ export default function KeyVisual() {
 
       <div className="key-visual w-full max-w-screen-2xl">
         <div className="flex min-h-screen pt-48 pb-24 gap-6">
-          <div className="relative visual w-2/3 pt-32">
+          <div className="relative visual w-2/3 pt-32 pb-8">
             <div className="absolute top-0 text-8xl font-bold italic"
             style={{
               'letterSpacing': '-0.02em',
@@ -51,7 +51,7 @@ export default function KeyVisual() {
           <div className="flex flex-col gap-6 w-1/3">
 
             <div className="h-2/4 rounded-2xl overflow-hidden"
-            style={{'backgroundColor': '#B8D2D8', 'width': '84%'}}
+            style={{'backgroundColor': '#B8D2D8', 'width': '89%'}}
             >
             
             </div>
