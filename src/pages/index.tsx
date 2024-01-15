@@ -11,7 +11,7 @@ import ProjectList from '@/components/ProjectList'
 export default function Home() {
 
   return (
-    <main className="page flex min-h-screen flex-col items-center justify-between p-24">
+    <main className="page flex min-h-screen flex-col items-center justify-between p-24 pt-0">
 
       <KeyVisual />
       <KeyMessage />

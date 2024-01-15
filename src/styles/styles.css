@@ -204,3 +204,26 @@ header .left span {
 .card a:hover .num {
   transform: translateY(-5%);
 }
+
+.goo {
+  --color-highlight: #fff;
+  font-size: 3rem;
+  line-height: 1.35;
+  display: inline;
+  box-decoration-break: clone;
+  background: var(--color-highlight);
+  padding: 1.2rem 2rem;
+  filter: url('#goo');
+  font-weight: 700;
+  white-space: pre-line;
+  /* line-height: 1.2; */
+}
+.hhh {
+  margin-top: 22px;
+  font-size: 3rem;
+  font-weight: 700;
+  /* background-color: #f0f0f0; */
+  /* background-color: #fff; */
+  padding: 1rem;
+  border-bottom-right-radius: 1rem;
+}
