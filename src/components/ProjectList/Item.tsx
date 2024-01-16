@@ -10,7 +10,7 @@ export default function Item(props) {
     <>
     <Link
       href={project.link ? project.link : '#'}
-      className='block relative text-black pl-10 pr-10 pt-10 pb-28 rounded-xl overflow-hidden hover:bg-black'
+      className='block relative text-black pl-7 pr-7 pt-7 pb-28 rounded-xl overflow-hidden hover:bg-black'
       style={{
         'viewTransitionName': project.id ? project.id : '',
         'backgroundColor': project.cardColor ?? '#ffffff',
@@ -18,7 +18,7 @@ export default function Item(props) {
         'color': project.textColor ?? '#000000',
       }}
     >
-      <div className='aspect-[4/3] rounded-2xl overflow-hidden'
+      <div className='aspect-[4/3] rounded-xl overflow-hidden'
       style={{
         'aspectRatio': `1 / ${ project.aspect }`
       }}

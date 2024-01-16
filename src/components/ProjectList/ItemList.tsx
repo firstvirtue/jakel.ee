@@ -23,9 +23,9 @@ export default function ItemList() {
   };
 
   const boxChildVariants = {
-    initial: { opacity: 0, y: 20, scale: 0.96 },
-    visible: { opacity: 1, y: 0, scale: 1 },
-    leaving: { opacity: 0, y: -20, scale: 0.96 },
+    initial: { opacity: 0, x: 20, y: 40, scale: 0.96 },
+    visible: { opacity: 1, x: 0, y: 0, scale: 1 },
+    leaving: { opacity: 0, x: -20, y: -40, scale: 0.96 },
   }
 
   useEffect(() => {
@@ -108,7 +108,7 @@ export default function ItemList() {
         
         { selectedItems.map((item, i) => {
           return <li 
-            className="card w-1/3 p-2"
+            className="card w-1/4 p-2"
             key={`project-${item.id}`}>
               <motion.div
                 variants={boxChildVariants}

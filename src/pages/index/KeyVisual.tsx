@@ -21,17 +21,18 @@ export default function KeyVisual() {
     </svg>
 
       <div className="key-visual w-full max-w-screen-2xl">
-        <div className="flex min-h-screen pt-48 pb-24 gap-6">
+        <div className="flex pt-40 pb-24 gap-8">
           <div className="relative visual w-2/3 pt-32 pb-8">
-            <div className="absolute top-0 text-8xl font-bold italic"
+            <div className="absolute top-0 text-8xl font-bold italic capitalize"
             style={{
-              'letterSpacing': '-0.02em',
+              'letterSpacing': '-0.03em',
+              'minHeight': '100vmin'
             }}
             >
               The best of my work
             </div>
 
-            <Link href={'/work/samsung-fund'} className="block relative h-full rounded-2xl overflow-hidden p-8 pt-20"
+            <Link href={'/work/samsung-fund'} className="block relative h-full rounded-2xl overflow-hidden p-8 pt-20 shadow-xl"
             style={{'backgroundColor': '#9EBED7'}}>
               <video className="w-full h-full object-cover rounded-2xl shadow-xl" src="/prj.mp4" autoPlay loop muted playsInline
               style={{'viewTransitionName': ''}}
@@ -41,22 +42,22 @@ export default function KeyVisual() {
             {/* <svg className="w-7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="m100,0H0v100C0,44.77,44.77,0,100,0Z" fill="#F9F8F6"></path></svg> */}
               <div className="goo">
                 React를 이용한
-                데이터 핸들링!<br />
+                데이터 핸들링<br />
                 삼성자산운용 통합 플랫폼
               </div>
               {/* <svg className="w-7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="m100,0H0v100C0,44.77,44.77,0,100,0Z" fill="#F9F8F6"></path></svg> */}
             </div>
             </Link>
           </div>
-          <div className="flex flex-col gap-6 w-1/3">
+          <div className="flex flex-col gap-8 w-1/3">
 
             <div className="h-2/4 rounded-2xl overflow-hidden"
-            style={{'backgroundColor': '#B8D2D8', 'width': '89%'}}
+            style={{'backgroundColor': '#B8D2D8', 'width': '92%'}}
             >
             
             </div>
 
-            <div className="h-2/4 rounded-2xl overflow-hidden"
+            <div className="h-2/4 rounded-2xl overflow-hidden shadow-xl"
             style={{'backgroundColor': '#83936F'}}>
               <img className="w-full h-full object-cover" src="/iconic20.png" alt="" />
             </div>
