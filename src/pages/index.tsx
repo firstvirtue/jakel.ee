@@ -12,7 +12,7 @@ import PlayGround from './index/PlayGround'
 export default function Home() {
 
   return (
-    <main className="page flex min-h-screen flex-col items-center justify-between p-24 pt-0">
+    <main className="page flex min-h-screen flex-col items-center justify-between pr-24 pl-24">
 
       <KeyVisual />
       <KeyMessage />
@@ -43,7 +43,7 @@ export default function Home() {
           priority
         /> */}
       </div>
-      
+
       <PlayGround />
     </main>
   )

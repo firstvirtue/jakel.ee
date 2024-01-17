@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 
-function sleep(sec: number = 1): Promise<void> {
+function sleep(sec: number = 0.08): Promise<void> {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       try {
@@ -50,72 +50,53 @@ class TaskQueue {
 export default function PlayGround() {
 
   function generateRandomNumber(): number {
-    return Math.floor(Math.random() * 100) + 1;
+    return Math.floor(Math.random() * (100 - 20)) + 20;
   }
   const randomNumbers: number[] = Array.from({ length: 100 }, generateRandomNumber);
-  // let arr = [10, 7, 8, 9, 1, 5, 23, 55, 100, 33, 72, 20, 41];
+  
   let arr = randomNumbers
   const [graph, setGraph] = useState(arr)
 
   useEffect(()=> {
 
-    // async function quickSort(arr: number[]): Promise<number[]> {
-    //   if (arr.length <= 1) {
-    //       return arr;
-    //   }
-
-    //   await sleep(0.5)
-    //   console.log('excutes..')
-  
-    //   let pivot = arr[0];
-    //   let left: number[] = [];
-    //   let right: number[] = [];
-  
-    //   for (let i = 1; i < arr.length; i++) {
-    //       if (arr[i] < pivot) {
-    //           left.push(arr[i]);
-    //       } else {
-    //           right.push(arr[i]);
-    //       }
-    //   }
-  
-    //   const sortedLeft = await quickSort(left);
-    //   const sortedRight = await quickSort(right);
-
-    //   return [...sortedLeft, pivot, ...sortedRight];
-    // }
+    let stopExecution = false;
 
     async function partition(arr: number[], low: number, high: number): Promise<number> {
+      
       let pivot = arr[high];
       let i = low - 1;
   
       for (let j = low; j < high; j++) {
-          if (arr[j] < pivot) {
-              i++;
-              [arr[i], arr[j]] = [arr[j], arr[i]];
-              await sleep(0.1);
-              setGraph([...arr])
-          }
+        if (stopExecution) return -1; // Check stop condition
+
+        if (arr[j] < pivot) {
+            i++;
+            [arr[i], arr[j]] = [arr[j], arr[i]];
+            await sleep();
+            setGraph([...arr])
+        }
       }
   
       [arr[i + 1], arr[high]] = [arr[high], arr[i + 1]];
-      await sleep(0.1);
+      await sleep();
       setGraph([...arr])
       return i + 1;
     }
     
     async function quickSort(arr: number[], low: number, high: number): Promise<void> {
         if (low < high) {
-            await sleep(0.1);
-            // console.log('partition pivot', arr)
+          if (stopExecution) return; // Check stop condition
 
-            const pi = await partition(arr, low, high);
-    
-            await sleep(0.1);
-            // console.log('quick sort recursion', arr)
+          await sleep();
+          // console.log('partition pivot', arr)
 
-            await quickSort(arr, low, pi - 1);
-            await quickSort(arr, pi + 1, high);
+          const pi = await partition(arr, low, high);
+  
+          await sleep();
+          // console.log('quick sort recursion', arr)
+
+          await quickSort(arr, low, pi - 1);
+          await quickSort(arr, pi + 1, high);
         }
     }
   
@@ -131,6 +112,10 @@ export default function PlayGround() {
       console.log('done')
     })()
 
+    return () => {
+      stopExecution = true
+    }
+
   }, [])
 
   useEffect(() => {
@@ -144,7 +129,7 @@ export default function PlayGround() {
         return <div key={i} className="bg-slate-300"
         style={{
           'height': `${x}px`,
-          'width': '10px',
+          'width': '8px',
           'transition': 'all 0.34s ease'
         }}
         ></div>
