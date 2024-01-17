@@ -7,6 +7,7 @@ import Link from '@/components/transition-link'
 import KeyVisual from './index/KeyVisual'
 import KeyMessage from './index/KeyMessage'
 import ProjectList from '@/components/ProjectList'
+import PlayGround from './index/PlayGround'
 
 export default function Home() {
 
@@ -42,8 +43,8 @@ export default function Home() {
           priority
         /> */}
       </div>
-
       
+      <PlayGround />
     </main>
   )
 }

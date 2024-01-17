@@ -49,10 +49,10 @@ export default function KeyVisual() {
             </div>
             </Link>
           </div>
-          <div className="flex flex-col gap-8 w-1/3">
+          <div className="flex flex-col justify-end gap-8 w-1/3">
 
             <div className="h-2/4 rounded-2xl overflow-hidden"
-            style={{'backgroundColor': '#B8D2D8', 'width': '92%'}}
+            style={{'backgroundColor': '#B8D2D8', 'width': '92%', 'height': '42%'}}
             >
             
             </div>
