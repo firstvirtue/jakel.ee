@@ -1,24 +1,24 @@
 [
   {
     "id": "p_202312",
-    "nm": "삼성물산",
+    "title": "삼성물산",
     "keywords": ["react"],
-    "keyImage": "/3.jpeg",
+    "CoverImage": "/3.jpeg",
     "cardColor": "#F5DB28",
     "aspect": "0.8"
   },
   {
     "id": "p_202310",
-    "nm": "삼성액티브자산운용",
+    "title": "삼성액티브자산운용",
     "keywords": ["react", "zustand"],
     "aspect": "1.1"
   },
   {
     "id": "p_202307",
     "link": "/dds",
-    "nm": "카스 쿨",
+    "title": "카스 쿨",
     "keywords": ["react", "CSS"],
-    "keyImage": "/cover-lg.png",
+    "CoverImage": "/cover-lg.png",
     "cardColor": "#CFE4FF",
     "aspect": "0.7"
   },
@@ -26,7 +26,7 @@
     "id": "p_202303",
     "link": "/work/samsung-fund",
     "pin": true,
-    "nm": "삼성자산운용",
+    "title": "삼성자산운용",
     "keywords": ["react", "awards", "zustand", "typescript"],
     "cardColor": "#5820E6",
     "textColor": "#ffffff",
@@ -34,28 +34,37 @@
   },
   {
     "id": "p_202210",
-    "nm": "카스 월드컵",
+    "title": "카스 월드컵",
     "keywords": ["next.js", "webgl", "CSS"],
     "cardColor": "#CFE4FF",
     "aspect": "0.8"
   },
   {
     "id": "p_202209",
-    "nm": "롯데백화점 웹 메인",
+    "title": "롯데백화점 웹 메인",
     "keywords": ["jacascript", "CSS"],
     "cardColor": "#F5DB28",
     "aspect": "1"
   },
   {
     "id": "p_202205",
-    "nm": "한화디펜스",
+    "title": "한화디펜스",
     "keywords": ["webgl"],
     "aspect": "0.7"
   },
   {
-    "id": "p_20223",
-    "nm": "한국타이어",
+    "id": "p_202203",
+    "title": "한국타이어",
     "keywords": ["webgl", "webpack", "awards"],
+    "aspect": "1.4"
+  },
+  {
+    "id": "p_202112",
+    "link": "/work/kia-worldwide",
+    "title": "KIA",
+    "desc": "기아의 환골탈태 브랜드 리론칭",
+    "keywords": ["awards", "canvas", "webpack", "gulp", "es6"],
+    "CoverImage": "/assets/projects/kia-worldwide/cover-lg.jpg",
     "aspect": "1.4"
   }
 ]

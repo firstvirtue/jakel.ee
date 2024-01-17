@@ -14,7 +14,7 @@ export default function Item(props) {
       style={{
         'viewTransitionName': project.id ? project.id : '',
         'backgroundColor': project.cardColor ?? '#ffffff',
-        'border': project.cardColor ? '' : '2px solid #f3f3f3',
+        'border': project.cardColor ? undefined : '2px solid #f3f3f3',
         'color': project.textColor ?? '#000000',
       }}
     >
@@ -24,8 +24,12 @@ export default function Item(props) {
       }}
       >
         {/* <video className='object-cover h-full w-full' src="/prj.mp4" autoPlay muted loop playsInline></video> */}
-        <img className='object-cover h-full w-full' src={project.keyImage ?? "/1.jpeg"} alt=''
-        ></img>
+        <img className='object-cover h-full w-full' 
+        src={project.CoverImage ?? "/1.jpeg"} alt=''
+        style={{
+          // 'viewTransitionName': project.id ? project.id : '',
+        }}
+        />
       </div>
 
       <div className='mt-5 '>
@@ -35,14 +39,14 @@ export default function Item(props) {
       </div>
 
       <div className=" pt-1 text-3xl font-bold">
-          { project.nm }
+          { project.title }
       </div>
       <div className=' text-lg pt-2'>
-          { '역대급 프로젝트 추억 그 기억 아련함' }
+          { project.desc ?? '역대급 프로젝트 추억 그 기억 아련함' }
       </div>
       <div className='num absolute text-white left-0 -bottom-14 text-10xl leading-none text font-bold pt-2 text-center w-full'
       style={{
-        'color': project.cardColor ? '' : '#f3f3f3'
+        'color': project.cardColor ? undefined : '#f3f3f3'
       }}
       >
           { '0' + index }

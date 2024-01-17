@@ -70,14 +70,22 @@ header .left a {
   font-size: 1.125rem;
   letter-spacing: -0.04em;
   line-height: 1;
+  transform: rotate(-3deg);
+  background-color: #fff;
+  padding: 8px;
+  font-style: italic;
 
-  border-bottom: 5px solid #000;
+  /* -rotate-3 bg-white p-2 */
 }
 
 header .left strong {
   display: block;
   position: relative;
   font-weight: 700;
+}
+
+header .left strong:nth-child(2) {
+  border-bottom: 4px solid #000;
 }
 
 header .left .dot {

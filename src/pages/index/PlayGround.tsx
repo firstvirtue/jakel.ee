@@ -124,16 +124,19 @@ export default function PlayGround() {
 
   return (
     <>
-    <div className="flex gap-2 items-end pb-8 pt-28">
-      {graph?.map((x, i) => {
-        return <div key={i} className="bg-slate-300"
-        style={{
-          'height': `${x}px`,
-          'width': '8px',
-          'transition': 'all 0.34s ease'
-        }}
-        ></div>
-      })}
+    <div className="pb-8 pt-28">
+      <div className="flex gap-2 items-end h-32">
+        {graph?.map((x, i) => {
+          return <div key={i} className="bg-slate-300"
+          style={{
+            'height': `${x}px`,
+            'width': '8px',
+            'transition': 'all 0.34s ease'
+          }}
+          ></div>
+        })}
+      </div>
+      <strong className="block text-slate-400 opacity-50 text-right mt-3">Quick Sort</strong>
     </div>
     </>
   )

@@ -46,6 +46,10 @@ export default function Menu() {
           <button className="text-lg text-left" type='button' onClick={e => setCurrentProject('Lab')}>
             <span> Side Project</span>
           </button>
+          <br />
+          <button className="text-lg pt-2 pb-2" type='button' onClick={e => setCurrentProject('awards')}>
+            Awards
+          </button>
         </div>
       </div>
     </div>

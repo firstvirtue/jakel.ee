@@ -4,7 +4,7 @@ export function Header() {
   return (
     <header className="header">
       <div className="left">
-        <Link href="/">
+        <Link className="" href="/">
           {/* <img src="/assets/img/j-logo2.png" alt="" /> */}
           <strong>
             Jake
