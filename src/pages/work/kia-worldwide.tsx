@@ -19,6 +19,7 @@ export default function Home() {
           z-index: 1;
           width: 30%;
           /* background-color: pink; */
+          view-transition-name: menu;
         `}
         >
           <PostMenu />
@@ -38,7 +39,7 @@ export default function Home() {
           left: -${70}px;
           width: calc(100% + ${70}px);
           /* background-color: hotpink; */
-          /* view-transition-name: p_202112_wrap; */
+          view-transition-name: item_wrap;
           `}>
 
           <div className="cover flex justify-center">
@@ -62,10 +63,10 @@ export default function Home() {
                 z-index: 1;
               `}
               >
-                <span css={css`view-transition-name: p_202112_t;`}>#awards #canvas #webpack #gulp #es6</span>
-                <h1 css={css`view-transition-name: p_202112_h;`} 
+                <span css={css`view-transition-name: item_t;`}>#awards #canvas #webpack #gulp #es6</span>
+                <h1 css={css`view-transition-name: item_h;`} 
                 className="text-4xl font-bold">기아 브랜드 글로벌 쇼케이스</h1>
-                <p css={css`view-transition-name: p_202112_d;`} className="text-xl m-7">
+                <p css={css`view-transition-name: item_d;`} className="text-xl m-7">
                   기아의 환골탈태 브랜드 리론칭
                 </p>
               </div>
@@ -84,7 +85,7 @@ export default function Home() {
                   width: 100%;
                   height: 100%;
                   object-fit: cover;
-                  view-transition-name: p_202112;
+                  view-transition-name: item_img;
                 `}
                 width={800} height={800}
                 alt=""

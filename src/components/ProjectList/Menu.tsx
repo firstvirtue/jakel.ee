@@ -13,7 +13,10 @@ export default function Menu() {
     style={{ 'backgroundColor': 'rgba(255, 255, 255, 1)' }}
     >
       <div className="menu sticky rounded-lg"
-      style={{ 'backgroundColor': 'rgba(0, 0, 0, 1)' }}
+      style={{ 
+        'backgroundColor': 'rgba(0, 0, 0, 1)',
+        
+      }}
       >
         <div className="text-white p-4">
           <h2 className="text-3xl uppercase font-bold pb-11">Projects</h2>

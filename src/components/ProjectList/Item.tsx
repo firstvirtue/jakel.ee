@@ -1,5 +1,5 @@
 /** @jsxImportSource @emotion/react */
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useRef } from 'react'
 import projectData from '../../data/project-data.json'
 import { useProjectStore } from "./store"
 import Link from 'next/link'
@@ -9,13 +9,19 @@ import { useRouter } from "next/router";
 
 export default function Item(props) {
   const { project, index } = props
-  const router = useRouter();
+  const router = useRouter()
+  const refImg = useRef()
+  const refT = useRef()
+  const refH = useRef()
+  const refD = useRef()
+  const refWrap = useRef()
 
   return (
     <>
     <Link
       href={project.link ? project.link : '#'}
       className='block relative text-black pb-28 rounded-3xl overflow-hidden hover:bg-black shadow-lg'
+      ref={refWrap}
       style={{
         'backgroundColor': project.cardColor ?? '#ffffff',
         'border': project.cardColor ? '2px solid transparent' : '2px solid #f3f3f3',
@@ -25,17 +31,21 @@ export default function Item(props) {
       }}
 
       onClick={e => {
-        // e.preventDefault()
+        e.preventDefault()
 
-        
+        refImg.current.style.viewTransitionName = 'item_img'
+        refT.current.style.viewTransitionName = 'item_t'
+        refH.current.style.viewTransitionName = 'item_h'
+        refD.current.style.viewTransitionName = 'item_d'
+        refWrap.current.style.viewTransitionName = 'item_wrap'
 
-        // router.push('/work/kia-worldwide')
+        router.push('/work/kia-worldwide')
       }}
     >
       <div className='v-wrap relative overflow-hidden'
+      ref={refImg}
       style={{
         'aspectRatio': `1 / ${ project.aspect }`,
-        'viewTransitionName': project.id ? project.id : '',
       }}
       >
         {/* <video className='object-cover h-full w-full' src="/prj.mp4" autoPlay muted loop playsInline></video> */}
@@ -68,17 +78,17 @@ export default function Item(props) {
       </div>
       
       <div className='pl-7 pr-7'>
-        <div css={css`view-transition-name: ${project.id}_t`} className='mt-5 '>
+        <div ref={refT} className='mt-5 '>
           { project.keywords.map((x, i) => {
             return <span key={`tag-${i}`}>{`#${x}`} </span>
           }) }
         </div>
 
-        <div css={css`view-transition-name: ${project.id}_h`} 
+        <div ref={refH}
         className=" pt-1 text-3xl font-bold">
             { project.title }
         </div>
-        <div css={css`view-transition-name: ${project.id}_d`} className=' text-lg pt-2'>
+        <div ref={refD} className=' text-lg pt-2'>
             { project.desc ?? '역대급 프로젝트 추억 그 기억 아련함' }
         </div>
       </div>
