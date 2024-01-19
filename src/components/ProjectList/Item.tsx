@@ -1,11 +1,10 @@
 /** @jsxImportSource @emotion/react */
 import { useEffect, useState, useRef } from 'react'
-import projectData from '../../data/project-data.json'
 import { useProjectStore } from "./store"
 import Link from 'next/link'
 import Image from "next/image"
 import { css } from "@emotion/react"
-import { useRouter } from "next/router";
+import { useRouter } from "next/router"
 
 export default function Item(props) {
   const { project, index } = props
@@ -56,9 +55,6 @@ export default function Item(props) {
         {/* <video className='object-cover h-full w-full' src="/prj.mp4" autoPlay muted loop playsInline></video> */}
         <Image className='object-cover h-full w-full rounded-3xl'
         src={project.CoverImage ?? "/1.jpeg"} alt=''
-        style={{
-          // 'viewTransitionName': project.id ? project.id : '',
-        }}
         width={800} height={800}
         />
 
