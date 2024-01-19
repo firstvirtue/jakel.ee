@@ -5,6 +5,9 @@ import Link from "next/link"
 import PostMenu from "@/components/Post/PostMenu"
 import Image from "next/image"
 import { css } from "@emotion/react"
+import Item from "@/components/ProjectList/Item"
+
+import projectData from '../../data/project-data.json'
 
 export default function Home() {
   return (
@@ -31,7 +34,9 @@ export default function Home() {
           width: 70%;
         `}
         >
-          <div css={css`
+          <div 
+          className="cover cover-transition-el"
+          css={css`
           padding: 4rem;
           border-radius: 24px;
           background-color: white;
@@ -42,61 +47,68 @@ export default function Home() {
           view-transition-name: item_wrap;
           `}>
 
-          <div className="cover flex justify-center">
-            <div
-            css={css`
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-            width: 17vw;
-            height: 75vh;
-            padding: 3rem;
-            `}
-            >
+            <div className="flex justify-center">
               <div
               css={css`
-                position: absolute;
-                bottom: 20%;
-                right: -30%;
-                z-index: 1;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              position: relative;
+              width: 17vw;
+              height: 75vh;
+              padding: 3rem;
               `}
               >
-                <span css={css`view-transition-name: item_t;`}>#awards #canvas #webpack #gulp #es6</span>
-                <h1 css={css`view-transition-name: item_h;`} 
-                className="text-4xl font-bold">기아 브랜드 글로벌 쇼케이스</h1>
-                <p css={css`view-transition-name: item_d;`} className="text-xl m-7">
-                  기아의 환골탈태 브랜드 리론칭
-                </p>
+                <div
+                css={css`
+                  position: absolute;
+                  bottom: 20%;
+                  right: -30%;
+                  z-index: 1;
+                `}
+                >
+                  <span
+                  className="cover-transition-el"
+                  css={css`view-transition-name: item_t;`}>#awards #canvas #webpack #gulp #es6</span>
+                  <h1
+                  className="cover-transition-el text-4xl font-bold"
+                  css={css`view-transition-name: item_h;`} 
+                  >기아 브랜드 글로벌 쇼케이스</h1>
+                  <p
+                  className="cover-transition-el text-xl m-7"
+                  css={css`view-transition-name: item_d;`}>
+                    기아의 환골탈태 브랜드 리론칭
+                  </p>
+                </div>
+              </div>
+
+              <div
+                className="relative"
+                css={css`
+                  aspect-ratio: 1 / 1.4;
+                  height: 75vh;
+                `}
+              >
+                <Image
+                  className="cover-transition-el"
+                  src="/assets/projects/kia-worldwide/cover-lg.jpg"
+                  css={css`
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    view-transition-name: item_img;
+                  `}
+                  width={800} height={800}
+                  alt=""
+                />
+
+                <h2 className="absolute text-8xl bottom-44 right-32 text-white uppercase">
+                  Kia
+                </h2>
+
               </div>
             </div>
-
-            <div
-              className="relative"
-              css={css`
-                aspect-ratio: 1 / 1.4;
-                height: 75vh;
-              `}
-            >
-              <Image
-                src="/assets/projects/kia-worldwide/cover-lg.jpg"
-                css={css`
-                  width: 100%;
-                  height: 100%;
-                  object-fit: cover;
-                  view-transition-name: item_img;
-                `}
-                width={800} height={800}
-                alt=""
-              />
-
-              <h2 className="absolute text-8xl bottom-44 right-32 text-white uppercase">
-                Kia
-              </h2>
-
-            </div>
-          </div>
 
           </div>
 
@@ -145,9 +157,12 @@ export default function Home() {
 
               </p>
 
-              <div css={css`
-                height: 500vh;
-              `}></div>
+
+              <div className="flex">
+                <Item project={projectData[2]} />
+                <Item project={projectData[3]} />
+                <Item project={projectData[4]} />
+              </div>
 
             </div>
 
@@ -155,15 +170,6 @@ export default function Home() {
 
         </div>
       </div>
-
-      
-      
-      {/* <div className="flex w-full max-w-screen-2xl">
-
-        <div>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio libero provident at nobis dicta nulla dolore laboriosam ea nemo, earum voluptates, eaque cupiditate sunt soluta animi molestiae? Fugiat, ab sed!
-        </div>
-      </div> */}
 
     </main>
   )

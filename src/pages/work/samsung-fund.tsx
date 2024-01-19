@@ -1,22 +1,52 @@
+/** @jsxImportSource @emotion/react */
 'use client'
 import LinkTransition from "@/components/LinkTransition"
 import Link from "next/link"
 import Menu from "@/components/ProjectList/Menu"
+import { css } from "@emotion/react"
 
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-center p-24">
 
-      <Link href="/contact">
+      <Link href="/contact"
+      style={{
+        'position': 'relative',
+        'viewTransitionName': 'item_wrap',
+      }}
+        >
         <video 
           src="/prj.mp4" 
           autoPlay muted loop
           className=""
           style={{
-            'viewTransitionName': 'p_202303',
+            width: '50%',
+            'viewTransitionName': 'item_img',
           }}
           />
         dds
+
+        <div
+        css={css`
+          position: absolute;
+          bottom: 20%;
+          right: 0;
+          z-index: 1;
+        `}
+        >
+          <span
+          className="cover-transition-el"
+          css={css`view-transition-name: item_t;`}>#awards #canvas #webpack #gulp #es6</span>
+          <h1
+          className="cover-transition-el text-4xl font-bold"
+          css={css`view-transition-name: item_h;`} 
+          >기아 브랜드 글로벌 쇼케이스</h1>
+          <p
+          className="cover-transition-el text-xl m-7"
+          css={css`view-transition-name: item_d;`}>
+            기아의 환골탈태 브랜드 리론칭
+          </p>
+        </div>
       </Link>
 
       <div className="flex w-full max-w-screen-2xl">

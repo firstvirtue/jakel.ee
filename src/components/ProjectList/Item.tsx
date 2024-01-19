@@ -33,13 +33,18 @@ export default function Item(props) {
       onClick={e => {
         e.preventDefault()
 
+        // Remove duplicate transition
+        document.querySelectorAll('.cover-transition-el').forEach((x, i) => x.style.viewTransitionName = `xx${i}` )
+
         refImg.current.style.viewTransitionName = 'item_img'
         refT.current.style.viewTransitionName = 'item_t'
         refH.current.style.viewTransitionName = 'item_h'
         refD.current.style.viewTransitionName = 'item_d'
         refWrap.current.style.viewTransitionName = 'item_wrap'
 
-        router.push('/work/kia-worldwide')
+        
+        router.push(project.link ?? '#')
+        // router.push('/work/samsung-fund')
       }}
     >
       <div className='v-wrap relative overflow-hidden'

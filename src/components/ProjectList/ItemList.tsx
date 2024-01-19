@@ -88,7 +88,7 @@ export default function ItemList() {
     )
 
     document.querySelector('.item-container').parentNode.style.height = `${h + 96 + 96}px`
-    console.log(h)
+    // console.log(h)
 
   }, [selectedItems])
   

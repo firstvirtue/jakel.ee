@@ -102,7 +102,7 @@ export default function PlayGround() {
     }
   
     
-    console.log(arr);
+    // console.log(arr);
     // const sortedArray = quickSort(arr);
 
     (async () => {
@@ -110,7 +110,7 @@ export default function PlayGround() {
       // console.log(sortedArray);
       await quickSort(arr, 0, arr.length - 1);
       // setGraph([...arr])
-      console.log('done')
+      // console.log('done')
     })()
 
     return () => {
