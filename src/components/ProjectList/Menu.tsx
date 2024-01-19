@@ -8,7 +8,7 @@ export default function Menu() {
 
   return (
     <>
-    <div className="pt-10 pl-8 pr-8 pb-10 backdrop-blur-xl"
+    <div className="pt-10 pl-8 pr-8 pb-10"
     // style={{ 'backgroundColor': 'rgba(0, 0, 0, 0.34)' }}
     style={{ 'backgroundColor': 'rgba(255, 255, 255, 1)' }}
     >

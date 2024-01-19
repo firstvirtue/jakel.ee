@@ -15,8 +15,8 @@ export default function ItemList() {
     initial: { opacity: 0, y: 10 },
     visible: { opacity: 1, y: 0, transition: {
       when: "beforeChildren",
-      staggerChildren: 0.1,
-      delayChildren: 0.1,
+      // staggerChildren: 0.1,
+      // delayChildren: 0.1,
       },
     },
     leaving: { opacity: 0, y: -10 },

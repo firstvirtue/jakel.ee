@@ -56,6 +56,7 @@ export default function PlayGround() {
   
   let arr = randomNumbers
   const [graph, setGraph] = useState(arr)
+  // [TODO] useMemo
 
   useEffect(()=> {
 

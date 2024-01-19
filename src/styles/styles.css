@@ -199,10 +199,19 @@ header .left span {
   color: white !important;
 }
 
+.card a:hover .rounded-border {
+  border-color: black !important;
+}
+
 .card a,
 .card a img,
-.card a .num {
+.card a .num,
+.card a .rounded-border {
   transition: all 0.31s ease-out;
+}
+
+.card a .v-wrap {
+  transition: all 0.21s ease-out;
 }
 
 .card a:hover img {
