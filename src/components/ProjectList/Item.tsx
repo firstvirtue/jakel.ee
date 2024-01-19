@@ -21,7 +21,7 @@ export default function Item(props) {
         // 'viewTransitionName': project.id ? project.id : '',
       }}
     >
-      <div className='v-wrap relative overflow-hidden rounded-3xl'
+      <div className='v-wrap relative overflow-hidden'
       style={{
         'aspectRatio': `1 / ${ project.aspect }`,
         'viewTransitionName': project.id ? project.id : '',

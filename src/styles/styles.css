@@ -222,6 +222,10 @@ header .left span {
   transform: translateY(-5%);
 }
 
+.card a:hover .v-wrap {
+  border-radius: 1.5rem;
+}
+
 .goo {
   --color-highlight: #fff;
   font-size: 3rem;
