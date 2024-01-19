@@ -5,9 +5,11 @@ import { useProjectStore } from "./store"
 import Link from 'next/link'
 import Image from "next/image"
 import { css } from "@emotion/react"
+import { useRouter } from "next/router";
 
 export default function Item(props) {
   const { project, index } = props
+  const router = useRouter();
 
   return (
     <>
@@ -19,6 +21,15 @@ export default function Item(props) {
         'border': project.cardColor ? '2px solid transparent' : '2px solid #f3f3f3',
         'color': project.textColor ?? '#000000',
         // 'viewTransitionName': project.id ? project.id : '',
+        // 'viewTransitionName': project.id ? project.id + '_wrap' : '',
+      }}
+
+      onClick={e => {
+        // e.preventDefault()
+
+        
+
+        // router.push('/work/kia-worldwide')
       }}
     >
       <div className='v-wrap relative overflow-hidden'
@@ -57,16 +68,17 @@ export default function Item(props) {
       </div>
       
       <div className='pl-7 pr-7'>
-        <div className='mt-5 '>
+        <div css={css`view-transition-name: ${project.id}_t`} className='mt-5 '>
           { project.keywords.map((x, i) => {
             return <span key={`tag-${i}`}>{`#${x}`} </span>
           }) }
         </div>
 
-        <div className=" pt-1 text-3xl font-bold">
+        <div css={css`view-transition-name: ${project.id}_h`} 
+        className=" pt-1 text-3xl font-bold">
             { project.title }
         </div>
-        <div className=' text-lg pt-2'>
+        <div css={css`view-transition-name: ${project.id}_d`} className=' text-lg pt-2'>
             { project.desc ?? '역대급 프로젝트 추억 그 기억 아련함' }
         </div>
       </div>

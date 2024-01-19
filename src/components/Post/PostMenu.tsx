@@ -8,12 +8,12 @@ export default function PostMenu() {
 
   return (
     <>
-    <div className="pt-10 pl-8 pr-8 pb-10"
+    <div className="pt-24 pl-8 pr-8 pb-10"
     css={css`
-      background-color: hotpink;
+      /* background-color: hotpink; */
     `}
     >
-      <div className="menu sticky top-0 rounded-lg"
+      <div className="menu sticky top-24 rounded-lg"
       css={css`
         background-color: #000;
       `}
