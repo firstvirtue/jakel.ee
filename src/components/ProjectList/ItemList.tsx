@@ -96,7 +96,11 @@ export default function ItemList() {
     <>
     <div className="item-container flex-1 pr-8 pl-8"
     // style={{ 'backgroundColor': 'rgba(255, 255, 255, 0.2)' }}
-    style={{ 'backgroundColor': 'rgba(255, 255, 255, 1)' }}
+    style={{ 
+      'backgroundColor': 'rgba(255, 255, 255, 1)',
+      'marginLeft': '-0.8rem',
+      'marginRight': '-0.8rem',
+    }}
     >
       <motion.ul 
         className="relative item-list flex flex-wrap mt-24 mb-24"

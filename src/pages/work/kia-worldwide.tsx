@@ -157,7 +157,6 @@ export default function Home() {
 
               </p>
 
-
               <div className="flex">
                 <Item project={projectData[2]} />
                 <Item project={projectData[3]} />
@@ -170,7 +169,6 @@ export default function Home() {
 
         </div>
       </div>
-
     </main>
   )
 }
