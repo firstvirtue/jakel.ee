@@ -1,4 +1,6 @@
+/** @jsxImportSource @emotion/react */
 import Link from "next/link"
+import { css } from "@emotion/react"
 
 export function Header() {
   return (
@@ -8,13 +10,20 @@ export function Header() {
           {/* <img src="/assets/img/j-logo2.png" alt="" /> */}
           <strong>
             Jake
+            {/* Vincent */}
+            {/* Sang */}
           </strong>
           <strong>
             Lee
-            <span className="dot">.</span>
+            {/* Oh */}
+            {/* 235 */}
+            {/* <span className="dot">.</span> */}
             {/* <span>Contact</span> */}
           </strong>
-          <small>developer</small>
+          <small>
+            developer
+            {/* protestant */}
+          </small>
         </Link>
       </div>
       <div className="menu-container">
