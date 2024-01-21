@@ -2,7 +2,7 @@
 'use client'
 import LinkTransition from "@/components/LinkTransition"
 import Link from "next/link"
-import PostMenu from "@/components/Post/PostMenu"
+import Sentinal from "@/components/Post/Sentinel"
 import Image from "next/image"
 import { css } from "@emotion/react"
 import Item from "@/components/ProjectList/Item"
@@ -25,7 +25,7 @@ export default function Home() {
           view-transition-name: menu;
         `}
         >
-          <PostMenu />
+          <Sentinal />
 
         </div>
         

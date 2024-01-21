@@ -67,7 +67,7 @@ header .left a {
   top: 2rem;
   left: 5rem;
   width: fit-content;
-  font-size: 1.125rem;
+  font-size: 1.3rem;
   letter-spacing: -0.04em;
   line-height: 1;
   transform: rotate(-3deg);
@@ -82,6 +82,7 @@ header .left strong {
   display: block;
   position: relative;
   font-weight: 700;
+  width: fit-content;
 }
 
 header .left strong:nth-child(2) {
@@ -90,7 +91,7 @@ header .left strong:nth-child(2) {
 
 header .left .dot {
   position: relative;
-  font-size: 2.5rem;
+  font-size: 2rem;
   color: #EE536B;
   color: #222;
   color: rgb(224, 109, 114);
@@ -100,10 +101,13 @@ header .left .dot {
   /* letter-spacing: 0.02em; */
 }
 
-header .left span {
-  color: #222;
-  font-size: 1.3rem;
-  font-weight: 400;
+header .left small {
+  display: block;
+  margin-top: 0.4em;
+  color: #555;
+  font-size: 60%;
+  letter-spacing: 0.04em;
+  font-weight: 100;
 }
 
 .menu-container {
@@ -113,7 +117,7 @@ header .left span {
   width: fit-content;
   position: absolute;
   right: 5rem;
-  top: 2rem;
+  top: 3rem;
   /* border: 1px solid black; */
   border-radius: 35px;
   padding: 0.9rem 3rem 0.9rem 1.8rem;

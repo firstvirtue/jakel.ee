@@ -6,7 +6,7 @@ import Image from "next/image"
 import projectData from '../../data/project-data.json'
 import { useRouter } from "next/router"
 
-export default function PostMenu() {
+export default function Sentinal() {
   const project = projectData[3]
 
   const router = useRouter()
@@ -33,7 +33,7 @@ export default function PostMenu() {
       `}
       >   
         <div className="text-white p-4">
-          <span className="text-xs opacity-40">Work</span>
+          <span className="text-xs opacity-40">Selected Work</span>
           <h2 className="text-3xl uppercase font-bold pb-2">
             { '기아 브랜드 글로벌 쇼케이스' }
           </h2>

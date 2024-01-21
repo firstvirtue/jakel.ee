@@ -14,6 +14,7 @@ export function Header() {
             <span className="dot">.</span>
             {/* <span>Contact</span> */}
           </strong>
+          <small>developer</small>
         </Link>
       </div>
       <div className="menu-container">
