@@ -11,7 +11,7 @@ import projectData from '../../data/project-data.json'
 
 export default function Home() {
   return (
-    <main className="min-h-screen pt-24">
+    <main className="min-h-screen pt-28">
 
       <div className="flex justify-center max-w-screen-2xl mr-auto ml-auto">
         <div
