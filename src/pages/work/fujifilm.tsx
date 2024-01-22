@@ -47,7 +47,7 @@ export default function Home() {
           view-transition-name: item_wrap;
           `}>
 
-            <div className="flex justify-center">
+            <div className="flex justify-center items-center">
               <div
               css={css`
               display: flex;
@@ -70,7 +70,9 @@ export default function Home() {
                 >
                   <span
                   className="cover-transition-el"
-                  css={css`view-transition-name: item_t;`}>#awards #canvas #webpack #gulp #es6</span>
+                  css={css`view-transition-name: item_t;`}>
+                    #awards #canvas #webpack #gulp #es6
+                  </span>
                   <h1
                   className="cover-transition-el text-4xl font-bold"
                   css={css`view-transition-name: item_h;`} 
@@ -86,13 +88,13 @@ export default function Home() {
               <div
                 className="relative"
                 css={css`
-                  aspect-ratio: 1 / 1.4;
-                  height: 75vh;
+                  aspect-ratio: 1;
+                  height: 60vh;
                 `}
               >
                 <Image
                   className="cover-transition-el"
-                  src="/assets/projects/kia-worldwide/cover-lg.jpg"
+                  src="/assets/projects/fujifilm/cover-lg.jpg"
                   css={css`
                     width: 100%;
                     height: 100%;
@@ -103,8 +105,8 @@ export default function Home() {
                   alt=""
                 />
 
-                <h2 className="absolute text-8xl bottom-44 right-32 text-white uppercase">
-                  Kia
+                <h2 className="absolute text-6xl bottom-44 right-12 text-white uppercase">
+                  Fujifilm
                 </h2>
 
               </div>
@@ -153,12 +155,13 @@ export default function Home() {
 
               <p>
               렌더링 루프 안에서 파티클 각각은 등가속도 회전 운동을 위한 가속도와 질량을 가집니다. 이 갱신된 값을 토대로 cos, sin 함수를 이용해 파티클은 조금씩 움직이게 되죠. 여기에 감속을 위한 댐핑 상수를 가속도에 더해주면 그럴듯한 파티클 움직임이 나옵니다.
+
+
               </p>
 
-              <div className="flex gap-7">
+              <div className="flex">
                 <Item project={projectData[2]} />
-                {/* <Item project={projectData[3]} /> */}
-                <Item project={projectData[9]} />
+                <Item project={projectData[4]} />
               </div>
 
             </div>

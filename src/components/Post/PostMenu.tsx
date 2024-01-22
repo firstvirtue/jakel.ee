@@ -6,7 +6,7 @@ import Image from "next/image"
 import projectData from '../../data/project-data.json'
 import { useRouter } from "next/router"
 
-export default function Sentinal() {
+export default function PostMenu() {
   const project = projectData[8]
   const [isOpen, setIsOpen] = useState(false)
 
