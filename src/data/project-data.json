@@ -3,7 +3,7 @@
     "id": "p_202312",
     "title": "삼성물산",
     "keywords": ["react"],
-    "CoverImage": "/3.jpeg",
+    "coverImage": "/3.jpeg",
     "cardColor": "#F5DB28",
     "aspect": "0.8"
   },
@@ -18,7 +18,7 @@
     "link": "/dds",
     "title": "카스 쿨",
     "keywords": ["react", "CSS"],
-    "CoverImage": "/cover-lg.png",
+    "coverImage": "/cover-lg.png",
     "cardColor": "#CFE4FF",
     "aspect": "0.7"
   },
@@ -69,7 +69,7 @@
     "role": ["프론트엔드 리드"],
     "outlink": "https://worldwide.kia.com",
     "keywords": ["awards", "canvas", "webpack", "gulp", "es6"],
-    "CoverImage": "/assets/projects/kia-worldwide/cover-lg.jpg",
+    "coverImage": "/assets/projects/kia-worldwide/cover-lg.jpg",
     "aspect": "1.4"
   },
   {
@@ -82,7 +82,7 @@
     "role": ["UI 개발"],
     "outlink": "https://fujifilm-korea.co.kr",
     "keywords": ["canvas", "webpack", "es6"],
-    "CoverImage": "/assets/projects/fujifilm/cover-lg.jpg",
+    "coverImage": "/assets/projects/fujifilm/cover-lg.jpg",
     "aspect": "1"
   }
 ]

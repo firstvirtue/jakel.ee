@@ -7,7 +7,7 @@ import { css } from "@emotion/react"
 import { useRouter } from "next/router"
 
 export default function Item(props) {
-  const { project, index } = props
+  const { project, index, related, prev, next } = props
   const router = useRouter()
   const refImg = useRef()
   const refT = useRef()
@@ -48,13 +48,13 @@ export default function Item(props) {
     >
       <div className='v-wrap relative overflow-hidden'
       ref={refImg}
-      style={{
-        'aspectRatio': `1 / ${ project.aspect }`,
+      css={{
+        aspectRatio: related ? "1 / 0.8" : `1 / ${ project.aspect }`,
       }}
       >
         {/* <video className='object-cover h-full w-full' src="/prj.mp4" autoPlay muted loop playsInline></video> */}
         <Image className='object-cover h-full w-full rounded-3xl'
-        src={project.CoverImage ?? "/1.jpeg"} alt=''
+        src={project.coverImage ?? "/1.jpeg"} alt=''
         width={800} height={800}
         />
 

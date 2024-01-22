@@ -1,4 +1,6 @@
+/** @jsxImportSource @emotion/react */
 import Link from "next/link"
+import { css } from "@emotion/react"
 
 export default function KeyVisual() {
   const dd = (() => {
@@ -32,7 +34,7 @@ export default function KeyVisual() {
               The best of my work
             </div>
 
-            <Link href={'/work/samsung-fund'} className="block relative h-full rounded-2xl overflow-hidden p-8 pt-20 shadow-xl"
+            <Link href={'/work/samsung-fund'} className="block relative rounded-2xl overflow-hidden p-8 pt-20 shadow-xl"
             style={{'backgroundColor': '#9EBED7'}}>
               <video className="w-full h-full object-cover rounded-2xl shadow-xl" src="/prj.mp4" autoPlay loop muted playsInline
               style={{'viewTransitionName': ''}}
@@ -48,6 +50,21 @@ export default function KeyVisual() {
               {/* <svg className="w-7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="m100,0H0v100C0,44.77,44.77,0,100,0Z" fill="#F9F8F6"></path></svg> */}
             </div>
             </Link>
+
+            <div
+              css={{
+                position: "absolute",
+                width: "560px",
+                height: "140px",
+                backgroundColor: "#E5E5E5",
+                borderRadius: "25px",
+                right: 0,
+                bottom: 0,
+                transform: "translate(0, 100%)",
+              }}
+            >
+              
+            </div>
           </div>
           <div className="flex flex-col justify-end gap-8 w-1/3">
 

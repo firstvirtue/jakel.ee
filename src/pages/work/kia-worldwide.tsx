@@ -2,115 +2,28 @@
 'use client'
 import LinkTransition from "@/components/LinkTransition"
 import Link from "next/link"
-import PostMenu from "@/components/Post/PostMenu"
+import LayoutWork from "@/components/Post/LayoutWork"
+import Cover from "@/components/Post/Cover"
+import RelatedPost from "@/components/Post/RelatedPost"
 import Image from "next/image"
 import { css } from "@emotion/react"
-import Item from "@/components/ProjectList/Item"
+
 
 import projectData from '../../data/project-data.json'
 
 export default function Home() {
+
+  const currentProject = projectData[8]
+
   return (
-    <main className="min-h-screen pt-28">
-
-      <div className="flex justify-center max-w-screen-2xl mr-auto ml-auto">
-        <div
-        className="left"
-        css={css`
-          display: flex;
-          justify-content: flex-end;
-          z-index: 1;
-          width: 30%;
-          /* background-color: pink; */
-          view-transition-name: menu;
-        `}
-        >
-          <PostMenu />
-
-        </div>
-        
-        <div className="right"
+    <LayoutWork project={ currentProject }>
+      <div className="right"
         css={css`
           width: 70%;
         `}
         >
-          <div 
-          className="cover cover-transition-el"
-          css={css`
-          padding: 4rem;
-          border-radius: 24px;
-          background-color: white;
-          position: relative;
-          left: -${70}px;
-          width: calc(100% + ${70}px);
-          /* background-color: hotpink; */
-          view-transition-name: item_wrap;
-          `}>
 
-            <div className="flex justify-center">
-              <div
-              css={css`
-              display: flex;
-              flex-direction: column;
-              justify-content: center;
-              align-items: center;
-              position: relative;
-              width: 17vw;
-              height: 75vh;
-              padding: 3rem;
-              `}
-              >
-                <div
-                css={css`
-                  position: absolute;
-                  bottom: 20%;
-                  right: -30%;
-                  z-index: 1;
-                `}
-                >
-                  <span
-                  className="cover-transition-el"
-                  css={css`view-transition-name: item_t;`}>#awards #canvas #webpack #gulp #es6</span>
-                  <h1
-                  className="cover-transition-el text-4xl font-bold"
-                  css={css`view-transition-name: item_h;`} 
-                  >기아 브랜드 글로벌 쇼케이스</h1>
-                  <p
-                  className="cover-transition-el text-xl m-7"
-                  css={css`view-transition-name: item_d;`}>
-                    기아의 환골탈태 브랜드 리론칭
-                  </p>
-                </div>
-              </div>
-
-              <div
-                className="relative"
-                css={css`
-                  aspect-ratio: 1 / 1.4;
-                  height: 75vh;
-                `}
-              >
-                <Image
-                  className="cover-transition-el"
-                  src="/assets/projects/kia-worldwide/cover-lg.jpg"
-                  css={css`
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                    view-transition-name: item_img;
-                  `}
-                  width={800} height={800}
-                  alt=""
-                />
-
-                <h2 className="absolute text-8xl bottom-44 right-32 text-white uppercase">
-                  Kia
-                </h2>
-
-              </div>
-            </div>
-
-          </div>
+          <Cover project={ currentProject } />
 
           <div className="flex pl-24 pr-24 pt-32">
             <div className="content w-full">
@@ -155,18 +68,13 @@ export default function Home() {
               렌더링 루프 안에서 파티클 각각은 등가속도 회전 운동을 위한 가속도와 질량을 가집니다. 이 갱신된 값을 토대로 cos, sin 함수를 이용해 파티클은 조금씩 움직이게 되죠. 여기에 감속을 위한 댐핑 상수를 가속도에 더해주면 그럴듯한 파티클 움직임이 나옵니다.
               </p>
 
-              <div className="flex gap-7">
-                <Item project={projectData[2]} />
-                {/* <Item project={projectData[3]} /> */}
-                <Item project={projectData[9]} />
-              </div>
-
             </div>
 
           </div>
 
+          <RelatedPost prev={projectData[0]} next={projectData[9]} />
+
         </div>
-      </div>
-    </main>
+    </LayoutWork>
   )
 }

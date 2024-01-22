@@ -58,7 +58,7 @@ header {
   width: 100%;
   top: 0;
   left: 0;
-  z-index: 1;
+  z-index: 3000;
 }
 
 header .left a {
@@ -168,7 +168,7 @@ header .left small {
   font-weight: 700;
   font-size: 10rem;
   text-align: center;
-  padding-top: 5rem;
+  padding-top: 10rem;
   padding-bottom: 10rem;
   line-height: 1;
 }
