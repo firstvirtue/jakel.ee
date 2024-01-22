@@ -24,7 +24,7 @@ export default function KeyVisual() {
 
       <div className="key-visual w-full max-w-screen-2xl">
         <div className="flex pt-40 pb-24 gap-8">
-          <div className="relative visual w-2/3 pt-32 pb-8">
+          <div className="relative visual w-2/3 pt-32 pb-16">
             <div className="absolute top-0 text-8xl font-bold italic capitalize"
             style={{
               'letterSpacing': '-0.03em',
@@ -59,7 +59,7 @@ export default function KeyVisual() {
                 backgroundColor: "#E5E5E5",
                 borderRadius: "25px",
                 right: 0,
-                bottom: 0,
+                bottom: "2rem",
                 transform: "translate(0, 100%)",
               }}
             >
@@ -69,13 +69,18 @@ export default function KeyVisual() {
           <div className="flex flex-col justify-end gap-8 w-1/3">
 
             <div className="h-2/4 rounded-2xl overflow-hidden"
-            style={{'backgroundColor': '#B8D2D8', 'width': '92%', 'height': '42%'}}
+            style={{
+              "backgroundColor": "#B8D2D8", 
+              "width": "92%", 
+              "height": "42%",
+            }}
             >
-            
             </div>
 
             <div className="h-2/4 rounded-2xl overflow-hidden shadow-xl"
-            style={{'backgroundColor': '#83936F'}}>
+            style={{
+              backgroundColor: "#83936F"
+            }}>
               <img className="w-full h-full object-cover" src="/iconic20.png" alt="" />
             </div>
           </div>

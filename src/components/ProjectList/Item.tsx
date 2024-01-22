@@ -15,6 +15,13 @@ export default function Item(props) {
   const refD = useRef()
   const refWrap = useRef()
 
+  function setBottomText() {
+    if(prev) return 'Prev'
+    if(next) return 'Next'
+    
+    return String(index).padStart(2, '0')
+  }
+
   return (
     <>
     <Link
@@ -99,7 +106,7 @@ export default function Item(props) {
         'color': project.cardColor ? undefined : '#f3f3f3'
       }}
       >
-          { '0' + index }
+          { setBottomText() }
       </div>
     </Link>
     </>

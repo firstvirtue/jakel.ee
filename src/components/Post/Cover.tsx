@@ -29,7 +29,8 @@ export default function Cover(props) {
               align-items: center;
               position: relative;
               width: 17vw;
-              height: 75vh;
+              height: ${project.aspect * 53 + "vh"};
+              height: 70vh;
               padding: 3rem;
               `}
               >
@@ -58,31 +59,37 @@ export default function Cover(props) {
                 </div>
               </div>
 
-              <div
-                className="relative"
-                css={css`
-                  aspect-ratio: 1 / ${project.aspect};
-                  height: 75vh;
-                `}
-              >
-                <Image
-                  className="cover-transition-el"
-                  src={project.coverImage}
+              <div css={{
+                display: "flex",
+                alignItems: "center",
+              }}>
+                <div
+                  className="relative"
                   css={css`
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                    view-transition-name: item_img;
+                    aspect-ratio: 1 / ${project.aspect};
+                    height: ${project.aspect * 53 + "vh"};
+                    max-height: 70vh;
                   `}
-                  width={800} height={800}
-                  alt=""
-                />
+                >
+                  <Image
+                    className="cover-transition-el"
+                    src={project.coverImage}
+                    css={css`
+                      width: 100%;
+                      height: 100%;
+                      object-fit: cover;
+                      view-transition-name: item_img;
+                    `}
+                    width={800} height={800}
+                    alt=""
+                  />
 
-                <h2 className="absolute text-8xl bottom-44 right-32 text-white uppercase">
-                  Kia
-                </h2>
-
+                  <h2 className="absolute text-6xl bottom-44 right-24 text-white uppercase">
+                    { project.client }
+                  </h2>
+                </div>
               </div>
+
             </div>
 
           </div>
