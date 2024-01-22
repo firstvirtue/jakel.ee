@@ -218,35 +218,35 @@ header .left small {
   width: 1.5rem;
 }
 
-.card a:hover {
+a.project-item:hover {
   background-color: black !important;
   color: white !important;
 }
 
-.card a:hover .rounded-border {
+a.project-item:hover .rounded-border {
   border-color: black !important;
 }
 
-.card a,
-.card a img,
-.card a .num,
-.card a .rounded-border {
+a.project-item,
+a.project-item img,
+a.project-item .num,
+a.project-item .rounded-border {
   transition: all 0.31s ease-out;
 }
 
-.card a .v-wrap {
+a.project-item .v-wrap {
   transition: all 0.21s ease-out;
 }
 
-.card a:hover img {
+a.project-item:hover img {
   transform: scale(1.05);
 }
 
-.card a:hover .num {
+a.project-item:hover .num {
   transform: translateY(-5%);
 }
 
-.card a:hover .v-wrap {
+a.project-item:hover .v-wrap {
   border-radius: 1.5rem;
 }
 

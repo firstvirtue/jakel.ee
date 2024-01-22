@@ -26,7 +26,7 @@ export default function Item(props) {
     <>
     <Link
       href={project.link ? project.link : '#'}
-      className='block relative text-black pb-28 rounded-3xl overflow-hidden hover:bg-black shadow-lg'
+      className='project-item block relative text-black pb-28 rounded-3xl overflow-hidden hover:bg-black shadow-lg'
       ref={refWrap}
       style={{
         'backgroundColor': project.cardColor ?? '#ffffff',
