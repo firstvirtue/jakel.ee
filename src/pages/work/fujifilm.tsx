@@ -67,7 +67,7 @@ export default function Post() {
 
         </div>
 
-        <RelatedPost prev={projectData[2]} next={projectData[4]} />
+        <RelatedPost prev={projectData[8]} next={projectData[4]} />
     </LayoutWork>
   )
 }
