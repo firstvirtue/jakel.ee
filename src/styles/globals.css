@@ -65,7 +65,7 @@ body {
 ::view-transition-group(item_wrap) {
   /* animation-timing-function: cubic-bezier(.33,-0.19,.24,1.29); */
   animation-timing-function: cubic-bezier(.17,.89,.33,1.11);
-  animation-duration: 0.685s;
+  animation-duration: 0.785s;
   
 }
 
@@ -75,8 +75,8 @@ body {
 ::view-transition-group(item_img) {
   /* animation-timing-function: cubic-bezier(.33,-0.19,.24,1.29); */
   animation-timing-function: cubic-bezier(.17,.89,.33,1.11);
-  animation-duration: 0.685s;
-  animation-delay: 0.1s;
+  animation-duration: 0.785s;
+  /* animation-delay: 0.1s; */
 }
 
 ::view-transition-group(item_t) {

@@ -69,11 +69,12 @@ export default function Cover(props) {
                 alignItems: "center",
               }}>
                 <div
-                  className="relative"
+                  className="cover-transition-el relative"
                   css={css`
                     aspect-ratio: 1 / ${project.aspect};
                     height: ${project.aspect * 53 + "vh"};
                     max-height: 70vh;
+                    view-transition-name: item_img;
                   `}
                 >
                   <Image
@@ -83,7 +84,6 @@ export default function Cover(props) {
                       width: 100%;
                       height: 100%;
                       object-fit: cover;
-                      view-transition-name: item_img;
                     `}
                     width={800} height={800}
                     alt=""

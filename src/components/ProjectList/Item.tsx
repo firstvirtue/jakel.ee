@@ -34,6 +34,10 @@ export default function Item(props) {
         'color': project.textColor ?? '#000000',
         // 'viewTransitionName': project.id ? project.id : '',
         // 'viewTransitionName': project.id ? project.id + '_wrap' : '',
+
+        paddingTop: '24px',
+        paddingLeft: '24px',
+        paddingRight: '24px',
       }}
 
       onClick={e => {
@@ -53,19 +57,21 @@ export default function Item(props) {
         // router.push('/work/samsung-fund')
       }}
     >
-      <div className='v-wrap relative overflow-hidden'
+      <div className='v-wrap relative overflow-hidden rounded-2xl'
       ref={refImg}
       css={{
-        aspectRatio: related ? "1 / 0.8" : `1 / ${ project.aspect }`,
+        aspectRatio: related ? "1 / 1" : `1 / ${ project.aspect }`,
       }}
       >
         {/* <video className='object-cover h-full w-full' src="/prj.mp4" autoPlay muted loop playsInline></video> */}
-        <Image className='object-cover h-full w-full rounded-3xl'
-        src={project.coverImage ?? "/1.jpeg"} alt=''
-        width={800} height={800}
+        <Image 
+          // ref={refImg}
+          className='object-cover h-full w-full rounded-2xl'
+          src={project.coverImage ?? "/1.jpeg"} alt=''
+          width={800} height={800}
         />
 
-        <div className='rounded-border absolute w-full h-full top-0 left-0'
+        {/* <div className='rounded-border absolute w-full h-full top-0 left-0'
         css={css`
           border: 15px solid ${project.cardColor ?? '#ffffff'};
         `}
@@ -82,7 +88,7 @@ export default function Item(props) {
             height: calc(100% + 15px);
           `}
           ></div>
-        </div>
+        </div> */}
       </div>
       
       <div className='pl-7 pr-7'>
