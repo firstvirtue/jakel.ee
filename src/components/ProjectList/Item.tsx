@@ -72,6 +72,9 @@ export default function Item(props) {
       onClick={e => {
         e.preventDefault()
 
+        // [NOTE] 모션 간섭이 일어나서 시각 효과에서 제거
+        document.querySelector('.menu').style.opacity = 0
+
         // Remove duplicate transition
         document.querySelectorAll('.cover-transition-el').forEach((x, i) => x.style.viewTransitionName = `xx${i}` )
 

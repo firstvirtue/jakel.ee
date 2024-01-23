@@ -1,10 +1,11 @@
 /** @jsxImportSource @emotion/react */
-import { useState, useRef } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import { css } from "@emotion/react"
 import Link from "next/link"
 import Image from "next/image"
 import projectData from '../../data/project-data.json'
 import { useRouter } from "next/router"
+import { motion, useScroll } from "framer-motion"
 
 export default function PostMenu(props) {
   const { project } = props
@@ -27,13 +28,13 @@ export default function PostMenu(props) {
         view-transition-name: menu;
       `}
     >
-        
       <div className="pt-24 pl-8 pr-8 pb-10"
       css={css`
         /* background-color: hotpink; */
       `}
       >
         <div className="menu sticky top-32 rounded-lg overflow-hidden shadow-2xl"
+        
         css={css`
           background-color: #000;
         `}
