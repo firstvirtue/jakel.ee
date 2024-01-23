@@ -10,18 +10,13 @@ import { css } from "@emotion/react"
 
 import projectData from '../../data/project-data.json'
 
-export default function Home() {
+export default function Post() {
   
   const currentProject = projectData[9]
 
   return (
     <LayoutWork project={ currentProject }>
-      <div
-      css={css`
-        width: 70%;
-      `}
-      >
-        <Cover project={ currentProject } />
+      <Cover project={ currentProject } />
 
         <div className="flex pl-24 pr-24 pt-32">
           <div className="content w-full">
@@ -73,7 +68,6 @@ export default function Home() {
         </div>
 
         <RelatedPost prev={projectData[2]} next={projectData[4]} />
-      </div>
     </LayoutWork>
   )
 }

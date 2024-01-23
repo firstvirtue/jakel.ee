@@ -44,15 +44,20 @@ export default function Cover(props) {
                 >
                   <span
                   className="cover-transition-el"
-                  css={css`view-transition-name: item_t;`}>
+                  css={{
+                    viewTransitionName: 'item_t',
+                    display: 'block',
+                    marginBottom: '1rem',
+                  }}
+                  >
                     { project.keywords.map((keyword, i) => <span key={`keyword${i}`}>{ `#${keyword} ` }</span>) }
                   </span>
                   <h1
-                  className="cover-transition-el text-4xl font-bold"
-                  css={css`view-transition-name: item_h;`} 
+                  className="cover-transition-el text-5xl font-bold"
+                  css={css`view-transition-name: item_h;`}
                   >{ project.title }</h1>
                   <p
-                  className="cover-transition-el text-xl m-7"
+                  className="cover-transition-el text-xl mt-7"
                   css={css`view-transition-name: item_d;`}>
                     { project.desc }
                   </p>
