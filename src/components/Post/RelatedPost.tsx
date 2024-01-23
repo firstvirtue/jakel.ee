@@ -6,7 +6,7 @@ export default function RelatedPost(props) {
   const { prev, next } = props
 
   return (
-    <div className="flex gap-8 pt-24 pl-48 pr-48">
+    <div className="flex gap-8 pt-40 pb-20 max-w-screen-xl m-auto">
       <Item project={prev} related prev />
       <Item project={next} related next />
     </div>

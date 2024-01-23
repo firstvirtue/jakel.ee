@@ -18,6 +18,7 @@ export default function Home() {
   const currentProject = projectData[8]
 
   return (
+    <>
     <LayoutWork project={ currentProject }>
       
       <Cover project={ currentProject } />
@@ -95,7 +96,12 @@ export default function Home() {
 
       </div>
 
-      <RelatedPost prev={projectData[0]} next={projectData[9]} />
     </LayoutWork>
+
+
+      <RelatedPost prev={projectData[0]} next={projectData[9]} />
+
+      
+      </>
   )
 }

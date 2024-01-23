@@ -14,6 +14,7 @@ export default function Item(props) {
   const refH = useRef()
   const refD = useRef()
   const refWrap = useRef()
+  const refBot = useRef()
 
   function setBottomText() {
     if(prev) return 'Prev'
@@ -22,13 +23,37 @@ export default function Item(props) {
     return String(index).padStart(2, '0')
   }
 
+  useEffect(() => {
+    if(related) {
+      try {
+        refWrap.current.style.display = 'flex'
+        refWrap.current.style.flex = 1
+        refWrap.current.style.paddingBottom = '24px'
+        refImg.current.style.width = '130px'
+        refImg.current.style.height = '130px'
+        refImg.current.style.aspectRatio = '1 / 1'
+
+        refBot.current.style.fontSize = '5rem'
+        refBot.current.style.transformOrigin = 'right'
+        refBot.current.style.textAlign = 'left'
+        refBot.current.style.transform = 'rotateZ(-90deg) translate(100%, -25%)'
+
+        // refH.current.style.fontSize = '1rem'
+        
+      } catch (error) {
+        
+      }
+    }
+
+  }, [related])
+
   return (
     <>
     <Link
       href={project.link ? project.link : '#'}
       className='project-item block relative text-black pb-28 rounded-3xl overflow-hidden hover:bg-black shadow-lg'
       ref={refWrap}
-      style={{
+      css={{
         'backgroundColor': project.cardColor ?? '#ffffff',
         'border': project.cardColor ? '2px solid transparent' : '2px solid #f3f3f3',
         'color': project.textColor ?? '#000000',
@@ -38,6 +63,10 @@ export default function Item(props) {
         paddingTop: '24px',
         paddingLeft: '24px',
         paddingRight: '24px',
+
+        ':hover .num': {
+          transform: related ? 'rotateZ(-90deg) translate(100%, -35%) !important' : 'translateY(-5%)',
+        }
       }}
 
       onClick={e => {
@@ -60,7 +89,7 @@ export default function Item(props) {
       <div className='v-wrap relative overflow-hidden rounded-2xl'
       ref={refImg}
       css={{
-        aspectRatio: related ? "1 / 1" : `1 / ${ project.aspect }`,
+        aspectRatio: `1 / ${ project.aspect }`,
       }}
       >
         {/* <video className='object-cover h-full w-full' src="/prj.mp4" autoPlay muted loop playsInline></video> */}
@@ -107,9 +136,9 @@ export default function Item(props) {
         </div>
       </div>
       
-      <div className='num absolute text-white left-0 -bottom-14 text-10xl leading-none text font-bold pt-2 text-center w-full'
-      style={{
-        'color': project.cardColor ? undefined : '#f3f3f3'
+      <div ref={refBot} className='num absolute text-white left-0 -bottom-14 text-10xl leading-none text font-bold pt-2 text-center w-full'
+      css={{
+        color: project.cardColor ? undefined : '#f3f3f3',
       }}
       >
           { setBottomText() }

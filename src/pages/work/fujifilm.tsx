@@ -15,6 +15,7 @@ export default function Post() {
   const currentProject = projectData[9]
 
   return (
+    <>
     <LayoutWork project={ currentProject }>
       <Cover project={ currentProject } />
 
@@ -67,7 +68,9 @@ export default function Post() {
 
         </div>
 
-        <RelatedPost prev={projectData[8]} next={projectData[4]} />
     </LayoutWork>
+        <RelatedPost prev={projectData[8]} next={projectData[4]} />
+        
+        </>
   )
 }
