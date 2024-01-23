@@ -1,6 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import Link from "next/link"
 import { css } from "@emotion/react"
+import Image from "next/image"
 
 export default function KeyVisual() {
   const dd = (() => {
@@ -51,20 +52,25 @@ export default function KeyVisual() {
             </div>
             </Link>
 
-            <div
+            {/* <div
               css={{
                 position: "absolute",
                 width: "560px",
-                height: "140px",
+                height: "110px",
                 backgroundColor: "#E5E5E5",
                 borderRadius: "25px",
                 right: 0,
                 bottom: "2rem",
                 transform: "translate(0, 100%)",
+                overflow: "hidden",
               }}
             >
-              
-            </div>
+              <Image src="/app.png" width={372} height={72} alt="" css={{
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+              }} />
+            </div> */}
           </div>
           <div className="flex flex-col justify-end gap-8 w-1/3">
 

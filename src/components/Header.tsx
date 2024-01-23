@@ -31,6 +31,11 @@ export function Header() {
         <a href="#" className="">About</a>
         {/* <a href="#" className="">Articles</a> */}
         <a href="#" className="contact">Contact</a>
+
+        <div className="social flex gap-2 ml-8">
+          <a className="w-7 h-7 p-1" href="https://www.linkedin.com/in/firstvirtue/" target="_blank"><img className="social-icon" src='/assets/icons/linkedin-svgrepo-com.svg' /></a>
+          <a className="w-7 h-7 p-1" href="https://github.com/firstvirtue" target="_blank"><img className="social-icon" src='/assets/icons/github-svgrepo-com.svg' /></a>
+        </div>
       </div>
     </header>
   )
