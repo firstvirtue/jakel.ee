@@ -95,13 +95,19 @@ export default function Item(props) {
         aspectRatio: `1 / ${ project.aspect }`,
       }}
       >
-        {/* <video className='object-cover h-full w-full' src="/prj.mp4" autoPlay muted loop playsInline></video> */}
+        { project.coverVideo ?
+
+        <video className='object-cover h-full w-full rounded-2xl' 
+          src={ project.coverVideo } autoPlay muted loop playsInline></video>
+        :
         <Image 
           // ref={refImg}
           className='object-cover h-full w-full rounded-2xl'
-          src={project.coverImage ?? "/1.jpeg"} alt=''
+          src={ project.coverImage ?? "/1.jpeg" } alt=''
           width={800} height={800}
         />
+        }
+        
 
         {/* <div className='rounded-border absolute w-full h-full top-0 left-0'
         css={css`

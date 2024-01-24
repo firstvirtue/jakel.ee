@@ -26,71 +26,54 @@ export default function Home() {
       <div className="flex pl-24 pr-24 pt-32">
         <div className="content w-full">
 
-          <h2 className="text-6xl font-bold text-center">
-          Movement that inspires
-          </h2>
+          <h2 className="text-6xl font-bold text-center">Luminous Beauty</h2>
 
           <h3>
-          브랜드 리론칭
+          글로벌 코스메틱 브랜드
           </h3>
 
           <p>
-          기아자동차는 2021년을 맞이하여 기아로 사명을 바꾸며 CI와 BI의 변경을 비롯하여 브랜드의 대대적인 리론칭을 시작했습니다.
-          이를 구체화하는 단계에서 동적으로 콘텐츠를 보여주는 쇼케이스 웹사이트가 요구 사항으로 나오게 되었습니다.
+            코스메틱 브랜드 라네즈의 글로벌 웹사이트는 10개국 지역 사이트가 오픈 예정이어서 특별히 설계가 매우 중요했습니다. 관리자 페이지에서 섹션의 순서를 바꿔도 정해진 모션이 매끄럽게 진행되도록 스크립트의 변수를 모두 동적으로 계산했죠.
           </p>
-
           <p>
-          가장 처음 만들어진 페이지는 이벤트 D-day의 해당 시간까지 카운트다운을 보여주고 시간이 되면 쇼케이스로 전환되어 콘텐츠를 볼 수 있는 페이지였습니다. 모두 한 페이지에서 말이죠.
+            이듬해, 3월과 5월에 각각 영어로 된 글로벌 웹사이트와 중국 사이트를 차례로 론칭 했습니다. 그러나 나머지 지역 사이트는 안타깝게도 COVID-19로 인하여 무기한 연기되었습니다.
           </p>
 
-          <figure>
-            <video src="/assets/projects/kia-worldwide/cover.mp4" poster="/assets/projects/kia-worldwide/cover.png" autoPlay muted loop playsInline></video>
-            <figcaption>파티클 모션은 이벤트 시간이 지나가는 찰나의 시간에만 볼 수 있는 비운의 인터랙션이었다..</figcaption>
+          <figure data-size="lg">
+            <video src="/assets/projects/laneige/main.mp4" poster="/assets/projects/laneige/main.png" autoPlay muted loop playsInline></video>
           </figure>
 
-          <h3 className="center">파티클 인터랙션</h3>
-
-          <p>
-            이벤트 시간이 되서 쇼케이스 콘텐츠로 전환될 때 원형 오브젝트가 터지는 파티클 모션을 보여줍니다. 원형 오브젝트가 파티클로 사라지는 모션은 기존 기아 로고를 둘러싸고 있던 원형 오브젝트가 사라지며 새 로고가 만들어지는 것을 의미했습니다.(물론 제 의도는 아니었구요..)
-          </p>
-
-          <p>
-            파티클 인터랙션은 canvas 엘리먼트로 구현되어 있습니다. 구형 디바이스에서도 쾌적하게 모션이 되도록 테스트를 거쳐 2000개의 파티클 갯수를 정했는데, 시간이 되면 정해진 범위 내에서 랜덤하게 생성 후 간단한 물리 연산을 통해 퍼지며 사라집니다.
-          </p>
-
-          <p>
-            렌더링 루프 안에서 파티클 각각은 등가속도 회전 운동을 위한 가속도와 질량을 가집니다. 이 갱신된 값을 토대로 cos, sin 함수를 이용해 파티클은 조금씩 움직이게 되죠. 여기에 감속을 위한 댐핑 상수를 가속도에 더해주면 그럴듯한 파티클 움직임이 나옵니다.
-          </p>
-
-          <figure data-size="lg" data-shade="dark">
-            <video src="/assets/projects/kia-worldwide/video-01.mp4" poster="/assets/projects/kia-worldwide/video-01.png" autoPlay muted loop playsInline></video>
+          <figure data-size="lg">
+            <img src="/assets/projects/laneige/shot-01.png" alt=""/>
           </figure>
 
-          <p className="standalone">
-            이후에도 이벤트 스케줄에 따라 페이지들이 추가되며 기아의 브랜드 콘셉트를 보여주는 웹사이트는 변화해 갔습니다. 앞선 페이지처럼 동적으로 변화하는 것은 아니지만요.
+          <h3 className="center">브랜드 스토리</h3>
+          <p>
+            라네즈의 브랜드를 소개하는 브랜드 스토리는 3개의 챕터로 구성되어 풀 페이지 인터랙션을 가지고 있습니다. 스크롤 되었다가 다시 풀페이지가 되었다가 패럴랙스가 되고 배경의 영상은 뷰에 따라 바뀌는 등 상태 관리가 매우 복잡했는데 오토마타(automata) 알고리즘을 흉내내서 매시브한 스위치문을 그래도 관리하기 편하도록 구현했습니다.
           </p>
 
-          <figure data-size="lg" data-shade="dark">
-            <img src="/assets/projects/kia-worldwide/screenshot-01.png" alt=""/>
+          <figure data-size="lg">
+            <video src="/assets/projects/laneige/brand-story.mp4" poster="/assets/projects/laneige/brand-story.png" autoPlay muted loop playsInline></video>
+            <figcaption>만들면서도 &lsquo;몇 명이나 이 페이지를 끝까지 볼까..&rsquo; 했던 복잡도 최상의 페이지 브랜드 스토리</figcaption>
           </figure>
 
-          <figure data-size="lg" data-shade="dark">
-            <img src="/assets/projects/kia-worldwide/screenshot-02.png" alt=""/>
-          </figure>
-
-          <p className="standalone">
-            페이지 수는 적었는데 어째 들어간 디자인 요소들이나 모션도 많고 요구 사항도 정신없이 들어와서 고생했던 프로젝트였습니다.
-          </p>
+          <h3>다국어</h3>
 
           <p>
-            영감을 주는 움직임(movement that inspires)이라는 브랜드 슬로건을 작업을 하며 저도 영감을 얻고자 이직이라는 움직임을 준비하게 되었죠..
+            10개국이 예정되어 있었으나 COVID-19로 안타깝게 2개국만 추가되었습니다. 단순히 콘텐츠만 바뀌는 것이 아닌 제품 페이지의 스텝을 보여주는 추가 인터랙션 요소도 포함되었습니다.
           </p>
 
-          <p>물론 농담입니다 ㅎㅎ :)</p>
-
-          <figure data-size="max" data-shade="dark">
-            <img src="/assets/projects/kia-worldwide/screenshot-03.jpg" alt=""/>
+          <figure data-size="lg">
+            <img src="/assets/projects/laneige/beautystep.png" alt=""/>
           </figure>
+
+          <figure data-size="lg">
+            <img src="/assets/projects/laneige/cn.png" alt=""/>
+          </figure>
+
+          <p>
+            중국 웹사이트의 경우 크로스 브라우징이 특히 기억에 남는데 UC 브라우저의 경우 자체 동영상 플레이어가 내장되어 있어 배경으로 지정된 모든 영상들을 팝업 형태로 보여주었습니다. 처음엔 굉장히 난감했는데 배경에 영상을 사용한 페이지가 많았기 때문이죠. 자바스크립트로 UC 브라우저에서만 배경이 영상일 때 포스터 이미지로 교체하는 형태로 해결했습니다.
+          </p>
 
         </div>
 

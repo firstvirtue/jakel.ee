@@ -77,8 +77,18 @@ export default function Cover(props) {
                     view-transition-name: item_img;
                   `}
                 >
+                  { project.coverVideo ?
+
+                  <video
+                    src={ project.coverVideo } 
+                    css={css`
+                      width: 100%;
+                      height: 100%;
+                      object-fit: cover;
+                    `}
+                    autoPlay muted loop playsInline></video>
+                  :
                   <Image
-                    className="cover-transition-el"
                     src={project.coverImage}
                     css={css`
                       width: 100%;
@@ -88,6 +98,7 @@ export default function Cover(props) {
                     width={800} height={800}
                     alt=""
                   />
+                  }
 
                   <h2 className="absolute text-6xl bottom-44 right-24 text-white uppercase">
                     { project.client }

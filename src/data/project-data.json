@@ -94,9 +94,37 @@
     "completed": "8. 2019",
     "role": ["UI 개발"],
     "outlink": "https://www.laneige.com",
-    "strikeThrough": true,
+    "strikeThrough": "(리뉴얼 되었습니다)",
     "keywords": ["gulp", "webpack", "es6"],
     "coverImage": "/assets/projects/laneige/cover-lg.png",
     "aspect": "1"
+  },
+  {
+    "id": "galleria",
+    "link": "/work/galleria",
+    "title": "Hanwha Galleria",
+    "desc": "방대한 통합 사이트 그리고 첫 PL 역할",
+    "client": "한화 갤러리아",
+    "completed": "4. 2019",
+    "role": ["UI 개발"],
+    "outlink": "https://www.hanwhagalleria.co.kr",
+    "strikeThrough": false,
+    "keywords": ["gulp", "webpack", "es6", "rxjs", "pjax"],
+    "coverVideo": "/assets/projects/galleria/main.mp4",
+    "aspect": "1"
+  },
+  {
+    "id": "vyvydstudio",
+    "link": "/work/vyvydstudio",
+    "title": "비비드 스튜디오",
+    "desc": "밀레니얼 인싸들을 위한 코스메틱 브랜드",
+    "client": "비비드웍스",
+    "completed": "12. 2018",
+    "role": ["UI 개발"],
+    "outlink": "https://www.vyvydstudio.com/",
+    "strikeThrough": "(폐쇄되었습니다ㅠㅠ)",
+    "keywords": ["gulp", "webpack", "es6"],
+    "coverVideo": "/assets/projects/vyvydstudio/cover.mp4",
+    "aspect": "0.7"
   }
 ]

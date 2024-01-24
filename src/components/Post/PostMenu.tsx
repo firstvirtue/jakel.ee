@@ -44,9 +44,9 @@ export default function PostMenu(props) {
             css={{
               transition: "all 0.5s",
               paddingTop: "1rem",
-              minWidth: isOpen ? "22rem" : "20rem",
-              paddingLeft: isOpen ? "2rem" : "1rem",
-              paddingRight: isOpen ? "2rem" : "1rem",
+              minWidth: isOpen ? "24rem" : "20rem",
+              paddingLeft: isOpen ? "3rem" : "1rem",
+              paddingRight: isOpen ? "3rem" : "1rem",
             }}
             >
               <span className="text-sm opacity-50">Selected Work</span>
@@ -64,48 +64,52 @@ export default function PostMenu(props) {
               paddingRight: "1rem",
             }}
             >
-
-              <span className="text-sm opacity-50">Client</span>
-              <p className="menu__list text-base opacity-100">{ project.client }</p>
-              
-              <span className="block text-sm opacity-50 pt-4">Role</span>
-              <p className="menu__list text-base opacity-100">
-                { project.role }
-              </p>
-
-              <span className="block text-sm opacity-50 pt-4">Tech</span>
-              <p className="menu__list text-base opacity-100">
-                { project.keywords.map((keyword, i) => <span css={{display: "block"}} key={`keyword${i}`}>{ `${keyword} ` }</span>) }
-              </p>
-
-              <span className="block text-sm opacity-50 pt-4">Completed</span>
-              <p className="menu__list text-base opacity-100">{ project.completed }</p>
-
-              { project.awards &&
-              <>
-              <span className="block text-sm opacity-50 pt-4">Awards</span>
-              <p className="menu__list text-base opacity-100">{ project.awards }</p>
-              </>
-              }
-
-              <Link className="inline-flex gap-2 items-center pt-4 text-sm text-white" 
-                href={ project.outlink } target="_blank"
+              <div
+                css={{
+                  opacity: isOpen ? 0 : 1,
+                  transition: 'all 0.34s',
+                }}
               >
-                <span className="leading-normal"
-                  css={{
-                    textDecoration: project.strikeThrough ? 'line-through' : '',
-                  }}
-                >
-                  { project.outlink }
-                </span>
+                <span className="text-sm opacity-50">Client</span>
+                <p className="menu__list text-base opacity-100">{ project.client }</p>
+                
+                <span className="block text-sm opacity-50 pt-4">Role</span>
+                <p className="menu__list text-base opacity-100">
+                  { project.role }
+                </p>
 
-                <span className="material-symbols-outlined text-xl leading-none">
-                open_in_new
-                </span>
-              </Link>
-              { project.strikeThrough &&
-              <div className='text-xs'>(리뉴얼 되었습니다)</div>
-              }
+                <span className="block text-sm opacity-50 pt-4">Tech</span>
+                <p className="menu__list text-base opacity-100">
+                  { project.keywords.map((keyword, i) => <span css={{display: "block"}} key={`keyword${i}`}>{ `${keyword} ` }</span>) }
+                </p>
+
+                <span className="block text-sm opacity-50 pt-4">Completed</span>
+                <p className="menu__list text-base opacity-100">{ project.completed }</p>
+
+                { project.awards &&
+                <>
+                <span className="block text-sm opacity-50 pt-4">Awards</span>
+                <p className="menu__list text-base opacity-100">{ project.awards }</p>
+                </>
+                }
+
+                <Link className="inline-flex gap-2 items-center pt-4 text-sm text-white" 
+                  href={ project.outlink } target="_blank"
+                >
+                  <span className="leading-normal"
+                    css={{
+                      textDecoration: project.strikeThrough ? 'line-through' : '',
+                    }}
+                  >
+                    { project.outlink }
+                  </span>
+
+                  <span className="material-symbols-outlined text-xl leading-none">
+                  open_in_new
+                  </span>
+                </Link>
+                { project.strikeThrough && <div className='text-xs'>{ project.strikeThrough }</div> }
+              </div>
 
               <div 
                 css={{
@@ -121,6 +125,7 @@ export default function PostMenu(props) {
                   zIndex: 1,
                   transform: isOpen ? "translate3d(0, calc(-100% + 50px), 0)" : "none",
                 }}
+                onMouseLeave={e => setIsOpen(false)}
               >
                 <div
                   css={{
@@ -130,10 +135,11 @@ export default function PostMenu(props) {
                     borderTopLeftRadius: "12px",
                     borderTopRightRadius: "12px",
                     textAlign: "center",
-                    height: "50px",
+                    minHeight: "50px",
                     cursor: "pointer",
                   }}
                   onClick={e => setIsOpen(!isOpen)}
+                  onMouseEnter={e => setIsOpen(true)}
                 >
                   <div
                     css={{
@@ -162,15 +168,29 @@ export default function PostMenu(props) {
                   css={{
                     overflowY: 'auto',
                     paddingBottom: '1rem',
+                    padding: '1rem 0.5rem',
+                    '::-webkit-scrollbar': {
+                      width: '5px',
+                      height: '8px',
+                      backgroundColor: '#aaa',
+                    },
+                    '::-webkit-scrollbar-thumb': {
+                      backgroundColor: '#000'
+                    },
+
                   }}
                 >
                 {projectData.map((project, i) => {
                   return <Link
                   key={`post-${i}`}
-                  href={project.link ? project.link : "#"}
+                  href={project.link ? project.link : '#'}
                   css={{
-                    display: "flex",
-                    padding: "0.3rem 2rem",
+                    display: 'flex',
+                    padding: '0.5rem 1rem',
+                    borderRadius: '0.5rem',
+                    ':hover': {
+                      backgroundColor: '#191919',
+                    }
                   }}
                   >
                     <div className="text-white font-normal opacity-70">
