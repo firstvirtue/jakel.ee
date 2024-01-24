@@ -12,7 +12,9 @@ import projectData from '../../data/project-data.json'
 
 export default function Post() {
   
-  const currentProject = projectData[11]
+    const currentProject = projectData.find(x => x.id === 'galleria')
+    const prevProject = projectData.find(x => x.id === 'laneige')
+    const nextProject = projectData.find(x => x.id === 'vyvydstudio')
 
   return (
     <>
@@ -80,8 +82,8 @@ export default function Post() {
         </div>
 
     </LayoutWork>
-        <RelatedPost prev={projectData[8]} next={projectData[4]} />
-        
-        </>
+
+    <RelatedPost prev={prevProject} next={nextProject} />
+    </>
   )
 }
