@@ -91,15 +91,26 @@ export default function PostMenu(props) {
               <Link className="inline-flex gap-2 items-center pt-4 text-sm text-white" 
                 href={ project.outlink } target="_blank"
               >
-                <span className="leading-normal">{ project.outlink }</span>
+                <span className="leading-normal"
+                  css={{
+                    textDecoration: project.strikeThrough ? 'line-through' : '',
+                  }}
+                >
+                  { project.outlink }
+                </span>
 
                 <span className="material-symbols-outlined text-xl leading-none">
                 open_in_new
                 </span>
               </Link>
+              { project.strikeThrough &&
+              <div className='text-xs'>(리뉴얼 되었습니다)</div>
+              }
 
               <div 
                 css={{
+                  display: 'flex',
+                  flexDirection: 'column',
                   position: "absolute",
                   width: "100%",
                   height: "100%",
@@ -147,6 +158,12 @@ export default function PostMenu(props) {
                     {/* More */}
                   </div>
                 </div>
+                <div
+                  css={{
+                    overflowY: 'auto',
+                    paddingBottom: '1rem',
+                  }}
+                >
                 {projectData.map((project, i) => {
                   return <Link
                   key={`post-${i}`}
@@ -161,6 +178,7 @@ export default function PostMenu(props) {
                     </div>
                   </Link>
                 })}
+                </div>
               </div>
 
             </div>

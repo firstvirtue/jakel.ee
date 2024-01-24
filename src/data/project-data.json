@@ -59,12 +59,12 @@
     "aspect": "1.4"
   },
   {
-    "id": "p_202112",
+    "id": "kia-worldwide",
     "link": "/work/kia-worldwide",
     "title": "기아 브랜드 글로벌 쇼케이스",
     "desc": "기아의 환골탈태 브랜드 리론칭",
     "client": "기아",
-    "completed": "12. 2021",
+    "completed": "1. 2021",
     "awards": ["i-awards final winner"],
     "role": ["프론트엔드 리드"],
     "outlink": "https://worldwide.kia.com",
@@ -73,16 +73,30 @@
     "aspect": "1.4"
   },
   {
-    "id": "p_202110",
+    "id": "fujifilm",
     "link": "/work/fujifilm",
     "title": "후지필름",
     "desc": "캔버스 엘리먼트를 처음 적용해 본 프로젝트",
     "client": "후지필름",
-    "completed": "10. 2021",
+    "completed": "10. 2020",
     "role": ["UI 개발"],
     "outlink": "https://fujifilm-korea.co.kr",
     "keywords": ["canvas", "webpack", "es6"],
     "coverImage": "/assets/projects/fujifilm/cover-lg.jpg",
+    "aspect": "1"
+  },
+  {
+    "id": "laneige",
+    "link": "/work/laneige",
+    "title": "라네즈",
+    "desc": "3개국 언어로 구축된 아모레 퍼시픽의 글로벌 뷰티 웹사이트",
+    "client": "아모레퍼시픽",
+    "completed": "8. 2019",
+    "role": ["UI 개발"],
+    "outlink": "https://www.laneige.com",
+    "strikeThrough": true,
+    "keywords": ["gulp", "webpack", "es6"],
+    "coverImage": "/assets/projects/laneige/cover-lg.png",
     "aspect": "1"
   }
 ]
