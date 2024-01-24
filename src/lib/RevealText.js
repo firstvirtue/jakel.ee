@@ -28,7 +28,24 @@ class RevealText {
         console.log(this.originalString[2])
 
         this.element.innerHTML = this.innerHTML
-        this.spans = [...this.element.querySelectorAll('span')]
+        
+        
+        const contents = document.createElement('span')
+        const pillar = document.createElement('span')
+        pillar.innerHTML = this.innerHTML
+        contents.innerHTML = this.innerHTML
+        pillar.style.opacity = 0
+        contents.style.position = 'absolute'
+        contents.style.left = 0
+        contents.style.top = 0
+        contents.style.width = '100%'
+        this.spans = [...contents.querySelectorAll('span')]
+
+        this.element.style.position = 'relative'
+        this.element.innerHTML = ''
+
+        this.element.appendChild(pillar)
+        this.element.appendChild(contents)
     }
 
     animate() {
