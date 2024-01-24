@@ -89,7 +89,7 @@ body {
 }
 
 ::view-transition-new(menu) {
-  animation: 390ms cubic-bezier(0, 0, 0.2, 1) both fade-in,
+  animation: 390ms cubic-bezier(0.4, 0, 1, 1) both fade-in,
     300ms cubic-bezier(0.4, 0, 0.2, 1) forwards slide-from-right;
   animation-delay: 0.2s;
 }
