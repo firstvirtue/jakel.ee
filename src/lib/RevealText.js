@@ -36,12 +36,12 @@ class RevealText {
 
             this.spans[this.idx].innerText = specialChars[Math.floor(Math.random() * specialChars.length)]
             
-            if(this.frame > (this.idx * 8) && this.frame !== 0) {
+            if(this.frame > (this.idx * 10 + 20) && this.frame !== 0) {
                 this.spans[this.idx].innerText = this.originalString[this.idx]
                 this.idx++
             }
             
-            this.frame += this.idx / 5 + 1
+            this.frame += this.idx / 4 + 1
             
             requestAnimationFrame(this.animate.bind(this))
 
