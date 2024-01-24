@@ -63,7 +63,7 @@ export default function Post() {
           <p>
             백화점 사이트는 정말 방대한 사이트인데 웬만한 웹사이트 5배 정도는 되는 것 같았습니다. 페이지 작업자로 참여하게 되었고 초기 설계 단계에서 데스크탑 가로 스크롤의 레이아웃 구성을 맡았습니다.<br/>
             데스크탑 브레이크 포인트에서 다수의 flex를 중첩으로 사용하여 가로 레이아웃을 구현했는데 상당히 까다로웠습니다. 레이아웃의 방향이 다르기 때문에 모션도 상이한데 브레이크 포인트가 바뀔 때 스크립트 초기화에 굉장히 신경써서 작업했습니다.
-            <div><a href="https://dept.galleria.co.kr/" target="_blank" rel="noopener noreferrer">https://dept.galleria.co.kr/</a></div>
+            <a href="https://dept.galleria.co.kr/" target="_blank" rel="noopener noreferrer">https://dept.galleria.co.kr/</a>
           </p>
 
           <figure data-size="lg">

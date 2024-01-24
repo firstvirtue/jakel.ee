@@ -5,6 +5,7 @@ import Image from 'next/image'
 import { css } from '@emotion/react'
 import { useRouter } from 'next/router'
 import { RevealText } from '../../lib/RevealText'
+import { Fragment } from 'react'
 
 export default function Item(props) {
   const { project, index, related, prev, next } = props
@@ -125,7 +126,7 @@ export default function Item(props) {
       <div className='pl-7 pr-7'>
         <div ref={refT} className='mt-5 '>
           { project.keywords.map((x, i) => {
-            return <>{`#${x}`} </>
+            return <Fragment key={`keyword_${i}`}>{`#${x}`} </Fragment>
           }) }
         </div>
 

@@ -3,6 +3,7 @@ import { css } from "@emotion/react"
 import Image from "next/image"
 import { useEffect, useRef } from "react"
 import { RevealText } from "@/lib/RevealText"
+import { Fragment } from "react"
 
 export default function Cover(props) {
 
@@ -62,7 +63,7 @@ export default function Cover(props) {
                     marginBottom: '1rem',
                   }}
                   >
-                    { project.keywords.map((keyword, i) => <>{ `#${keyword} ` }</>) }
+                    { project.keywords.map((keyword, i) => <Fragment key={`keyword_${i}`}>{ `#${keyword} ` }</Fragment>) }
                   </span>
                   <h1
                   className="cover-transition-el text-5xl font-bold"

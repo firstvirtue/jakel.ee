@@ -38,7 +38,7 @@ export default function KeyVisual() {
             <Link href={'/work/samsung-fund'} className="block relative rounded-2xl overflow-hidden p-8 pt-20 shadow-xl"
             style={{'backgroundColor': '#9EBED7'}}>
               <video className="w-full h-full object-cover rounded-2xl shadow-xl" src="/prj.mp4" autoPlay loop muted playsInline
-              style={{'viewTransitionName': ''}}
+              style={{'viewTransitionName': 'q'}}
               ></video>
 
             <div className="absolute top-12 left-16 z-10">
