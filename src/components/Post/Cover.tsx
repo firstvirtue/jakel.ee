@@ -1,10 +1,21 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react"
 import Image from "next/image"
+import { useEffect, useRef } from "react"
+import { RevealText } from "@/lib/RevealText"
 
 export default function Cover(props) {
 
   const { project } = props
+  const refMo = useRef()
+  const refT = useRef()
+
+  useEffect(() => {
+    refMo.current = new RevealText(refT.current)
+    refMo.current.reset()
+    setTimeout(() => { refMo.current.animate() }, 700)
+    
+  }, [])
 
   return (
     <div 
@@ -43,6 +54,7 @@ export default function Cover(props) {
                 `}
                 >
                   <span
+                  ref={refT}
                   className="cover-transition-el"
                   css={{
                     viewTransitionName: 'item_t',
@@ -50,7 +62,7 @@ export default function Cover(props) {
                     marginBottom: '1rem',
                   }}
                   >
-                    { project.keywords.map((keyword, i) => <span key={`keyword${i}`}>{ `#${keyword} ` }</span>) }
+                    { project.keywords.map((keyword, i) => <>{ `#${keyword} ` }</>) }
                   </span>
                   <h1
                   className="cover-transition-el text-5xl font-bold"

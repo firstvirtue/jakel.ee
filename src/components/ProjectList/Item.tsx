@@ -1,10 +1,10 @@
 /** @jsxImportSource @emotion/react */
 import { useEffect, useState, useRef } from 'react'
-import { useProjectStore } from "./store"
 import Link from 'next/link'
-import Image from "next/image"
-import { css } from "@emotion/react"
-import { useRouter } from "next/router"
+import Image from 'next/image'
+import { css } from '@emotion/react'
+import { useRouter } from 'next/router'
+import { RevealText } from '../../lib/RevealText'
 
 export default function Item(props) {
   const { project, index, related, prev, next } = props
@@ -15,6 +15,7 @@ export default function Item(props) {
   const refD = useRef()
   const refWrap = useRef()
   const refBot = useRef()
+  const refMo = useRef()
 
   function setBottomText() {
     if(prev) return 'Prev'
@@ -46,6 +47,12 @@ export default function Item(props) {
     }
 
   }, [related])
+
+  useEffect(() => {
+    refMo.current = new RevealText(refT.current)
+    refMo.current.reset()
+    setTimeout(() => { refMo.current.animate() }, 200)
+  }, [])
 
   return (
     <>
@@ -88,6 +95,11 @@ export default function Item(props) {
         router.push(project.link ?? '#')
         // router.push('/work/samsung-fund')
       }}
+
+      onMouseEnter={e => {
+        refMo.current.reset()
+        refMo.current.animate()
+      }}
     >
       <div className='v-wrap relative overflow-hidden rounded-2xl'
       ref={refImg}
@@ -108,31 +120,12 @@ export default function Item(props) {
         />
         }
         
-
-        {/* <div className='rounded-border absolute w-full h-full top-0 left-0'
-        css={css`
-          border: 15px solid ${project.cardColor ?? '#ffffff'};
-        `}
-        >
-          <div className='rounded-border absolute rounded-3xl'
-          style={{
-            // 'transform': 'scale(1.09)'
-          }}
-          css={css`
-            border: 15px solid ${project.cardColor ?? '#ffffff'};
-            top: -7.5px;
-            left: -7.5px;
-            width: calc(100% + 15px);
-            height: calc(100% + 15px);
-          `}
-          ></div>
-        </div> */}
       </div>
       
       <div className='pl-7 pr-7'>
         <div ref={refT} className='mt-5 '>
           { project.keywords.map((x, i) => {
-            return <span key={`tag-${i}`}>{`#${x}`} </span>
+            return <>{`#${x}`} </>
           }) }
         </div>
 
