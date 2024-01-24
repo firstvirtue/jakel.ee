@@ -37,17 +37,10 @@ class RevealText {
 
             // this.spans[this.idx].style.transform = `translateX(0)`
 
-            this.spans[max(this.idx, this.originalString.length)].style.opacity = 1
-            this.spans[max(this.idx + 1, this.originalString.length)].style.opacity = 1
-            this.spans[max(this.idx + 2, this.originalString.length)].style.opacity = 1
-            this.spans[max(this.idx + 3, this.originalString.length)].style.opacity = 1
-            this.spans[max(this.idx + 4, this.originalString.length)].style.opacity = 1
-
-            this.spans[max(this.idx, this.originalString.length)].innerText = specialChars[Math.floor(Math.random() * specialChars.length)]
-            this.spans[max(this.idx + 1, this.originalString.length)].innerText = specialChars[Math.floor(Math.random() * specialChars.length)]
-            this.spans[max(this.idx + 2, this.originalString.length)].innerText = specialChars[Math.floor(Math.random() * specialChars.length)]
-            this.spans[max(this.idx + 3, this.originalString.length)].innerText = specialChars[Math.floor(Math.random() * specialChars.length)]
-            this.spans[max(this.idx + 4, this.originalString.length)].innerText = specialChars[Math.floor(Math.random() * specialChars.length)]
+            for (let index = 0; index <= 7; index++) {
+                this.spans[max(this.idx + index, this.originalString.length)].style.opacity = 1
+                this.spans[max(this.idx + index, this.originalString.length)].innerText = specialChars[Math.floor(Math.random() * specialChars.length)]
+            }
             
             if(this.frame > (this.idx * 20 + 30) && this.frame !== 0) {
                 this.spans[this.idx].innerText = this.originalString[this.idx]

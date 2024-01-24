@@ -68,7 +68,7 @@
     "awards": ["i-awards final winner"],
     "role": ["프론트엔드 리드"],
     "outlink": "https://worldwide.kia.com",
-    "keywords": ["awards", "canvas", "webpack", "gulp", "es6"],
+    "keywords": ["awards", "canvas", "webpack", "es6"],
     "coverImage": "/assets/projects/kia-worldwide/cover-lg.jpg",
     "aspect": "1.4"
   },
@@ -109,7 +109,7 @@
     "role": ["UI 개발"],
     "outlink": "https://www.hanwhagalleria.co.kr",
     "strikeThrough": false,
-    "keywords": ["gulp", "webpack", "es6", "rxjs", "pjax"],
+    "keywords": ["rxjs", "pjax", "gulp", "webpack"],
     "coverVideo": "/assets/projects/galleria/main.mp4",
     "aspect": "1"
   },
