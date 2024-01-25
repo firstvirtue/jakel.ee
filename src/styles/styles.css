@@ -172,11 +172,13 @@ header .left small {
 
 .slogan {
   font-weight: 700;
-  font-size: 8rem;
+  font-size: 9rem;
   text-align: center;
   padding-top: 12rem;
   padding-bottom: 12rem;
   line-height: 1;
+  overflow: hidden;
+  width: 100%;
 }
 
 .slogan small {
