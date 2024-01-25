@@ -9,6 +9,10 @@ function max(n, length) {
     return n >= length - 1 ? length - 1 : n
 }
 
+let stop = false;
+let frameCount = 0;
+let fps, fpsInterval, startTime, now, then, elapsed;
+
 class RevealText {
     constructor(element) {
         this.idx = 0
@@ -48,24 +52,37 @@ class RevealText {
         this.element.appendChild(contents)
     }
 
+    startAnimating(fps = 60) {
+        fpsInterval = 1000 / fps
+        then = Date.now()
+        startTime = then
+        this.animate()
+    }
+
     animate() {
+
         this.isIntersecting = true
         if(this.idx !== this.originalString.length && this.isIntersecting) {
 
-            // this.spans[this.idx].style.transform = `translateX(0)`
+            now = Date.now();
+            elapsed = now - then;
 
-            for (let index = 0; index <= 7; index++) {
-                this.spans[max(this.idx + index, this.originalString.length)].style.opacity = 1
-                this.spans[max(this.idx + index, this.originalString.length)].innerText = specialChars[Math.floor(Math.random() * specialChars.length)]
+            if(elapsed > fpsInterval) {
+                // this.spans[this.idx].style.transform = `translateX(0)`
+
+                for (let index = 0; index <= 7; index++) {
+                    this.spans[max(this.idx + index, this.originalString.length)].style.opacity = 1
+                    this.spans[max(this.idx + index, this.originalString.length)].innerText = specialChars[Math.floor(Math.random() * specialChars.length)]
+                }
+                
+                if(this.frame > (this.idx * 10 + 20) && this.frame !== 0) {
+                    this.spans[this.idx].innerText = this.originalString[this.idx]
+                    this.idx++
+                }
+                
+                this.frame += this.idx + 1
             }
-            
-            if(this.frame > (this.idx * 20 + 30) && this.frame !== 0) {
-                this.spans[this.idx].innerText = this.originalString[this.idx]
-                this.idx++
-            }
-            
-            this.frame += this.idx / 2 + 1
-            
+
             requestAnimationFrame(this.animate.bind(this))
 
         } else {

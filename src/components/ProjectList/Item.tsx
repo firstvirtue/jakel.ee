@@ -52,7 +52,7 @@ export default function Item(props) {
   useEffect(() => {
     refMo.current = new RevealText(refT.current)
     refMo.current.reset()
-    setTimeout(() => { refMo.current.animate() }, 200)
+    setTimeout(() => { refMo.current.startAnimating() }, 200)
   }, [])
 
   return (
@@ -99,7 +99,7 @@ export default function Item(props) {
 
       onMouseEnter={e => {
         refMo.current.reset()
-        refMo.current.animate()
+        refMo.current.startAnimating()
       }}
     >
       <div className='v-wrap relative overflow-hidden rounded-2xl'

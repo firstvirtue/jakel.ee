@@ -14,7 +14,7 @@ export default function Cover(props) {
   useEffect(() => {
     refMo.current = new RevealText(refT.current)
     refMo.current.reset()
-    setTimeout(() => { refMo.current.animate() }, 700)
+    setTimeout(() => { refMo.current.startAnimating() }, 700)
     
   }, [])
 
