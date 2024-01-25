@@ -87,7 +87,7 @@ class RevealText {
                     this.idx++
                 }
                 
-                this.frame += this.idx + 1
+                this.frame += this.idx * 2 + 1
             }
 
             requestAnimationFrame(this.animate.bind(this))
