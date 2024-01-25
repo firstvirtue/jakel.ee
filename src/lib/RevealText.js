@@ -9,12 +9,18 @@ function max(n, length) {
     return n >= length - 1 ? length - 1 : n
 }
 
-let stop = false;
-let frameCount = 0;
-let fps, fpsInterval, startTime, now, then, elapsed;
+// let stop = false;
+// let frameCount = 0;
+// let fps, fpsInterval, startTime, now, then, elapsed;
 
 class RevealText {
     constructor(element) {
+        this.fpsInterval
+        this.startTime
+        this.now
+        this.then
+        this.elapsed
+
         this.idx = 0
         this.frame = 0
         this.element = element
@@ -53,9 +59,9 @@ class RevealText {
     }
 
     startAnimating(fps = 60) {
-        fpsInterval = 1000 / fps
-        then = Date.now()
-        startTime = then
+        this.fpsInterval = 1000 / fps
+        this.then = Date.now()
+        this.startTime = this.then
         this.animate()
     }
 
@@ -64,10 +70,11 @@ class RevealText {
         this.isIntersecting = true
         if(this.idx !== this.originalString.length && this.isIntersecting) {
 
-            now = Date.now();
-            elapsed = now - then;
+            this.now = Date.now();
+            this.elapsed = this.now - this.then;
 
-            if(elapsed > fpsInterval) {
+            if(this.elapsed > this.fpsInterval) {
+                this.then = this.now - (this.elapsed % this.fpsInterval);
                 // this.spans[this.idx].style.transform = `translateX(0)`
 
                 for (let index = 0; index <= 7; index++) {
