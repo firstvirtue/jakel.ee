@@ -1,0 +1,17 @@
+import { Canvas } from "@react-three/fiber"
+import KeyVisual from "./KeyVisual"
+
+export default function SceneContainer() {
+  return (
+    <div style={{ position: 'absolute', width: 800, height: 800, left: 0 }}>
+    <Canvas
+      colorManagement
+      shadows // highlight-lines
+      camera={{ fov: 70, position: [0, 0, 20] }} eventPrefix="client">
+      <color attach="background" args={['#f0f0f0']} />
+
+      <KeyVisual />
+    </Canvas>
+    </div>
+  )
+}

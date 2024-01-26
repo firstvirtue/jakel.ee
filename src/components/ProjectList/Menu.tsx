@@ -19,7 +19,7 @@ export default function Menu() {
       }}
       >
         <div className="text-white p-4">
-          <h2 className="text-3xl uppercase font-bold pb-11">Featured <br/> Projects</h2>
+          <h2 className="text-3xl uppercase font-bold pb-11">Featured <br/> Work</h2>
           <button className="text-lg pt-2 pb-2" type='button' onClick={e => setCurrentProject('')}>
             All
           </button>

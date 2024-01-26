@@ -132,7 +132,7 @@ export default function PlayGround() {
           style={{
             'height': `${x}px`,
             'width': '8px',
-            'transition': 'all 0.34s ease'
+            'transition': 'all 0.34s ease',
           }}
           ></div>
         })}

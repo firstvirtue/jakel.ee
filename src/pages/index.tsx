@@ -4,7 +4,7 @@ import Image from 'next/image'
 import LinkTransition from '@/components/LinkTransition'
 // import Link from 'next/link'
 import Link from '@/components/transition-link'
-import KeyVisual from './index/KeyVisual'
+import MainCover from './index/MainCover'
 import KeyMessage from './index/KeyMessage'
 import ProjectList from '@/components/ProjectList'
 import PlayGround from './index/PlayGround'
@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <main className="page flex min-h-screen flex-col items-center justify-between pr-24 pl-24">
 
-      <KeyVisual />
+      <MainCover />
       <KeyMessage />
       <ProjectList />
 
