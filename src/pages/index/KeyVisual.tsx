@@ -81,7 +81,6 @@ function VideoMaterial({ url }) {
   
   const texture = useVideoTexture(url)
   const [hovered, setHover] = useState(false)
-  // return <meshBasicMaterial map={texture} toneMapped={false} />
   return <imageFadeMaterial tex={texture} mouse={[0.5, 0.5]} toneMapped={false} />
 }
 

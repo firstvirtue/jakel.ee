@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@emotion/react": "^11.11.3",
+    "@react-three/cannon": "^6.6.0",
     "@react-three/drei": "^9.96.5",
     "@react-three/fiber": "^8.15.15",
     "@types/three": "^0.160.0",
