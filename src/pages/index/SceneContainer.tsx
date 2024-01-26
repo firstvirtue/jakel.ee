@@ -35,10 +35,9 @@ export default function SceneContainer() {
 
       <KeyVisual />
 
-      <Frame id="02" name={`Hello\nWorld`} author="seoeunggyo5" position={[1.42, 0.3, 0]}>
+      <Frame id="02" name={`Hello\nWorld`} author="@seoeunggyo5" position={[1.42, 0.3, 0]}>
         <AppScene />
       </Frame>
-
     <Rig />
     </Canvas>
     </div>
@@ -65,6 +64,7 @@ function Frame({ id, name, author, bg, width = 1.3, height = 1, children, ...pro
       <Text fontSize={0.04} anchorX="right" position={[0.0, -0.377, 0.01]} material-toneMapped={false}>
         {author}
       </Text>
+      {/* window.history.pushState("object or string", "Title", "/new-url") */}
       <mesh name={id} onClick={(e) => (e.stopPropagation(), setIsView(true))}
       // onPointerOver={(e) => hover(true)} onPointerOut={() => hover(false)}
       >
