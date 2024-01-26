@@ -21,7 +21,7 @@ export default function KeyMessage() {
         display: 'block',
         fontSize: '2rem',
         fontWeight: '400',
-        marginBottom: '5rem',
+        marginBottom: '6rem',
         whiteSpace: 'nowrap',
       }}
     >
@@ -34,14 +34,14 @@ export default function KeyMessage() {
       I want them to say:<br/> 
       He feels deeply,<br/> 
       He feels tenderly."<br/>
-      <span css={{display: 'block', marginTop: '2rem', textAlign: 'right', fontSize: '2rem'}}>- Loving Vincent</span>
+      <span css={{display: 'block', position: 'absolute', bottom: '18rem', right: 0, textAlign: 'right', fontSize: '2rem'}}>Loving Vincent</span>
 
       <span 
       css={{
         display: 'block',
         fontSize: '2rem',
         fontWeight: '400',
-        marginTop: '5rem',
+        marginTop: '6rem',
         whiteSpace: 'nowrap',
       }}
     >

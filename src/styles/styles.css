@@ -171,6 +171,7 @@ header .left small {
 }
 
 .slogan {
+  position: relative;
   font-weight: 700;
   font-size: 9rem;
   text-align: center;
