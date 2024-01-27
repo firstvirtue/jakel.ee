@@ -118,8 +118,8 @@ function Rig({ position = new THREE.Vector3(0, 0, 2), focus = new THREE.Vector3(
     controls?.setLookAt(...position.toArray(), ...focus.toArray(), true)
 
     console.log('CameraControls:: ', controls)
-    controls && (controls.mouseButtons.wheel = 0)
   }, [isView])
+  controls && (controls.mouseButtons.wheel = 0)
 
   return <CameraControls makeDefault minPolarAngle={0} maxPolarAngle={Math.PI / 2} />
 }

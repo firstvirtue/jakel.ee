@@ -9,7 +9,11 @@ export default function KeyVisual({}) {
   const size = useAspect(200, 100)
   // console.log('size', size)
   const ref = useRef()
-  const { camera, mouse } = useThree()
+  const { camera, pointer } = useThree()
+  const [viewportSize, setViewportSize] = useState({
+    width: 0,
+    height: 0
+  })
   const [geoSize, setGeoSize] = useState({
     width: 1.5,
     height: 1.2
@@ -21,8 +25,12 @@ export default function KeyVisual({}) {
       const fov = camera.fov * (Math.PI / 180)
       const viewport_height = 2 * Math.tan(fov / 2) * camera.position.z
       const viewport_width = viewport_height * camera.aspect
+      setViewportSize({
+        width: viewport_width,
+        height: viewport_height
+      })
 
-      // console.log('viewport:: ', width, height)
+      console.log('viewport:: ', viewport_width, viewport_height)
 
       // const htmlElement = htmlElementr3fMesh.current;
       const htmlElement = document.querySelector('#key-visual')
@@ -32,14 +40,17 @@ export default function KeyVisual({}) {
       // Get the position and size of the HTML element
       const htmlRect = htmlElement.getBoundingClientRect()
 
+      const elSizeX = viewport_width * htmlRect.width / window.innerWidth
+      const elSizeY = viewport_height * htmlRect.height / window.innerHeight
+
       setGeoSize({
-        width: viewport_width * htmlRect.width / window.innerWidth,
-        height: viewport_height * htmlRect.height / window.innerHeight
+        width: elSizeX,
+        height: elSizeY
       })
 
       // Set the position and size of the R3F mesh
-      r3fMesh.position.x = -0.74
-      r3fMesh.position.y = -0.47
+      r3fMesh.position.x = -(viewport_width / 2) + (elSizeX / 2) + ((htmlRect.left) / window.innerWidth) * viewport_width
+      r3fMesh.position.y = (viewport_height / 2) - (elSizeY / 2) - (htmlRect.top / window.innerHeight) * viewport_height
       // r3fMesh.scale.set(htmlRect.width / window.innerWidth, htmlRect.height / window.innerHeight, 1)
 
       console.log('pos, scale', r3fMesh.position, r3fMesh.scale)
@@ -55,12 +66,17 @@ export default function KeyVisual({}) {
     };
   }, []);
 
-  useFrame(() => {
+  useFrame(({pointer}) => {
     if(ref.current.material.uniforms) {
       // ref.current.material.needsUpdate = true
 
-      ref.current.material.uniforms.mouse.value.x = THREE.MathUtils.lerp(ref.current.material.uniforms.mouse.value.x, (mouse.x + 1) / 2, 0.05)
-      ref.current.material.uniforms.mouse.value.y = THREE.MathUtils.lerp(ref.current.material.uniforms.mouse.value.y, (mouse.y + 1) / 2, 0.05)
+      let refineX = (pointer.x + 1) / 2
+      let refineY = (pointer.y + 1) / 2
+      // refineX = refineX - r3fMesh.position.x
+
+      ref.current.material.uniforms.mouse.value.x = THREE.MathUtils.lerp(ref.current.material.uniforms.mouse.value.x, refineX, 0.05)
+      ref.current.material.uniforms.mouse.value.y = THREE.MathUtils.lerp(ref.current.material.uniforms.mouse.value.y, refineY, 0.05)
+      
       
       // console.log((mouse.x + 1) / 2, (mouse.y + 1) / 2)
     }

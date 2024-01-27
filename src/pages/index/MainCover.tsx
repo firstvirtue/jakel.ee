@@ -38,17 +38,19 @@ export default function MainCover() {
 
             <Link href={'/work/samsung-fund'} className="block relative rounded-2xl overflow-hidden p-8 pt-20 shadow-xl"
             style={{'backgroundColor': '#9EBED7'}}>
-              <video id="key-visual" className="w-full h-full object-cover rounded-2xl shadow-xl" src="/prj.mp4" autoPlay loop muted playsInline
+              <video id="key-visual" className="w-full h-full object-cover rounded-2xl shadow-xl opacity-0" src="/prj.mp4"
               style={{'viewTransitionName': 'q'}}
               ></video>
 
+              {/* <div id="key-visual" className="w-full h-full object-cover rounded-2xl shadow-xl"></div> */}
+
             <div className="absolute top-12 left-16 z-10">
             {/* <svg className="w-7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="m100,0H0v100C0,44.77,44.77,0,100,0Z" fill="#F9F8F6"></path></svg> */}
-              {/* <div className="goo">
+              <div className="goo">
                 React를 이용한
                 데이터 핸들링<br />
                 삼성자산운용 통합 플랫폼
-              </div> */}
+              </div>
               {/* <svg className="w-7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="m100,0H0v100C0,44.77,44.77,0,100,0Z" fill="#F9F8F6"></path></svg> */}
             </div>
             </Link>
