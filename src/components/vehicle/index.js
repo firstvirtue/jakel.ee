@@ -53,7 +53,7 @@ const Vehicle = ({ radius = 0.2, width = 0.3, height = 0, front = 0.38, back = -
     chassis.current.api.position.set(0, 0.5, 0);
     chassis.current.api.velocity.set(0, 0, 0);
     chassis.current.api.angularVelocity.set(0, 0.5, 0);
-    chassis.current.api.rotation.set(0, -Math.PI / 4, 0);
+    chassis.current.api.rotation.set(0, -Math.PI / 5, 0);
   };
 
   useFrame(() => {

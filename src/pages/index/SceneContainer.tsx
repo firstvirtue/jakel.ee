@@ -113,7 +113,7 @@ function Rig({ position = new THREE.Vector3(0, 0, 2), focus = new THREE.Vector3(
     const active = scene.getObjectByName('02')
     if (isView) {
       active.parent.localToWorld(position.set(0, 0.5, 0.25))
-      active.parent.localToWorld(focus.set(0, 0, -3))
+      active.parent.localToWorld(focus.set(0, 0.5, 0))
     }
     controls?.setLookAt(...position.toArray(), ...focus.toArray(), true)
 
