@@ -151,7 +151,7 @@ export const AppScene = () => {
   console.log('Scene:: ')
   
   return (
-    <>
+    <group scale={[0.3, 0.3, 0.3]}>
       <color attach="background" args={['#f0f0f0']} />        
       <ambientLight intensity={0.5} />
       <directionalLight color="white" position={[0, 22, 15]} 
@@ -185,8 +185,6 @@ export const AppScene = () => {
         <Vehicle position={[0, 2, 0]} rotation={[0, -Math.PI / 4, 0]} angularVelocity={[0, 1, 0]} wheelRadius={2} />
         {/* </Debug> */}
       </Physics>
-      
-      {/* <Rig /> */}
-    </>
+    </group>
   )
 }

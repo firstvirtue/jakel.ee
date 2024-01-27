@@ -47,7 +47,7 @@ const Vehicle = ({ radius = 0.2, width = 0.3, height = 0, front = 0.38, back = -
     indexUpAxis: 1
   }));
 
-  const { yaw } = useFollowCam(chassis, [0, 13, 0.5])
+  const { yaw } = useFollowCam(chassis, [0, 5, 0.5])
 
   const resetCar = () => {
     chassis.current.api.position.set(0, 0.5, 0);
@@ -74,7 +74,7 @@ const Vehicle = ({ radius = 0.2, width = 0.3, height = 0, front = 0.38, back = -
   return (
     <>
       <group ref={vehicle} position={[0, 0, 0]}>
-        <Drifter ref={chassis} rotation={props.rotation} position={props.position} angularVelocity={props.angularVelocity} />
+        <Drifter name={'vehicle'} ref={chassis} rotation={props.rotation} position={props.position} angularVelocity={props.angularVelocity} />
         <Wheel ref={wheel1} radius={radius} leftSide />
         <Wheel ref={wheel2} radius={radius} />
         <Wheel ref={wheel3} radius={radius} leftSide />
