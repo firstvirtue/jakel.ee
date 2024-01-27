@@ -28,7 +28,7 @@ export function Header() {
       </div>
       <div className="menu-container">
         <Link href="/work" className="">Work</Link>
-        <a href="#" className="">About</a>
+        <Link href="/about" className="">About</Link>
         {/* <a href="#" className="">Articles</a> */}
         <a href="#" className="contact">Contact</a>
 

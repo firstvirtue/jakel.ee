@@ -20,7 +20,7 @@ const useIntoStore = create<State>((set) => ({
 }))
 
 export { useIntoStore }
-
+const cameraVector = [0, 0, 2]
 
 extend(geometry)
 // const regular = import('@pmndrs/assets/fonts/inter_regular.woff')
@@ -57,11 +57,11 @@ export default function SceneContainer() {
     <Canvas
       colorManagement
       shadows // highlight-lines
-      camera={{ fov: 70, position: [0, 0, 2] }} eventPrefix="client">
+      camera={{ fov: 70, position: cameraVector }} eventPrefix="client">
 
       <KeyVisual />
 
-      <Frame id="02" name={`Hello\nWorld`} author="@seoeunggyo5" position={[1.42, 0.3, 0]}>
+      <Frame id="02" name={`Hello\nWorld`} author="@seoeunggyo5">
         <AppScene />
       </Frame>
       <Rig />
@@ -161,7 +161,7 @@ function Frame({ id, name, author, bg, width = 1.3, height = 1, children, ...pro
   )
 }
 
-function Rig({ position = new THREE.Vector3(0, 0, 2), focus = new THREE.Vector3(0, 0, 0) }) {
+function Rig({ position = new THREE.Vector3(cameraVector[0], cameraVector[1], cameraVector[2]), focus = new THREE.Vector3(0, 0, 0) }) {
   const { controls, scene } = useThree()
   const isView = useIntoStore((state) => state.isView)
   
