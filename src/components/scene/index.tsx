@@ -151,7 +151,7 @@ export const AppScene = () => {
   console.log('Scene:: ')
   
   return (
-    <group scale={[0.3, 0.3, 0.3]}>
+    <group scale={[0.2, 0.2, 0.2]}>
       <color attach="background" args={['#f0f0f0']} />        
       <ambientLight intensity={0.5} />
       <directionalLight color="white" position={[0, 22, 15]} 

@@ -40,7 +40,7 @@ export default function KeyVisual({}) {
       // Get the position and size of the HTML element
       const htmlRect = htmlElement.getBoundingClientRect()
 
-      const elSizeX = viewport_width * htmlRect.width / window.innerWidth
+      const elSizeX = viewport_width * htmlRect.width / (window.innerWidth - 16)
       const elSizeY = viewport_height * htmlRect.height / window.innerHeight
 
       setGeoSize({
@@ -49,9 +49,9 @@ export default function KeyVisual({}) {
       })
 
       // Set the position and size of the R3F mesh
-      r3fMesh.position.x = -(viewport_width / 2) + (elSizeX / 2) + ((htmlRect.left) / window.innerWidth) * viewport_width
+      r3fMesh.position.x = -(viewport_width / 2) + (elSizeX / 2) + ((htmlRect.left) / (window.innerWidth - 16)) * viewport_width
       r3fMesh.position.y = (viewport_height / 2) - (elSizeY / 2) - (htmlRect.top / window.innerHeight) * viewport_height
-      // r3fMesh.scale.set(htmlRect.width / window.innerWidth, htmlRect.height / window.innerHeight, 1)
+      // r3fMesh.scale.set(htmlRect.width / (window.innerWidth - 16), htmlRect.height / window.innerHeight, 1)
 
       console.log('pos, scale', r3fMesh.position, r3fMesh.scale)
     };

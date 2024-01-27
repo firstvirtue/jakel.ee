@@ -45,7 +45,7 @@ svg {
 canvas {
   touch-action: none;
   opacity: 0;
-  animation: fade-in 5s ease 1s forwards;
+  animation: fade-in 1s ease-out 0.5s forwards;
 }
 
 #freg canvas {

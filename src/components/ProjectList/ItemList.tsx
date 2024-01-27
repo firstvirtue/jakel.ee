@@ -81,14 +81,16 @@ export default function ItemList() {
 
   useEffect(() => {
     
-    const h = arrangeMasonryLayout(
-      document.querySelectorAll('.card'),
-      document.querySelector('.item-container')?.clientWidth,
-      document.querySelector('.card')?.clientWidth
-    )
-
-    document.querySelector('.item-container').parentNode.style.height = `${h + 96 + 96}px`
-    // console.log(h)
+    setTimeout(() => {
+      const h = arrangeMasonryLayout(
+        document.querySelectorAll('.card'),
+        document.querySelector('.item-container')?.clientWidth,
+        document.querySelector('.card')?.clientWidth
+      )
+  
+      document.querySelector('.item-container').parentNode.style.height = `${h + 96 + 96}px`
+      // console.log(h)
+    }, 200)
 
   }, [selectedItems])
   

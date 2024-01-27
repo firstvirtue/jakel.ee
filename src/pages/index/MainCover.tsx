@@ -77,7 +77,7 @@ export default function MainCover() {
           </div>
           <div className="flex flex-col justify-end gap-8 w-1/3">
 
-            <div className="h-2/4 rounded-2xl overflow-hidden"
+            <div id="portal-visual" className="h-2/4 rounded-2xl overflow-hidden"
             style={{
               "backgroundColor": "#B8D2D8", 
               "width": "92%", 
