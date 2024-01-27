@@ -68,12 +68,12 @@ export default function useFollowCam(ref, offset) {
 
     // [NOTE] lerp 사용 시 프레임 끊김.
     // pivot.position.lerp(worldPosition, delta * 10)
-    alt.position.y = THREE.MathUtils.lerp(alt.position.y, offset[1],0.01)
+    alt.position.y = THREE.MathUtils.lerp(alt.position.y, offset[1], 0.015)
 
     pivot.position.copy(worldPosition)
     _.camera.lookAt(worldPosition)
     } else {
-      alt.position.y = THREE.MathUtils.lerp(alt.position.y, 0,0.01)
+      alt.position.y = THREE.MathUtils.lerp(alt.position.y, 0, 0.01)
     }
   })
 
