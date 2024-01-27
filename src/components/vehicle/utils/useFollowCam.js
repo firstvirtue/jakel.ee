@@ -1,8 +1,12 @@
 import { useThree, useFrame } from '@react-three/fiber'
 import { useEffect, useMemo } from 'react'
 import { Object3D, Vector3 } from 'three'
+import * as THREE from "three"
+import { useIntoStore } from '@/pages/index/SceneContainer'
 
 export default function useFollowCam(ref, offset) {
+  const isView = useIntoStore((state) => state.isView)
+
   const { scene, camera } = useThree()
 
   const pivot = useMemo(() => new Object3D(), [])
@@ -33,14 +37,22 @@ export default function useFollowCam(ref, offset) {
   }
 
   useEffect(() => {
+    if(isView) {
+      
+      pitch.add(camera)
+      camera.position.set(offset[0], 0, offset[2])
+      
+    } else {
+      pitch.remove(camera)
+    }
+  }, [isView])
+
+  useEffect(() => {
     scene.add(pivot)
     pivot.add(alt)
-    alt.position.y = offset[1]
     alt.add(yaw)
     yaw.add(pitch)
-    pitch.add(camera)
-    // pitch.remove(camera)
-    camera.position.set(offset[0], 0, offset[2])
+    
 
     // document.addEventListener('mousemove', onDocumentMouseMove)
     // document.addEventListener('mousewheel', onDocumentMouseWheel, { passive: false })
@@ -51,13 +63,18 @@ export default function useFollowCam(ref, offset) {
   }, [camera])
 
   useFrame((_, delta) => {
+    if(isView) {
     ref.current.getWorldPosition(worldPosition)
 
     // [NOTE] lerp 사용 시 프레임 끊김.
     // pivot.position.lerp(worldPosition, delta * 10)
+    alt.position.y = THREE.MathUtils.lerp(alt.position.y, offset[1],0.01)
 
     pivot.position.copy(worldPosition)
     _.camera.lookAt(worldPosition)
+    } else {
+      alt.position.y = THREE.MathUtils.lerp(alt.position.y, 0,0.01)
+    }
   })
 
   return { pivot, alt, yaw, pitch }

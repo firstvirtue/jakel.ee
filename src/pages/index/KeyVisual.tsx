@@ -7,7 +7,7 @@ extend(geometry)
 
 export default function KeyVisual({}) {
   const size = useAspect(200, 100)
-  console.log('size', size)
+  // console.log('size', size)
   const ref = useRef()
   const { camera, mouse } = useThree()
   const [geoSize, setGeoSize] = useState({

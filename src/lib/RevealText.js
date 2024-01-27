@@ -35,8 +35,6 @@ class RevealText {
             this.innerHTML += `<span>${ this.originalString[index] }</span>`
         }
 
-        console.log(this.originalString[2])
-
         this.element.innerHTML = this.innerHTML
         
         

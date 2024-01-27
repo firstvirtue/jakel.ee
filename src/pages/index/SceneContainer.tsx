@@ -19,12 +19,39 @@ const useIntoStore = create<State>((set) => ({
   setIsView: (isView) => set({ isView }),
 }))
 
+export { useIntoStore }
+
 
 extend(geometry)
 // const regular = import('@pmndrs/assets/fonts/inter_regular.woff')
 // const medium = import('@pmndrs/assets/fonts/inter_medium.woff')
 
 export default function SceneContainer() {
+  const isView = useIntoStore((state) => state.isView)
+  const setIsView = useIntoStore((state) => state.setIsView)
+
+  useEffect(() => {
+    if(isView) {
+      document.body.style.position = 'fixed'
+    } else {
+      document.body.style.position = ''
+    }
+  }, [isView])
+
+  useEffect(() => {
+    function handlePopState() {
+      console.log(location.href)
+      setIsView(false)
+    }
+
+    window.addEventListener('popstate', handlePopState)
+
+    return () => {
+      window.removeEventListener('popstate', handlePopState)
+    }
+    
+  }, [])
+
   return (
     <div style={{ position: 'absolute', width: '100%', height: '100vh', left: 0 }}>
     <Canvas
@@ -65,7 +92,7 @@ function Frame({ id, name, author, bg, width = 1.3, height = 1, children, ...pro
         {author}
       </Text>
       {/* window.history.pushState("object or string", "Title", "/new-url") */}
-      <mesh name={id} onClick={(e) => (e.stopPropagation(), setIsView(true))}
+      <mesh name={id} onClick={(e) => (e.stopPropagation(), window.history.pushState('', '', '/hello-world'), setIsView(true))}
       // onPointerOver={(e) => hover(true)} onPointerOut={() => hover(false)}
       >
         <roundedPlaneGeometry args={[width, height, 0.1]} />
@@ -92,7 +119,7 @@ function Rig({ position = new THREE.Vector3(0, 0, 2), focus = new THREE.Vector3(
 
     console.log('CameraControls:: ', controls)
     controls && (controls.mouseButtons.wheel = 0)
-  })
+  }, [isView])
 
   return <CameraControls makeDefault minPolarAngle={0} maxPolarAngle={Math.PI / 2} />
 }
