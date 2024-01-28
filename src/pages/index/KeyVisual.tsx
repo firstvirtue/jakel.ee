@@ -1,4 +1,4 @@
-import { Suspense, useRef, useState, useEffect } from 'react'
+import { Suspense, useRef, useState, useEffect, useMemo } from 'react'
 import { Canvas, extend, useFrame, useThree} from "@react-three/fiber"
 import { useAspect, useVideoTexture, useTexture, shaderMaterial } from '@react-three/drei'
 import * as THREE from "three"
@@ -18,6 +18,29 @@ export default function KeyVisual({}) {
     width: 1.5,
     height: 1.2
   })
+  const xMin = useMemo(() => {
+    const r3fMesh = ref.current
+    if(!r3fMesh) return 0
+    return r3fMesh.position.x - geoSize.width / 2
+  }, [ref, geoSize])
+
+  const xMax = useMemo(() => {
+    const r3fMesh = ref.current
+    if(!r3fMesh) return 0
+    return r3fMesh.position.x + geoSize.width / 2
+  }, [ref, geoSize])
+
+  const yMin = useMemo(() => {
+    const r3fMesh = ref.current
+    if(!r3fMesh) return 0
+    return r3fMesh.position.y - geoSize.height / 2
+  }, [ref, geoSize])
+
+  const yMax = useMemo(() => {
+    const r3fMesh = ref.current
+    if(!r3fMesh) return 0
+    return r3fMesh.position.y + geoSize.height / 2
+  }, [ref, geoSize])
 
   useEffect(() => {
     const updateR3FMesh = () => {
@@ -68,16 +91,28 @@ export default function KeyVisual({}) {
 
   useFrame(({pointer}) => {
     if(ref.current.material.uniforms) {
-      // ref.current.material.needsUpdate = true
+      const r3fMesh = ref.current
 
-      let refineX = (pointer.x + 1) / 2
-      let refineY = (pointer.y + 1) / 2
-      // refineX = refineX - r3fMesh.position.x
+      const x = pointer.x * viewportSize.width / 2
+      const y = pointer.y * viewportSize.height / 2
 
-      ref.current.material.uniforms.mouse.value.x = THREE.MathUtils.lerp(ref.current.material.uniforms.mouse.value.x, refineX, 0.05)
-      ref.current.material.uniforms.mouse.value.y = THREE.MathUtils.lerp(ref.current.material.uniforms.mouse.value.y, refineY, 0.05)
-      
-      
+      if(x > xMin && x < xMax && y > yMin && y < yMax) {
+        const rangeX = (xMax + 3) - (xMin + 3)
+        const progressValueX = (x + 3) - (xMin + 3)
+        const progressX = progressValueX / rangeX * 1
+
+        const rangeY = (yMax + 3) - (yMin + 3)
+        const progressValueY = (y + 3) - (yMin + 3)
+        const progressY = progressValueY / rangeY * 1
+        
+
+        ref.current.material.uniforms.mouse.value.x = THREE.MathUtils.lerp(ref.current.material.uniforms.mouse.value.x, progressX, 0.1)
+        ref.current.material.uniforms.mouse.value.y = THREE.MathUtils.lerp(ref.current.material.uniforms.mouse.value.y, progressY, 0.1)
+      } else {
+        // ref.current.material.uniforms.mouse.value.x = THREE.MathUtils.lerp(ref.current.material.uniforms.mouse.value.x, 0.5, 0.05)
+        // ref.current.material.uniforms.mouse.value.y = THREE.MathUtils.lerp(ref.current.material.uniforms.mouse.value.y, 0.5, 0.05)
+      }
+
       // console.log((mouse.x + 1) / 2, (mouse.y + 1) / 2)
     }
 
