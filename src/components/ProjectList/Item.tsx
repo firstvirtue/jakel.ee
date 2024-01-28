@@ -123,8 +123,8 @@ export default function Item(props) {
         
       </div>
       
-      <div className='pl-7 pr-7'>
-        <div ref={refT} className='mt-5 '>
+      <div className={`${related ? 'pl-7 pr-7 pt-5' : 'pt-5'}`}>
+        <div ref={refT} className=''>
           { project.keywords.map((x, i) => {
             return <Fragment key={`keyword_${i}`}>{`#${x}`} </Fragment>
           }) }

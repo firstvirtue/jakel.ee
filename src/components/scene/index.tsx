@@ -151,6 +151,7 @@ export const AppScene = () => {
   console.log('Scene:: ')
   
   return (
+    // rotation={[0.3, 0.2, 0]}
     <group scale={[0.2, 0.2, 0.2]}>
       <color attach="background" args={['#f0f0f0']} />        
       <ambientLight intensity={0.5} />
