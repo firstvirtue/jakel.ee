@@ -50,9 +50,11 @@ export default function Item(props) {
   }, [related])
 
   useEffect(() => {
-    refMo.current = new RevealText(refT.current)
-    refMo.current.reset()
-    setTimeout(() => { refMo.current.startAnimating() }, 200)
+    if(!refMo.current) {
+      refMo.current = new RevealText(refT.current)
+      refMo.current.reset()
+      setTimeout(() => { refMo.current.startAnimating() }, 200)
+    }
   }, [])
 
   return (
