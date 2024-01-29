@@ -1,11 +1,13 @@
 import { Suspense, useRef, useState, useEffect, useMemo } from 'react'
 import { Canvas, extend, useFrame, useThree} from "@react-three/fiber"
-import { useAspect, useVideoTexture, useTexture, shaderMaterial } from '@react-three/drei'
+import { useCursor, useAspect, useVideoTexture, useTexture, shaderMaterial } from '@react-three/drei'
 import * as THREE from "three"
 import { easing, geometry } from 'maath'
 extend(geometry)
 
 export default function KeyVisual({}) {
+  const [hovered, hover] = useState(false)
+  useCursor(hovered)
   const size = useAspect(200, 100)
   // console.log('size', size)
   const ref = useRef()
@@ -119,7 +121,8 @@ export default function KeyVisual({}) {
   })
 
   return(<>
-    <mesh ref={ref}>
+    <mesh ref={ref} 
+    onPointerOver={(e) => hover(true)} onPointerOut={() => hover(false)}>
       <roundedPlaneGeometry args={[geoSize.width, geoSize.height, 0.05]}/>
       <Suspense fallback={<FallbackMaterial url="/qt.png" />}>
         <VideoMaterial url="/prj.mp4" />

@@ -71,6 +71,8 @@ export default function SceneContainer() {
 }
 
 function Frame({ id, name, author, bg, width = 1.3, height = 1, children, ...props }) {
+  const [hovered, hover] = useState(false)
+  useCursor(hovered)
   const isView = useIntoStore((state) => state.isView)
   const setIsView = useIntoStore((state) => state.setIsView)
 
@@ -133,8 +135,6 @@ function Frame({ id, name, author, bg, width = 1.3, height = 1, children, ...pro
 
   const portal = useRef()
   
-  const [hovered, hover] = useState(false)
-  // useCursor(hovered)
   useFrame((state, dt) => easing.damp(portal.current, 'blend', isView ? 1 : 0, 0.2, dt))
   return (
     <group {...props} ref={ref}>
@@ -149,7 +149,7 @@ function Frame({ id, name, author, bg, width = 1.3, height = 1, children, ...pro
       </Text>
       {/* window.history.pushState("object or string", "Title", "/new-url") */}
       <mesh name={id} onClick={(e) => (e.stopPropagation(), window.history.pushState('', '', '/hello-world'), setIsView(true))}
-      // onPointerOver={(e) => hover(true)} onPointerOut={() => hover(false)}
+      onPointerOver={(e) => hover(true)} onPointerOut={() => hover(false)}
       >
         <roundedPlaneGeometry args={[frameSize.width, frameSize.height, 0.05]} />
         <MeshPortalMaterial ref={portal} side={THREE.DoubleSide}>
