@@ -30,7 +30,7 @@ export function Header() {
         <Link href="/work" className="">Work</Link>
         <Link href="/about" className="">About</Link>
         {/* <a href="#" className="">Articles</a> */}
-        <a href="#" className="contact">Contact</a>
+        <Link href="#" className="contact">Contact</Link>
 
         <div className="social flex gap-2 ml-8">
           <a className="w-7 h-7 p-1" href="https://www.linkedin.com/in/firstvirtue/" target="_blank"><img className="social-icon" src='/assets/icons/linkedin-svgrepo-com.svg' /></a>
