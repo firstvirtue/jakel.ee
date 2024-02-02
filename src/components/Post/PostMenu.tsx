@@ -19,21 +19,17 @@ export default function PostMenu(props) {
   function handleProgress() {
     if(progress >= 0.99) {
       setIsOpen(true)
-      setProgress(0)
     }
 
     setProgress(progress + 0.1)
   }
 
   useEffect(() => {
-    console.log(isUp)
-  }, [isUp])
-
-  useEffect(() => {
     if(isOpen) {
       setIsUp(true)
       setTimeout(() => {
         setIsUp(false)
+        setProgress(0)
       }, 400)
     }
   }, [isOpen])
@@ -145,7 +141,7 @@ export default function PostMenu(props) {
                   height: '100%',
                   top: 'calc(100% - 50px)',
                   left: 0,
-                  transition: 'transform 0.5s ease',
+                  transition: progress > 0.99 ? 'transform 0.5s ease' : 'transform 0.34s ease',
                   backgroundColor: '#080808',
                   zIndex: 1,
                   transform: isOpen ? 'translate3d(0, calc(-100% + 50px), 0)' : 'none',
