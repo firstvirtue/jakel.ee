@@ -91,7 +91,7 @@ class RevealText {
             requestAnimationFrame(this.animate.bind(this))
 
         } else {
-            console.log('done')
+            // console.log('done')
         }
     }
 

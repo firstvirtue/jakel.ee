@@ -123,7 +123,7 @@ export default function ItemList() {
         
         { selectedItems.map((item, i) => {
           return <li 
-            className="card 2xl:w-1/4 xl:1/3 lg:w-1/2 p-2"
+            className="card 2xl:w-1/4 xl:w-1/3 lg:w-1/2 p-2"
             css={{
               transition: 'all 0.34s',
             }}
