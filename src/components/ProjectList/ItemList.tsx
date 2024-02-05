@@ -1,3 +1,4 @@
+/** @jsxImportSource @emotion/react */
 import { useEffect, useState } from 'react'
 import projectData from '../../data/project-data.json'
 import { useProjectStore } from "../store"
@@ -5,6 +6,8 @@ import Item from './Item'
 import { AnimatePresence, motion } from 'framer-motion'
 
 import MasonryLayout from '../MasonryLayout'
+import { debounce } from '@/lib/helper'
+import { css } from '@emotion/react'
 
 export default function ItemList() {
   const currentProject = useProjectStore((state) => state.currentProject)
@@ -80,8 +83,8 @@ export default function ItemList() {
   }
 
   useEffect(() => {
-    
-    setTimeout(() => {
+
+    const arrangeLayout = debounce(() => {
       const h = arrangeMasonryLayout(
         document.querySelectorAll('.card'),
         document.querySelector('.item-container')?.clientWidth,
@@ -90,8 +93,14 @@ export default function ItemList() {
   
       document.querySelector('.item-container').parentNode.style.height = `${h + 96 + 96}px`
       // console.log(h)
-    }, 200)
+    })
+    
+    arrangeLayout()
+    window.addEventListener('resize', arrangeLayout)
 
+    return () => {
+      window.removeEventListener('resize', arrangeLayout)
+    }
   }, [selectedItems])
   
   return (
@@ -114,7 +123,10 @@ export default function ItemList() {
         
         { selectedItems.map((item, i) => {
           return <li 
-            className="card w-1/4 p-2"
+            className="card 2xl:w-1/4 xl:1/3 lg:w-1/2 p-2"
+            css={{
+              transition: 'all 0.34s',
+            }}
             key={`project-${item.id}`}>
               <motion.div
                 variants={boxChildVariants}
