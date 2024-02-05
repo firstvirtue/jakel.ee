@@ -1,4 +1,4 @@
-import { useProjectStore } from "./store"
+import { useProjectStore } from "../store"
 
 export default function Menu() {
   const setCurrentProject = useProjectStore((state) => state.setCurrentProject)

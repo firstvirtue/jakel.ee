@@ -6,7 +6,7 @@ import SceneContainer from "./SceneContainer"
 
 export default function MainCover() {
   const dd = (() => {
-    const date = new Date()
+    const date = new Date('2024-02-12')
 
     return `${date.getFullYear()}/${date.getMonth() + 1}/${date.getDate()}`
   })()
@@ -97,11 +97,6 @@ export default function MainCover() {
       </div>
 
       <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', pointerEvents: 'none' }}>
-        <a href="https://pmnd.rs/" style={{ position: 'absolute', bottom: 40, left: 90, fontSize: '13px', color: '#777' }}>
-          이상오 (Jake Lee, firstvirtue)
-          <br />
-          He feels deeply, he feels tenderly
-        </a>
         <div style={{ position: 'absolute', bottom: 40, right: 40, fontSize: '13px' }}>
           
           {/* 

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import projectData from '../../data/project-data.json'
-import { useProjectStore } from "./store"
+import { useProjectStore } from "../store"
 import Item from './Item'
 import { AnimatePresence, motion } from 'framer-motion'
 

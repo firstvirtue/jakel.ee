@@ -118,7 +118,7 @@ function Frame({ id, name, author, bg, width = 1.3, height = 1, children, ...pro
 
       // Set the position and size of the R3F mesh
       r3fMesh.position.x = -(viewport_width / 2) + (elSizeX / 2) + ((htmlRect.left) / (window.innerWidth - 16)) * viewport_width
-      r3fMesh.position.y = (viewport_height / 2) - (elSizeY / 2) - (htmlRect.top / window.innerHeight) * viewport_height
+      r3fMesh.position.y = (viewport_height / 2) - (elSizeY / 2) - ((htmlRect.top + window.scrollY) / window.innerHeight) * viewport_height
       // r3fMesh.scale.set(htmlRect.width / (window.innerWidth - 16), htmlRect.height / window.innerHeight, 1)
 
       console.log('pos, scale', r3fMesh.position, r3fMesh.scale)
@@ -176,6 +176,7 @@ function Rig({ position = new THREE.Vector3(cameraVector[0], cameraVector[1], ca
     console.log('CameraControls:: ', controls)
   }, [isView])
   controls && (controls.mouseButtons.wheel = 0)
+  controls && (controls.mouseButtons.left = 0)
 
   return <CameraControls makeDefault minPolarAngle={0} maxPolarAngle={Math.PI / 2} />
 }
