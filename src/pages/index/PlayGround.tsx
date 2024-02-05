@@ -125,19 +125,20 @@ export default function PlayGround() {
 
   return (
     <>
-    <div className="pb-8 pt-28">
-      <div className="flex gap-2 items-end h-32">
-        {graph?.map((x, i) => {
-          return <div key={i} className="bg-slate-300"
-          style={{
-            'height': `${x}px`,
-            'width': '8px',
-            'transition': 'all 0.34s ease',
-          }}
-          ></div>
-        })}
-      </div>
-      <strong className="block text-slate-400 opacity-50 text-right mt-3">Quick Sort</strong>
+      <div className="relative mt-14 pb-8 pt-28 w-full h-200 overflow-hidden">
+        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex gap-2 justify-center items-end w-full">
+          {graph?.map((x, i) => {
+            return <div key={i} className="bg-slate-300"
+            style={{
+              'height': `${x}px`,
+              'width': `${1 / graph.length * 100}%`,
+              'minWidth': '8px',
+              'transition': 'all 0.34s ease',
+            }}
+            ></div>
+          })}
+        </div>
+        <strong className="block absolute bottom-0 right-0 text-slate-400 opacity-50 text-right mt-3">Quick Sort</strong>
     </div>
     </>
   )
