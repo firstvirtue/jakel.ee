@@ -28,6 +28,8 @@ export default function KeyMessage() {
     I want to touch people with my art. <span css={{fontSize: '3rem', fontWeight: 100, marginLeft: '3rem', marginRight: '3rem', }}>+</span>
     I want to touch people with my art. <span css={{fontSize: '3rem', fontWeight: 100, marginLeft: '3rem', marginRight: '3rem', }}>+</span>
     I want to touch people with my art. <span css={{fontSize: '3rem', fontWeight: 100, marginLeft: '3rem', marginRight: '3rem', }}>+</span>
+    I want to touch people with my art. <span css={{fontSize: '3rem', fontWeight: 100, marginLeft: '3rem', marginRight: '3rem', }}>+</span>
+    I want to touch people with my art. <span css={{fontSize: '3rem', fontWeight: 100, marginLeft: '3rem', marginRight: '3rem', }}>+</span>
     </span>
       {/* I want to touch people<br/> with my art.<br/>  */}
       "
@@ -45,6 +47,8 @@ export default function KeyMessage() {
         whiteSpace: 'nowrap',
       }}
     >
+    I want to touch people with my art. <span css={{fontSize: '3rem', fontWeight: 100, marginLeft: '3rem', marginRight: '3rem', }}>+</span>
+    I want to touch people with my art. <span css={{fontSize: '3rem', fontWeight: 100, marginLeft: '3rem', marginRight: '3rem', }}>+</span>
     I want to touch people with my art. <span css={{fontSize: '3rem', fontWeight: 100, marginLeft: '3rem', marginRight: '3rem', }}>+</span>
     I want to touch people with my art. <span css={{fontSize: '3rem', fontWeight: 100, marginLeft: '3rem', marginRight: '3rem', }}>+</span>
     I want to touch people with my art. <span css={{fontSize: '3rem', fontWeight: 100, marginLeft: '3rem', marginRight: '3rem', }}>+</span>

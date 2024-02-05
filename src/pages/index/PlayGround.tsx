@@ -133,6 +133,7 @@ export default function PlayGround() {
               'height': `${x}px`,
               'width': `${1 / graph.length * 100}%`,
               'minWidth': '8px',
+              'maxWidth': '12px',
               'transition': 'all 0.34s ease',
             }}
             ></div>
