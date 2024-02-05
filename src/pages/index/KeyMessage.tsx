@@ -1,7 +1,19 @@
 /** @jsxImportSource @emotion/react */
-import { css } from '@emotion/react'
+import { css, keyframes } from '@emotion/react'
 
 export default function KeyMessage() {
+
+  const offset = '12rem'
+
+  const marquee = keyframes`
+    0% {
+      transform: translateX(calc(-25% + ${offset}));
+    }
+    100% {
+      transform: translateX(calc(-50% + ${offset}));
+    }
+  `
+
   return (
     <>
     <p className='slogan hidden'>
@@ -23,8 +35,14 @@ export default function KeyMessage() {
         fontWeight: '400',
         marginBottom: '6rem',
         whiteSpace: 'nowrap',
+        width: 'fit-content',
+        transform: `translate3d(calc(-25% + ${offset}), 0, 0)`,
+        animation: `${marquee} 8s linear infinite`,
       }}
     >
+    I want to touch people with my art. <span css={{fontSize: '3rem', fontWeight: 100, marginLeft: '3rem', marginRight: '3rem', }}>+</span>
+    I want to touch people with my art. <span css={{fontSize: '3rem', fontWeight: 100, marginLeft: '3rem', marginRight: '3rem', }}>+</span>
+    I want to touch people with my art. <span css={{fontSize: '3rem', fontWeight: 100, marginLeft: '3rem', marginRight: '3rem', }}>+</span>
     I want to touch people with my art. <span css={{fontSize: '3rem', fontWeight: 100, marginLeft: '3rem', marginRight: '3rem', }}>+</span>
     I want to touch people with my art. <span css={{fontSize: '3rem', fontWeight: 100, marginLeft: '3rem', marginRight: '3rem', }}>+</span>
     I want to touch people with my art. <span css={{fontSize: '3rem', fontWeight: 100, marginLeft: '3rem', marginRight: '3rem', }}>+</span>
@@ -45,8 +63,15 @@ export default function KeyMessage() {
         fontWeight: '400',
         marginTop: '6rem',
         whiteSpace: 'nowrap',
+        width: 'fit-content',
+        transform: `translate3d(calc(-25% + ${offset}), 0, 0)`,
+        animation: `${marquee} 8s linear infinite`,
+        animationDirection: 'reverse',
       }}
     >
+    I want to touch people with my art. <span css={{fontSize: '3rem', fontWeight: 100, marginLeft: '3rem', marginRight: '3rem', }}>+</span>
+    I want to touch people with my art. <span css={{fontSize: '3rem', fontWeight: 100, marginLeft: '3rem', marginRight: '3rem', }}>+</span>
+    I want to touch people with my art. <span css={{fontSize: '3rem', fontWeight: 100, marginLeft: '3rem', marginRight: '3rem', }}>+</span>
     I want to touch people with my art. <span css={{fontSize: '3rem', fontWeight: 100, marginLeft: '3rem', marginRight: '3rem', }}>+</span>
     I want to touch people with my art. <span css={{fontSize: '3rem', fontWeight: 100, marginLeft: '3rem', marginRight: '3rem', }}>+</span>
     I want to touch people with my art. <span css={{fontSize: '3rem', fontWeight: 100, marginLeft: '3rem', marginRight: '3rem', }}>+</span>
