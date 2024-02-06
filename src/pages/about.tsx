@@ -89,21 +89,21 @@ export default function About() {
       <div>Flur</div>
 
       <h2 className="text-3xl mt-10">Awards</h2>
-      <div>2023 앤어워드 과학기술정보통신부 장관상 / 한화에어로스페이스 플랫폼</div>
-      <div>2023 앤어워드 Grand Prix / 삼성자산운용 통합 플랫폼</div>
-      <div>i-AWARDS 2023 최고대상 / 삼성자산운용 통합 플랫폼</div>
+      <div>2023 앤어워드 과학기술정보통신부 장관상 - <span>한화에어로스페이스 플랫폼</span></div>
+      <div>2023 앤어워드 Grand Prix - <span>삼성자산운용 통합 플랫폼</span></div>
+      <div>i-AWARDS 2023 최고대상 - <span>삼성자산운용 통합 플랫폼</span></div>
 
-      <div>Red Dot Design Award 2023 / 한국타이어 디지털 마케팅&세일즈 플랫폼</div>
-      <div>iF DESIGN AWARD 2023 / 한국타이어 디지털 마케팅&세일즈 플랫폼</div>
-      <div>2022 앤어워드 Grand Prix / 한국타이어 글로벌 플랫폼</div>
-      <div>2022 앤어워드 Grand Prix / 스마일게이트</div>
-      <div>i-AWARDS 2022 최고대상 / 기아 월드와이드</div>
+      <div>Red Dot Design Award 2023 - <span>한국타이어 디지털 마케팅&세일즈 플랫폼</span></div>
+      <div>iF DESIGN AWARD 2023 - <span>한국타이어 디지털 마케팅&세일즈 플랫폼</span></div>
+      <div>2022 앤어워드 Grand Prix - <span>한국타이어 글로벌 플랫폼</span></div>
+      <div>2022 앤어워드 Grand Prix - <span>스마일게이트</span></div>
+      <div>i-AWARDS 2022 최고대상 - <span>기아 월드와이드</span></div>
 
-      <div>i-AWARDS 2022 제조업분야 대상 / 한국타이어 글로벌 플랫폼</div>
-      <div>Red Dot Design Award 2022 / 내 손안에 Galaxy Studio</div>
-      <div>i-AWARDS 2019 최우수상 / 한화 갤러리아 공식 웹사이트</div>
-      <div>i-AWARDS 2019 최우수상 / 갤러리아 디지털 커뮤니케이션 채널 통합</div>
-      <div>i-AWARDS 2019 최우수상 / 비비드 스튜디오</div>
+      <div>i-AWARDS 2022 제조업분야 대상 - <span>한국타이어 글로벌 플랫폼</span></div>
+      <div>Red Dot Design Award 2022 - <span>내 손안에 Galaxy Studio</span></div>
+      <div>i-AWARDS 2019 최우수상 - <span>한화 갤러리아 공식 웹사이트</span></div>
+      <div>i-AWARDS 2019 최우수상 - <span>갤러리아 디지털 커뮤니케이션 채널 통합</span></div>
+      <div>i-AWARDS 2019 최우수상 - <span>비비드 스튜디오</span></div>
     </div>
     </>
   )

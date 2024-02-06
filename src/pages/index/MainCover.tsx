@@ -79,7 +79,7 @@ export default function MainCover() {
 
             <div id="portal-visual" className="h-2/4 rounded-2xl overflow-hidden"
             style={{
-              "backgroundColor": "#B8D2D8", 
+              // "backgroundColor": "#B8D2D8", 
               "width": "92%", 
               "height": "42%",
             }}

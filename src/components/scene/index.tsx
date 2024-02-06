@@ -148,7 +148,7 @@ export const AppScene = () => {
     boxRef.current.rotation.z += 0.004;
   });
 
-  console.log('Scene:: ')
+  // console.log('Scene:: ')
   
   return (
     // rotation={[0.3, 0.2, 0]}

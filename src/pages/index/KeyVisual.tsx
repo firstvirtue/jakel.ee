@@ -55,7 +55,7 @@ export default function KeyVisual({}) {
         height: viewport_height
       })
 
-      console.log('viewport:: ', viewport_width, viewport_height)
+      // console.log('viewport:: ', viewport_width, viewport_height)
 
       // const htmlElement = htmlElementr3fMesh.current;
       const htmlElement = document.querySelector('#key-visual')
@@ -78,7 +78,7 @@ export default function KeyVisual({}) {
       r3fMesh.position.y = (viewport_height / 2) - (elSizeY / 2) - ((htmlRect.top + window.scrollY) / window.innerHeight) * viewport_height
       // r3fMesh.scale.set(htmlRect.width / (window.innerWidth), htmlRect.height / window.innerHeight, 1)
 
-      console.log('pos, scale', r3fMesh.position, r3fMesh.scale)
+      // console.log('pos, scale', r3fMesh.position, r3fMesh.scale)
     };
 
     // Call the updateR3FMesh function whenever the window is resized
