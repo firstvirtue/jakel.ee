@@ -2,6 +2,7 @@ import { useEffect } from "react"
 import { Header } from "./Header"
 import { Footer } from "./Footer"
 import { useProjectStore } from "./store"
+import Loader from "./Loader"
 
 export default function Layout({ children }) {
 
@@ -26,6 +27,7 @@ export default function Layout({ children }) {
     <Header />
     { children }
     <Footer />
+    <Loader />
     </>
   )
 }
