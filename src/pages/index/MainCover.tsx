@@ -86,13 +86,13 @@ export default function MainCover() {
             >
             </div>
 
-            <div className="h-2/4 rounded-2xl overflow-hidden shadow-xl"
+            <Link href="#" className="h-2/4 rounded-2xl overflow-hidden shadow-xl"
             style={{
-              backgroundColor: "#83936F"
+              backgroundColor: '#83936F',
+              zIndex: '10'
             }}>
               <video className="w-full h-full object-cover" src="/assets/projects/iconic20/cover.mp4" autoPlay loop muted playsInline></video>
-              {/* <img className="w-full h-full object-cover" src="/iconic20.png" alt="" /> */}
-            </div>
+            </Link>
           </div>
         </div>
       </div>
