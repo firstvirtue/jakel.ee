@@ -48,15 +48,39 @@
   },
   {
     "id": "p_202205",
-    "title": "한화디펜스",
+    "title": "한화 디펜스(에어로스페이스) 버츄얼 쇼룸",
     "keywords": ["webgl"],
-    "aspect": "0.7"
+    "aspect": "0.7",
+    "cardColor": "#FB781E",
+    "textColor": "#ffffff"
   },
   {
     "id": "p_202203",
-    "title": "한국타이어",
+    "title": "한국타이어 글로벌/세일즈 플랫폼",
     "keywords": ["webgl", "webpack", "awards"],
     "aspect": "1.4"
+  },
+  {
+    "id": "iconic20",
+    "title": "스마일게이트 아이코닉20",
+    "keywords": ["webgl", "Shader"],
+    "aspect": "1.4",
+    "cardColor": "#72D837",
+    "textColor": "#ffffff"
+  },
+  {
+    "id": "galaxystudio",
+    "title": "삼성 내 손안에 갤럭시 스튜디오",
+    "keywords": ["webpack", "jacascript", "GSAP"],
+    "aspect": "1.4",
+    "cardColor": "#0076DA",
+    "textColor": "#ffffff"
+  },
+  {
+    "id": "bespoke",
+    "title": "삼성 비스포크 나답게 집꾸",
+    "keywords": ["webpack", "jacascript", "GSAP"],
+    "aspect": "1"
   },
   {
     "id": "kia-worldwide",
