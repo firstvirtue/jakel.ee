@@ -114,6 +114,7 @@ export default function PostMenu(props) {
                 </>
                 }
 
+                { project.outlink &&
                 <Link className="inline-flex gap-2 items-center pt-4 text-sm text-white" 
                   href={ project.outlink } target="_blank"
                 >
@@ -129,6 +130,7 @@ export default function PostMenu(props) {
                   open_in_new
                   </span>
                 </Link>
+                }
                 { project.strikeThrough && <div className='text-xs'>{ project.strikeThrough }</div> }
               </div>
 

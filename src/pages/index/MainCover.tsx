@@ -90,7 +90,8 @@ export default function MainCover() {
             style={{
               backgroundColor: "#83936F"
             }}>
-              <img className="w-full h-full object-cover" src="/iconic20.png" alt="" />
+              <video className="w-full h-full object-cover" src="/assets/projects/iconic20/cover.mp4" autoPlay loop muted playsInline></video>
+              {/* <img className="w-full h-full object-cover" src="/iconic20.png" alt="" /> */}
             </div>
           </div>
         </div>

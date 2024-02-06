@@ -16,7 +16,7 @@ import projectData from '../../data/project-data.json'
 export default function Home() {
 
   const currentProject = projectData.find(x => x.id === 'kia-worldwide')
-  const prevProject = projectData.find(x => x.id === 'kia-worldwide')
+  const prevProject = projectData.find(x => x.id === 'bespoke')
   const nextProject = projectData.find(x => x.id === 'fujifilm')
 
   return (
