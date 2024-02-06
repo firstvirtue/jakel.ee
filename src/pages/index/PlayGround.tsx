@@ -13,6 +13,10 @@ function sleep(sec: number = 0.08): Promise<void> {
   })
 }
 
+function generateRandomNumber(): number {
+  return Math.floor(Math.random() * (100 - 20)) + 20;
+}
+
 class TaskQueue {
   private queue: (() => void)[];
   private interval: number;
@@ -49,16 +53,15 @@ class TaskQueue {
 
 export default function PlayGround() {
 
-  function generateRandomNumber(): number {
-    return Math.floor(Math.random() * (100 - 20)) + 20;
-  }
-  const randomNumbers: number[] = Array.from({ length: 100 }, generateRandomNumber);
   
-  let arr = randomNumbers
-  const [graph, setGraph] = useState(arr)
+  const [count, setCount] = useState(0)
+  const [graph, setGraph] = useState<number[]>()
   // [TODO] useMemo
 
   useEffect(()=> {
+
+    let randomNumbers: number[] = Array.from({ length: 100 }, generateRandomNumber);
+    setGraph(randomNumbers)
 
     let stopExecution = false;
 
@@ -100,28 +103,23 @@ export default function PlayGround() {
           await quickSort(arr, pi + 1, high);
         }
     }
-  
-    
-    // console.log(arr);
-    // const sortedArray = quickSort(arr);
 
     (async () => {
-      // const sortedArray = await quickSort(arr);
-      // console.log(sortedArray);
-      await quickSort(arr, 0, arr.length - 1);
-      // setGraph([...arr])
+      
+      await quickSort(randomNumbers, 0, randomNumbers.length - 1);
       // console.log('done')
+      setCount(count + 1)
     })()
 
     return () => {
       stopExecution = true
     }
 
-  }, [])
+  }, [count])
 
   useEffect(() => {
-    // console.log(graph)
-  }, [graph])
+    console.log('count: ', count)
+  }, [count])
 
   return (
     <>
@@ -130,10 +128,10 @@ export default function PlayGround() {
           {graph?.map((x, i) => {
             return <div key={i} className="bg-slate-300"
             style={{
-              'height': `${x}px`,
+              'height': `${x * 0.8}px`,
               'width': `${1 / graph.length * 100}%`,
               'minWidth': '8px',
-              'maxWidth': '12px',
+              'maxWidth': '10px',
               'transition': 'all 0.34s ease',
             }}
             ></div>
