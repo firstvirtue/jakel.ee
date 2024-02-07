@@ -96,6 +96,7 @@ export default function ItemList() {
     })
     
     arrangeLayout()
+    setTimeout(arrangeLayout, 1000)
     window.addEventListener('resize', arrangeLayout)
 
     return () => {

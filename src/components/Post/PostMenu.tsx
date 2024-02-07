@@ -132,6 +132,7 @@ export default function PostMenu(props) {
                   </span>
                 </Link>
                 }
+                { project.bracket && <div className='text-xs'>{ project.bracket }</div> }
                 { project.strikeThrough && <div className='text-xs'>{ project.strikeThrough }</div> }
               </div>
 

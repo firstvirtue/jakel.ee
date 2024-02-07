@@ -74,8 +74,10 @@
     "keywords": ["webgl", "Shader"],
     "aspect": "1",
     "completed": "12. 2021",
+    "awards": ["2022 앤어워드 Grand Prix"],
     "role": ["UI 개발"],
     "outlink": "https://smilegate.com/en/company/iconic20.do",
+    "bracket": "(현재 메인으로 리다이렉팅 되는 경우가 있는데 한 번 더 링크 이동해주세요🙏)",
     "client": "스마일게이트",
     "cardColor": "#72D837",
     "textColor": "#ffffff",
@@ -99,7 +101,7 @@
     "id": "bespoke",
     "link": "/work/bespoke",
     "title": "삼성 비스포크 나답게 집꾸",
-    "desc": "냉장고 모듈 조합 마이크로 UX",
+    "desc": "모듈 조합 마이크로 UX",
     "keywords": ["webpack", "jacascript", "GSAP"],
     "aspect": "1",
     "completed": "6. 2021",
@@ -115,7 +117,7 @@
     "client": "현대자동차",
     "completed": "12. 2018",
     "role": ["UI 개발"],
-    "keywords": ["mvvm", "SOLID"]
+    "keywords": ["mvvm", "SOLID", "personal_project"]
   },
   {
     "id": "kia-worldwide",

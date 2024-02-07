@@ -88,7 +88,9 @@ export default function Item(props) {
         // Remove duplicate transition
         document.querySelectorAll('.cover-transition-el').forEach((x, i) => x.style.viewTransitionName = `xx${i}` )
 
-        refImg.current.style.viewTransitionName = 'item_img'
+        if(refImg.current) {
+          refImg.current.style.viewTransitionName = 'item_img'
+        }
         refT.current.style.viewTransitionName = 'item_t'
         refH.current.style.viewTransitionName = 'item_h'
         refD.current.style.viewTransitionName = 'item_d'
