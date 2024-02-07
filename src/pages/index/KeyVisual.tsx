@@ -3,10 +3,12 @@ import { Canvas, extend, useFrame, useThree} from "@react-three/fiber"
 import { useCursor, useAspect, useVideoTexture, useTexture, shaderMaterial } from '@react-three/drei'
 import * as THREE from "three"
 import { easing, geometry } from 'maath'
+import { useRouter } from "next/router";
 extend(geometry)
 
 export default function KeyVisual({}) {
   const [hovered, hover] = useState(false)
+  const router = useRouter()
   useCursor(hovered)
   const size = useAspect(200, 100)
   // console.log('size', size)
@@ -123,7 +125,7 @@ export default function KeyVisual({}) {
 
   return(<>
     <mesh ref={ref} 
-    onPointerOver={(e) => hover(true)} onPointerOut={() => hover(false)}>
+    onPointerOver={(e) => hover(true)} onPointerOut={() => hover(false)} onClick={e=>router.push('/post/continuous-award-winning')}>
       <roundedPlaneGeometry args={[geoSize.width, geoSize.height, 0.05]}/>
       <Suspense fallback={<FallbackMaterial url="/qt.png" />}>
         <VideoMaterial url="/prj.mp4" />

@@ -20,7 +20,11 @@ function ProjectList() {
       </div>
     </div>
 
-    <div className="flex w-full max-w-screen-2xl rounded-3xl shadow-xl overflow-hidden">
+    <div className="flex w-full max-w-screen-2xl rounded-3xl shadow-xl overflow-hidden"
+    style={{
+      minHeight: '44rem',
+    }}
+    >
       <Menu />
       <ItemList />
     </div>

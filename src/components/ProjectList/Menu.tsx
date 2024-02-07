@@ -4,7 +4,7 @@ export default function Menu() {
   const setCurrentProject = useProjectStore((state) => state.setCurrentProject)
 
   const skills = ["react", "next.js", "webgl", "typescript", "webpack"]
-  const softwareDesigns = ["SOLID", "mvvm"]
+  const softwareDesigns = ["mvvm"]
 
   return (
     <>

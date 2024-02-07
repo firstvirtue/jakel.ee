@@ -24,23 +24,16 @@ export default function Post() {
       <div className="flex pl-24 pr-24 pt-32">
         <div className="content w-full">
 
-          <h2 className="text-6xl font-bold text-center">Be<span css={{color: '#E06D72'}}>|</span>spoke</h2>
+          <h2 className="text-6xl font-bold text-center">Unfold Your World</h2>
 
           <figure data-size="lg">
-            <img src="/assets/projects/bespoke/bespoke01.png" alt=""/>
+          <video src="/assets/projects/galaxystudio/video-03.mp4" poster="" autoPlay muted loop playsInline></video>
           </figure>
 
           <figure data-size="lg">
-            <img src="/assets/projects/bespoke/bespoke02.png" alt=""/>
+          <video src="/assets/projects/galaxystudio/video-05.mp4" poster="" autoPlay muted loop playsInline></video>
           </figure>
 
-          <figure data-size="lg">
-            <img src="/assets/projects/bespoke/bespoke03.png" alt=""/>
-          </figure>
-
-          <figure data-size="lg">
-            <img src="/assets/projects/bespoke/bespoke04.png" alt=""/>
-          </figure>
         </div>
 
       </div>

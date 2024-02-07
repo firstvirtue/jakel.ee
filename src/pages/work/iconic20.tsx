@@ -24,22 +24,14 @@ export default function Post() {
       <div className="flex pl-24 pr-24 pt-32">
         <div className="content w-full">
 
-          <h2 className="text-6xl font-bold text-center">Be<span css={{color: '#E06D72'}}>|</span>spoke</h2>
+          <h2 className="text-6xl font-bold text-center">Hold &amp; Drag</h2>
 
           <figure data-size="lg">
-            <img src="/assets/projects/bespoke/bespoke01.png" alt=""/>
+            <img src="/assets/projects/iconic20/shot-01.png" alt=""/>
           </figure>
 
           <figure data-size="lg">
-            <img src="/assets/projects/bespoke/bespoke02.png" alt=""/>
-          </figure>
-
-          <figure data-size="lg">
-            <img src="/assets/projects/bespoke/bespoke03.png" alt=""/>
-          </figure>
-
-          <figure data-size="lg">
-            <img src="/assets/projects/bespoke/bespoke04.png" alt=""/>
+            <img src="/assets/projects/iconic20/shot-02.png" alt=""/>
           </figure>
         </div>
 
