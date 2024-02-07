@@ -104,26 +104,29 @@ export default function Item(props) {
         refMo.current.startAnimating()
       }}
     >
-      <div className='v-wrap relative overflow-hidden rounded-2xl'
-      ref={refImg}
-      css={{
-        aspectRatio: `1 / ${ project.aspect }`,
-      }}
-      >
-        { project.coverVideo ?
 
-        <video className='object-cover h-full w-full rounded-2xl' 
-          src={ project.coverVideo } autoPlay muted loop playsInline></video>
-        :
-        <Image 
-          // ref={refImg}
-          className='object-cover h-full w-full rounded-2xl'
-          src={ project.coverImage ?? "/1.jpeg" } alt=''
-          width={800} height={800}
-        />
-        }
-        
-      </div>
+      { (project.coverVideo || project.coverImage) &&
+        <div className='v-wrap relative overflow-hidden rounded-2xl'
+          ref={refImg}
+          css={{
+            aspectRatio: `1 / ${ project.aspect }`,
+          }}
+          >
+            { project.coverVideo ?
+    
+            <video className='object-cover h-full w-full rounded-2xl' 
+              src={ project.coverVideo } autoPlay muted loop playsInline></video>
+            :
+            <Image 
+              // ref={refImg}
+              className='object-cover h-full w-full rounded-2xl'
+              src={ project.coverImage ?? "/1.jpeg" } alt=''
+              width={800} height={800}
+            />
+            }
+            
+          </div>
+      }
       
       <div className={`${related ? 'pl-7 pr-7 pt-5' : 'pt-5'}`}>
         <div ref={refT} className=''>

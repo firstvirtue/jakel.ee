@@ -59,20 +59,6 @@ export default function About() {
       <p>
         무언가 멋진 것들을 함께 만들어 봅시다!
       </p>
-
-      <br />
-      <br />
-      <div className="text-4xl">
-      Years
-      13
-      
-      Projects
-      23+
-
-      Awards
-      13
-      </div>
-
       
       <h2 className="text-3xl mt-10">Experience</h2>
       <div>2021 - 2023</div>
@@ -87,6 +73,20 @@ export default function About() {
       <div>Eloicube</div>
       <div>2008 - 2010</div>
       <div>Flur</div>
+
+
+      <br />
+      <br />
+      <div className="text-4xl">
+      Years
+      13
+      
+      Projects
+      23+
+
+      Awards
+      13
+      </div>
 
       <h2 className="text-3xl mt-10">Awards</h2>
       <div>2023 앤어워드 과학기술정보통신부 장관상 - <span>한화에어로스페이스 플랫폼</span></div>

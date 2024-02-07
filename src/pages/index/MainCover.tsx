@@ -86,7 +86,7 @@ export default function MainCover() {
             >
             </div>
 
-            <Link href="#" className="h-2/4 rounded-2xl overflow-hidden shadow-xl"
+            <Link href="/work/iconic20" className="h-2/4 rounded-2xl overflow-hidden shadow-xl"
             style={{
               backgroundColor: '#83936F',
               zIndex: '10'

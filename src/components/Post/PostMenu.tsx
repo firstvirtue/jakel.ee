@@ -89,6 +89,7 @@ export default function PostMenu(props) {
                 css={{
                   opacity: isOpen ? 0 : 1,
                   transition: 'all 0.34s',
+                  minHeight: '350px',
                 }}
               >
                 <span className="text-sm opacity-50">Client</span>

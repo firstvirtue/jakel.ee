@@ -2,46 +2,47 @@
   {
     "id": "samsungcnt",
     "title": "삼성물산",
+    "desc": "심리스한 화면 전환",
+    "cardColor": "#F5DB28",
     "keywords": ["react"],
     "coverImage": "/3.jpeg",
-    "cardColor": "#F5DB28",
     "aspect": "0.8",
     "coverVideo": "/assets/projects/samsungcnt/cover.mp4"
   },
   {
-    "id": "p_202310",
-    "title": "삼성액티브자산운용",
-    "keywords": ["react", "zustand"],
-    "aspect": "1.1"
-  },
-  {
-    "id": "p_202303",
+    "id": "kodex",
     "link": "/work/samsung-fund",
     "pin": true,
     "title": "삼성자산운용",
+    "desc": "데이터 기반 렌더링 역대급 프로젝트",
     "keywords": ["react", "awards", "zustand", "typescript"],
     "cardColor": "#5820E6",
     "textColor": "#ffffff",
-    "aspect": "1.5"
+    "aspect": "1.5",
+    "coverVideo": "/assets/projects/kodex/main.mp4"
   },
   {
-    "id": "cass",
-    "title": "카스 월드컵/쿨",
+    "id": "casscool",
+    "title": "카스 쿨/월드컵",
+    "desc": "작지만 강한 미니 프로젝트",
     "keywords": ["next.js", "react", "webgl", "CSS"],
     "cardColor": "#CFE4FF",
-    "aspect": "0.8"
+    "aspect": "0.8",
+    "coverImage": "/assets/projects/casscool/main_poster.png"
   },
   {
     "id": "lotteshopping",
     "title": "롯데백화점 웹 메인",
-    "keywords": ["jacascript", "CSS"],
+    "desc": "Vanilla 상태 관리로 유려한 UI",
     "cardColor": "#F5DB28",
+    "keywords": ["jacascript", "CSS"],
     "aspect": "1",
     "coverImage": "/assets/projects/lotteshopping/cover-sm.png"
   },
   {
     "id": "hanwhadefense",
     "title": "한화디펜스(에어로스페이스) 버츄얼 쇼룸",
+    "desc": "첫 번째 실무 WebGL",
     "keywords": ["webgl"],
     "aspect": "0.7",
     "cardColor": "#FB781E",
@@ -49,15 +50,18 @@
     "coverImage": "/assets/projects/hanwhadefense/redback.jpeg"
   },
   {
-    "id": "p_202203",
+    "id": "hankooktire",
     "title": "한국타이어 글로벌/세일즈 플랫폼",
+    "desc": "수많은 컴포넌트와 템플릿 관리",
     "keywords": ["webgl", "webpack", "awards"],
     "aspect": "1.4",
     "coverImage": "/assets/projects/hankooktire/14_Outro_Image.avif"
   },
   {
     "id": "iconic20",
+    "link": "/work/iconic20",
     "title": "스마일게이트 아이코닉20",
+    "desc": "모션그래픽 수준의 비주얼",
     "keywords": ["webgl", "Shader"],
     "aspect": "1",
     "cardColor": "#72D837",
@@ -66,7 +70,9 @@
   },
   {
     "id": "galaxystudio",
+    "link": "/work/galaxystudio",
     "title": "삼성 내 손안에 갤럭시 스튜디오",
+    "desc": "그 시간은 짧았지만 알차게 화이팅",
     "keywords": ["webpack", "jacascript", "GSAP"],
     "aspect": "1",
     "cardColor": "#0076DA",
@@ -77,12 +83,23 @@
     "id": "bespoke",
     "link": "/work/bespoke",
     "title": "삼성 비스포크 나답게 집꾸",
+    "desc": "냉장고 모듈 조합 마이크로 UX",
     "keywords": ["webpack", "jacascript", "GSAP"],
     "aspect": "1",
     "completed": "6. 2021",
     "role": ["UI 개발"],
     "client": "삼성전자",
     "coverImage": "/assets/projects/bespoke/bespoke-cover.jpeg"
+  },
+  {
+    "id": "sams",
+    "link": "/work/sams",
+    "title": "현대자동차 SAMS",
+    "desc": "현대자동차 보안점검 시스템",
+    "client": "현대자동차",
+    "completed": "12. 2018",
+    "role": ["UI 개발"],
+    "keywords": ["mvvm", "SOLID"]
   },
   {
     "id": "kia-worldwide",
@@ -132,6 +149,8 @@
     "desc": "방대한 통합 사이트 그리고 첫 PL 역할",
     "client": "한화 갤러리아",
     "completed": "4. 2019",
+    "cardColor": "#FB781E",
+    "textColor": "#ffffff",
     "role": ["UI 개발"],
     "outlink": "https://www.hanwhagalleria.co.kr",
     "strikeThrough": false,

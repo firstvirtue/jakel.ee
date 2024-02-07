@@ -14,7 +14,7 @@ export default function Post() {
   
   const currentProject = projectData.find(x => x.id === 'vyvydstudio')
   const prevProject = projectData.find(x => x.id === 'galleria')
-  const nextProject = projectData.find(x => x.id === 'p_202312')
+  const nextProject = projectData.find(x => x.id === 'samsungcnt')
 
   return (
     <>

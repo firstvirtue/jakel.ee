@@ -13,7 +13,7 @@ import projectData from '../../data/project-data.json'
 export default function Post() {
   
   const currentProject = projectData.find(x => x.id === 'bespoke')
-  const prevProject = projectData.find(x => x.id === 'laneige')
+  const prevProject = projectData.find(x => x.id === 'galaxystudio')
   const nextProject = projectData.find(x => x.id === 'kia-worldwide')
 
   return (
