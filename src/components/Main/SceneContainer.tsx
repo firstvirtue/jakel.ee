@@ -53,7 +53,7 @@ export default function SceneContainer() {
   }, [])
 
   return (
-    <div style={{ position: 'absolute', width: '100%', height: '100vh', left: 0 }}>
+    <div style={{ position: 'absolute', width: '100%', height: '100vh', left: 0, top: 0 }}>
     <Canvas
       colorManagement
       shadows // highlight-lines
@@ -126,6 +126,8 @@ function Frame({ id, name, author, bg, width = 1.3, height = 1, children, ...pro
     // Call the updateR3FMesh function whenever the window is resized
     window.addEventListener('resize', updateR3FMesh);
     updateR3FMesh(); // Initial update
+    
+    // setIsView(true)
 
     // Cleanup the event listener when the component unmounts
     return () => {
