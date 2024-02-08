@@ -6,7 +6,6 @@ import { easing, geometry } from 'maath'
 import { suspend } from 'suspend-react'
 import { useCursor, MeshPortalMaterial, CameraControls, Gltf, Text, Sky, Cloud } from '@react-three/drei'
 import { AppScene } from '@/components/scene'
-
 import { create } from 'zustand'
 
 type State = {
@@ -39,6 +38,7 @@ export default function SceneContainer() {
   }, [isView])
 
   useEffect(() => {
+    
     function handlePopState() {
       console.log(location.href)
       setIsView(false)

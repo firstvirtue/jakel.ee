@@ -8,7 +8,7 @@
     "role": ["프론트엔드 파트 리딩"],
     "client": "삼성물산",
     "cardColor": "#F5DB28",
-    "keywords": ["react"],
+    "keywords": ["react", "typescript"],
     "coverImage": "/3.jpeg",
     "aspect": "0.8",
     "outlink": "https://trading.samsungcnt.com/main.do",
