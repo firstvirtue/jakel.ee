@@ -26,6 +26,9 @@ export default function Post() {
 
           <h2 className="text-6xl font-bold text-center">All investments in the world</h2>
 
+          <h3>Hybrid React</h3>
+          <p>백엔드 팀과 연계하며 고객사 요건을 충족시키기 위해 Spring boot 위에 뷰 라이브러리 형태로 필요한 부분에 React를 사용하게 되었습니다. <br />단순 게시글 리스트류를 제외하면 데이터 연동을 위한 모든 부분은 React로 처리하게 되었습니다.</p>
+
           <figure data-size="lg">
             {/* <img src="/assets/projects/iconic20/shot-01.png" alt=""/> */}
           </figure>
