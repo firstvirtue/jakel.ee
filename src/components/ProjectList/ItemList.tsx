@@ -13,6 +13,7 @@ export default function ItemList() {
   const currentProject = useProjectStore((state) => state.currentProject)
 
   const [selectedItems, setSelectedItems] = useState<any>(projectData)
+  const [isNoData, setIsNoData] = useState<boolean>(false)
 
   const boxVariants = {
     initial: { opacity: 0, y: 10 },
@@ -51,6 +52,15 @@ export default function ItemList() {
   }, [currentProject])
 
   function arrangeMasonryLayout(items, containerWidth, columnWidth) {
+    console.log('::: ', items, containerWidth, columnWidth)
+
+    if(items.length === 0) {
+      setIsNoData(true)
+      return
+    }
+
+    setIsNoData(false)
+
     const numColumns = Math.floor(containerWidth / columnWidth);
     let columnHeights = new Array(numColumns).fill(0);
     let h = 0
@@ -88,6 +98,8 @@ export default function ItemList() {
   }
 
   useEffect(() => {
+
+    console.log(selectedItems)
 
     const arrangeLayout = debounce(() => {
       const h = arrangeMasonryLayout(
@@ -142,6 +154,23 @@ export default function ItemList() {
           </li>
         })}
       </motion.ul>
+      
+      { isNoData &&
+      <>
+      <div css={{
+        display: 'block',
+        textAlign: 'center',
+        fontWeight: 'bold',
+        fontSize: '20rem',
+      }}>
+      (;-;)
+      </div>
+      <p className='block text-center'>
+      May be preparing..
+      </p>
+      </>
+      
+      }
     </div>
     </>
   )

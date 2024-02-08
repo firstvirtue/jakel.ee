@@ -61,7 +61,7 @@
     "link": "/work/hanwhadefense",
     "title": "한화디펜스(에어로스페이스) 버츄얼 쇼룸",
     "desc": "실무 레벨의 WebGL",
-    "keywords": ["webgl"],
+    "keywords": ["webgl", "awards"],
     "aspect": "0.7",
     "completed": "6. 2022",
     "awards": ["2023 앤어워드 과학기술정보통신부 장관상"],
@@ -90,7 +90,7 @@
     "link": "/work/iconic20",
     "title": "스마일게이트 아이코닉20",
     "desc": "모션그래픽 수준의 비주얼",
-    "keywords": ["webgl", "Shader"],
+    "keywords": ["webgl", "Shader", "awards"],
     "aspect": "1",
     "completed": "12. 2021",
     "awards": ["2022 앤어워드 Grand Prix"],
@@ -107,7 +107,7 @@
     "link": "/work/galaxystudio",
     "title": "삼성 내 손안에 갤럭시 스튜디오",
     "desc": "긴박했지만 안정적인 론칭",
-    "keywords": ["webpack", "jacascript", "GSAP"],
+    "keywords": ["webpack", "jacascript", "GSAP", "awards"],
     "aspect": "1",
     "completed": "8. 2021",
     "awards": ["Red Dot Design Award 2022"],
@@ -128,16 +128,6 @@
     "role": ["UI 개발"],
     "client": "삼성전자",
     "coverImage": "/assets/projects/bespoke/bespoke-cover.jpeg"
-  },
-  {
-    "id": "sams",
-    "link": "/work/sams",
-    "title": "현대자동차 SAMS",
-    "desc": "현대자동차 보안점검 시스템",
-    "client": "현대자동차",
-    "completed": "12. 2018",
-    "role": ["UI 개발"],
-    "keywords": ["mvvm", "SOLID", "personal_project"]
   },
   {
     "id": "kia-worldwide",
