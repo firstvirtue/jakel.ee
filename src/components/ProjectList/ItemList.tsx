@@ -54,6 +54,7 @@ export default function ItemList() {
     const numColumns = Math.floor(containerWidth / columnWidth);
     let columnHeights = new Array(numColumns).fill(0);
     let h = 0
+    let maxH = 0
 
     items.forEach((item, index) => {
         // Find the shortest column
@@ -74,12 +75,16 @@ export default function ItemList() {
         // Update the height of the shortest column
         columnHeights[shortestColumn] += item.offsetHeight;
 
+        if(maxH < columnHeights[shortestColumn]) {
+          maxH = columnHeights[shortestColumn]
+        }
+
         if(index === items.length - 1) {
           h = columnHeights[shortestColumn]
         }
     });
 
-    return h
+    return maxH
   }
 
   useEffect(() => {
