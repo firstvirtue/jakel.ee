@@ -111,7 +111,9 @@ export default function PostMenu(props) {
                 { project.awards &&
                 <>
                 <span className="block text-sm opacity-50 pt-4">Awards</span>
-                <p className="menu__list text-base opacity-100">{ project.awards }</p>
+                <p className="menu__list text-base opacity-100">{ project.awards.map((award, i) => {
+                  return <span key={`award-${i}`} className='block'>{award}</span>
+                }) }</p>
                 </>
                 }
 

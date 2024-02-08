@@ -24,7 +24,7 @@ export default function Post() {
       <div className="flex pl-24 pr-24 pt-32">
         <div className="content w-full">
 
-          <h2 className="text-6xl font-bold text-center">Invaluable path <br />for better world</h2>
+          <h2 className="text-5xl font-bold text-center">Invaluable path for better world</h2>
 
           <figure data-size="lg">
             {/* <img src="/assets/projects/iconic20/shot-01.png" alt=""/> */}
