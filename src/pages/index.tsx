@@ -8,8 +8,16 @@ import MainCover from '../components/Main/Cover'
 import KeyMessage from '../components/Main/KeyMessage'
 import ProjectList from '@/components/ProjectList'
 import PlayGround from '../components/Main/PlayGround'
+// import { useIntoStore } from '@/components/Main/store'
+// import { useEffect } from 'react'
 
 export default function Home() {
+  // const setIsHelloWorld = useIntoStore((state) => state.setIsHelloWorld)
+  // const isView = useIntoStore((state) => state.isView)
+
+  // useEffect(() => {
+  //   setIsHelloWorld(false)
+  // }, [isView])
 
   return (
     <main className="page flex min-h-screen flex-col items-center justify-between pr-24 pl-24">

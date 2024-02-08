@@ -2,8 +2,10 @@
 import Link from "next/link"
 import { css } from "@emotion/react"
 import { useEffect, useState } from "react"
+import { useIntoStore } from "./Main/store"
 
 export function Header() {
+  const setIsView = useIntoStore((state) => state.setIsView)
   const [isMore, setIsMore] = useState(false)
 
   useEffect(() => {
@@ -13,7 +15,9 @@ export function Header() {
   return (
     <header className="header">
       <div className="left">
-        <Link className="" href="/">
+        <Link className="" href="/" onClick={e=>{
+          setIsView(false)
+        }}>
           {/* <img src="/assets/img/j-logo2.png" alt="" /> */}
           <strong>
             Jake

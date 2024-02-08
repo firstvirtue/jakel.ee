@@ -2,7 +2,7 @@ import { useThree, useFrame } from '@react-three/fiber'
 import { useEffect, useMemo } from 'react'
 import { Object3D, Vector3 } from 'three'
 import * as THREE from "three"
-import { useIntoStore } from '@/components/Main/SceneContainer'
+import { useIntoStore } from '@/components/Main/store'
 
 export default function useFollowCam(ref, offset) {
   const isView = useIntoStore((state) => state.isView)

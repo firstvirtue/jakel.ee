@@ -4,7 +4,8 @@ import { css } from "@emotion/react"
 import Image from "next/image"
 import SceneContainer from "./SceneContainer"
 
-export default function MainCover() {
+export default function MainCover(props) {
+
   const dd = (() => {
     const date = new Date('2024-02-12')
 

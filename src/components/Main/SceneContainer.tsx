@@ -6,30 +6,21 @@ import { easing, geometry } from 'maath'
 import { suspend } from 'suspend-react'
 import { useCursor, MeshPortalMaterial, CameraControls, Gltf, Text, Sky, Cloud } from '@react-three/drei'
 import { AppScene } from '@/components/scene'
-import { create } from 'zustand'
+import { useIntoStore } from './store'
 
-type State = {
-  isView: boolean;
-  setIsView: (isView: boolean) => void;
-};
-
-const useIntoStore = create<State>((set) => ({
-  isView: false,
-  setIsView: (isView) => set({ isView }),
-}))
-
-export { useIntoStore }
 const cameraVector = [0, 0, 2]
 
 extend(geometry)
 // const regular = import('@pmndrs/assets/fonts/inter_regular.woff')
 // const medium = import('@pmndrs/assets/fonts/inter_medium.woff')
 
-export default function SceneContainer() {
+export default function SceneContainer(props) {
   const isView = useIntoStore((state) => state.isView)
   const setIsView = useIntoStore((state) => state.setIsView)
+  const setIsHelloWorld = useIntoStore((state) => state.setIsHelloWorld)
 
   useEffect(() => {
+    console.log('isVew:: ', isView)
     if(isView) {
       document.body.style.position = 'fixed'
     } else {
@@ -40,8 +31,10 @@ export default function SceneContainer() {
   useEffect(() => {
     
     function handlePopState() {
-      console.log(location.href)
-      setIsView(false)
+
+      if(location.pathname === '/') {
+        setIsView(false)
+      }
     }
 
     window.addEventListener('popstate', handlePopState)
@@ -71,6 +64,9 @@ export default function SceneContainer() {
 }
 
 function Frame({ id, name, author, bg, width = 1.3, height = 1, children, ...props }) {
+  const isHelloWorld = useIntoStore((state) => state.isHelloWorld)
+  const setIsHelloWorld = useIntoStore((state) => state.setIsHelloWorld)
+
   const [hovered, hover] = useState(false)
   useCursor(hovered)
   const isView = useIntoStore((state) => state.isView)
@@ -127,7 +123,10 @@ function Frame({ id, name, author, bg, width = 1.3, height = 1, children, ...pro
     window.addEventListener('resize', updateR3FMesh);
     updateR3FMesh(); // Initial update
     
-    // setIsView(true)
+    if(isHelloWorld) {
+      setIsView(true)
+      setIsHelloWorld(false)
+    }
 
     // Cleanup the event listener when the component unmounts
     return () => {
