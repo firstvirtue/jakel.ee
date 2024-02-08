@@ -118,9 +118,9 @@ export default function Cover(props) {
                     </>
                   }
 
-                  <h2 className="absolute text-6xl bottom-44 right-24 text-white uppercase">
+                  {/* <h2 className="absolute text-6xl bottom-44 right-24 text-white uppercase">
                     { project.client }
-                  </h2>
+                  </h2> */}
                 </div>
               </div>
 

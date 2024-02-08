@@ -11,6 +11,7 @@
     "keywords": ["react"],
     "coverImage": "/3.jpeg",
     "aspect": "0.8",
+    "outlink": "https://trading.samsungcnt.com/main.do",
     "coverVideo": "/assets/projects/samsungcnt/cover.mp4"
   },
   {
@@ -27,6 +28,7 @@
     "cardColor": "#5820E6",
     "textColor": "#ffffff",
     "aspect": "1.5",
+    "outlink": "https://www.samsungfund.com/etf/main.do",
     "coverVideo": "/assets/projects/kodex/main.mp4"
   },
   {
@@ -46,11 +48,12 @@
     "title": "롯데백화점 웹 메인",
     "desc": "Vanilla 상태 관리로 유려한 UI",
     "completed": "10. 2022",
-    "role": ["프론트엔드 파트 리딩"],
+    "role": ["Web 메인 개발"],
     "client": "롯데백화점",
     "cardColor": "#F5DB28",
     "keywords": ["jacascript", "CSS"],
     "aspect": "1",
+    "outlink": "https://www.lotteshopping.com/main",
     "coverImage": "/assets/projects/lotteshopping/cover-sm.png"
   },
   {
