@@ -32,6 +32,7 @@ export default function Item(props) {
         refWrap.current.style.flex = 1
         refWrap.current.style.paddingBottom = '24px'
         refImg.current.style.width = '130px'
+        refImg.current.style.minWidth = '130px'
         refImg.current.style.height = '130px'
         refImg.current.style.aspectRatio = '1 / 1'
 
@@ -130,7 +131,7 @@ export default function Item(props) {
           </div>
       }
       
-      <div className={`${related ? 'pl-7 pr-7 pt-5' : 'pt-5'}`}>
+      <div className={`${related ? 'pl-7 pr-7 pt-5 w-full' : 'pt-5'}`}>
         <div ref={refT} className=''>
           { project.keywords.map((x, i) => {
             return <Fragment key={`keyword_${i}`}>{`#${x}`} </Fragment>
@@ -142,7 +143,7 @@ export default function Item(props) {
             { project.title }
         </div>
         <div ref={refD} className=' text-lg pt-2'>
-            { project.desc ?? '역대급 프로젝트 추억 그 기억 아련함' }
+            { project.desc }
         </div>
       </div>
       

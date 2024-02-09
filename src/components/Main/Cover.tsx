@@ -3,8 +3,13 @@ import Link from "next/link"
 import { css } from "@emotion/react"
 import Image from "next/image"
 import SceneContainer from "./SceneContainer"
+import SceneUI from "./SceneUI"
+import AppBanner from "./AppBanner"
+import { useIntoStore } from './store'
 
 export default function MainCover(props) {
+
+  const isView = useIntoStore((state) => state.isView)
 
   const dd = (() => {
     const date = new Date('2024-02-12')
@@ -43,57 +48,42 @@ export default function MainCover(props) {
               style={{'viewTransitionName': 'q'}}
               ></video>
 
-              {/* <div id="key-visual" className="w-full h-full object-cover rounded-2xl shadow-xl"></div> */}
+              <div id="key-visual" className="w-full h-full object-cover rounded-2xl shadow-xl"></div>
 
             <div className="absolute top-12 left-16 z-10" css={{pointerEvents: 'none'}}>
-            {/* <svg className="w-7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="m100,0H0v100C0,44.77,44.77,0,100,0Z" fill="#F9F8F6"></path></svg> */}
+            
+            { !isView &&
               <div className="goo text-right">
-                2년 연속 Web Award Korea
-                <br />
-                최고 대상 수상!
+              2년 연속 Web Award Korea
+              <br />
+              최고 대상 수상!
               </div>
-              {/* <svg className="w-7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="m100,0H0v100C0,44.77,44.77,0,100,0Z" fill="#F9F8F6"></path></svg> */}
+            }
+            
             </div>
             </Link>
 
-            {/* <div
-              css={{
-                position: "absolute",
-                width: "560px",
-                height: "110px",
-                backgroundColor: "#E5E5E5",
-                borderRadius: "25px",
-                right: 0,
-                bottom: "2rem",
-                transform: "translate(0, 100%)",
-                overflow: "hidden",
-              }}
-            >
-              <Image src="/app.png" width={372} height={72} alt="" css={{
-                width: "100%",
-                height: "100%",
-                objectFit: "cover",
-              }} />
-            </div> */}
+            {/* <AppBanner /> */}
           </div>
           <div className="flex flex-col justify-end gap-8 w-1/3">
 
             <div id="portal-visual" className="h-2/4 rounded-2xl overflow-hidden"
             style={{
-              // "backgroundColor": "#B8D2D8", 
               "width": "92%", 
               "height": "42%",
             }}
             >
             </div>
 
-            <Link href="/work/iconic20" className="h-2/4 rounded-2xl overflow-hidden shadow-xl"
-            style={{
-              backgroundColor: '#83936F',
-              zIndex: '10'
-            }}>
-              <video className="w-full h-full object-cover" src="/assets/projects/iconic20/cover.mp4" autoPlay loop muted playsInline></video>
-            </Link>
+            { !isView &&
+              <Link href="/work/iconic20" className="h-2/4 rounded-2xl overflow-hidden shadow-xl"
+              style={{
+                backgroundColor: '#83936F',
+                zIndex: '10'
+              }}>
+                <video className="w-full h-full object-cover" src="/assets/projects/iconic20/cover.mp4" autoPlay loop muted playsInline></video>
+              </Link>
+            }
           </div>
         </div>
       </div>
@@ -110,6 +100,7 @@ export default function MainCover(props) {
       </div>{' '}
 
       <SceneContainer />
+      {isView && <SceneUI />}
 
     </>
   )

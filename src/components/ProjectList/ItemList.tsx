@@ -52,7 +52,7 @@ export default function ItemList() {
   }, [currentProject])
 
   function arrangeMasonryLayout(items, containerWidth, columnWidth) {
-    console.log('::: ', items, containerWidth, columnWidth)
+    // console.log('::: ', items, containerWidth, columnWidth)
 
     if(items.length === 0) {
       setIsNoData(true)
@@ -102,14 +102,17 @@ export default function ItemList() {
     console.log(selectedItems)
 
     const arrangeLayout = debounce(() => {
-      const h = arrangeMasonryLayout(
-        document.querySelectorAll('.card'),
-        document.querySelector('.item-container')?.clientWidth,
-        document.querySelector('.card')?.clientWidth
-      )
-  
-      document.querySelector('.item-container').parentNode.style.height = `${h + 96 + 96}px`
-      // console.log(h)
+      const $container = document.querySelector('.item-container')
+      if($container && $container.parentNode) {
+        const h = arrangeMasonryLayout(
+          document.querySelectorAll('.card'),
+          $container?.clientWidth,
+          document.querySelector('.card')?.clientWidth
+        )
+    
+        $container.parentNode.style.height = `${h + 96 + 96}px`
+        // console.log(h)
+      }
     })
     
     arrangeLayout()
@@ -154,7 +157,7 @@ export default function ItemList() {
           </li>
         })}
       </motion.ul>
-      
+
       { isNoData &&
       <>
       <div css={{

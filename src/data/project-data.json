@@ -37,6 +37,8 @@
     "title": "카스 쿨/월드컵",
     "desc": "작지만 강한 미니 프로젝트",
     "completed": "11. 2022",
+    "role": ["UI 개발"],
+    "client": "CASS",
     "keywords": ["next.js", "react", "webgl", "CSS"],
     "cardColor": "#CFE4FF",
     "aspect": "0.8",

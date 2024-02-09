@@ -183,7 +183,7 @@ export const ImageFadeMaterial = shaderMaterial(
       gl_FragColor = color;
       // gl_FragColor = texture2D(tex, vUv);
       #include <tonemapping_fragment>
-      #include <encodings_fragment>
+      #include <colorspace_fragment>
     }`
 )
 

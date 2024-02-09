@@ -15,9 +15,7 @@ export function Header() {
   return (
     <header className="header">
       <div className="left">
-        <Link className="" href="/" onClick={e=>{
-          setIsView(false)
-        }}>
+        <Link className="" href="/" onClick={e=>{setIsView(false)}}>
           {/* <img src="/assets/img/j-logo2.png" alt="" /> */}
           <strong>
             Jake
@@ -38,8 +36,8 @@ export function Header() {
         </Link>
       </div>
       <div className="menu-container">
-        <Link href="/work" className="">Work</Link>
-        <Link href="/about" className="">About</Link>
+        <Link href="/work" className="" onClick={e=>{setIsView(false)}}>Work</Link>
+        <Link href="/about" className="" onClick={e=>{setIsView(false)}}>About</Link>
         {/* <a href="#" className="">Articles</a> */}
         <Link href="mailto:firstvirtue@gmail.com" className="contact">Contact</Link>
 

@@ -42,7 +42,7 @@ export default function Cover(props) {
               justify-content: center;
               align-items: center;
               position: relative;
-              width: 17vw;
+              width: 23vw;
               height: ${project.aspect * 53 + "vh"};
               height: 70vh;
               padding: 3rem;
@@ -51,8 +51,9 @@ export default function Cover(props) {
                 <div
                 css={css`
                   position: absolute;
+                  width: 100%;
                   bottom: 20%;
-                  right: -30%;
+                  right: -35%;
                   z-index: 1;
                 `}
                 >

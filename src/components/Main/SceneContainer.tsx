@@ -46,19 +46,19 @@ export default function SceneContainer(props) {
   }, [])
 
   return (
-    <div style={{ position: 'absolute', width: '100%', height: '100vh', left: 0, top: 0 }}>
-    <Canvas
-      colorManagement
-      shadows // highlight-lines
-      camera={{ fov: 70, position: cameraVector }} eventPrefix="client">
+    <div style={{ position: 'absolute', width: '100%', height: '100%', left: 0, top: 0 }}>
+      <Canvas
+        colorManagement
+        shadows // highlight-lines
+        camera={{ fov: 70, position: cameraVector }} eventPrefix="client">
 
-      <KeyVisual />
+        <KeyVisual />
 
-      <Frame id="02" name={`Hello\nWorld`} author="@seoeunggyo5">
-        <AppScene />
-      </Frame>
-      <Rig />
-    </Canvas>
+        <Frame id="02" name={`Hello\nWorld`} author="@seoeunggyo5">
+          <AppScene />
+        </Frame>
+        <Rig />
+      </Canvas>
     </div>
   )
 }
