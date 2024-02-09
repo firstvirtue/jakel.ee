@@ -23,25 +23,25 @@ export default function KeyVisual({}) {
     height: 1.2
   })
   const xMin = useMemo(() => {
-    const r3fMesh = ref.current
+    const r3fMesh = ref.current as any
     if(!r3fMesh) return 0
     return r3fMesh.position.x - geoSize.width / 2
   }, [ref, geoSize])
 
   const xMax = useMemo(() => {
-    const r3fMesh = ref.current
+    const r3fMesh = ref.current as any
     if(!r3fMesh) return 0
     return r3fMesh.position.x + geoSize.width / 2
   }, [ref, geoSize])
 
   const yMin = useMemo(() => {
-    const r3fMesh = ref.current
+    const r3fMesh = ref.current as any
     if(!r3fMesh) return 0
     return r3fMesh.position.y - geoSize.height / 2
   }, [ref, geoSize])
 
   const yMax = useMemo(() => {
-    const r3fMesh = ref.current
+    const r3fMesh = ref.current as any
     if(!r3fMesh) return 0
     return r3fMesh.position.y + geoSize.height / 2
   }, [ref, geoSize])
@@ -49,8 +49,10 @@ export default function KeyVisual({}) {
   useEffect(() => {
     const updateR3FMesh = () => {
 
+      // @ts-ignore
       const fov = camera.fov * (Math.PI / 180)
       const viewport_height = 2 * Math.tan(fov / 2) * camera.position.z
+      // @ts-ignore
       const viewport_width = viewport_height * camera.aspect
       setViewportSize({
         width: viewport_width,
@@ -61,8 +63,10 @@ export default function KeyVisual({}) {
 
       // const htmlElement = htmlElementr3fMesh.current;
       const htmlElement = document.querySelector('#key-visual')
-
-      const r3fMesh = ref.current
+      const r3fMesh = ref.current as any
+      
+      if(!htmlElement|| !r3fMesh) return
+      
 
       // Get the position and size of the HTML element
       const htmlRect = htmlElement.getBoundingClientRect()
@@ -94,6 +98,7 @@ export default function KeyVisual({}) {
   }, []);
 
   useFrame(({pointer}) => {
+    // @ts-ignore
     if(ref.current.material.uniforms) {
       const r3fMesh = ref.current
 
@@ -110,8 +115,9 @@ export default function KeyVisual({}) {
         const progressValueY = (y + 3) - (yMin + 3)
         const progressY = progressValueY / rangeY * 1
         
-
+        // @ts-ignore
         ref.current.material.uniforms.mouse.value.x = THREE.MathUtils.lerp(ref.current.material.uniforms.mouse.value.x, progressX, 0.1)
+        // @ts-ignore
         ref.current.material.uniforms.mouse.value.y = THREE.MathUtils.lerp(ref.current.material.uniforms.mouse.value.y, progressY, 0.1)
       } else {
         // ref.current.material.uniforms.mouse.value.x = THREE.MathUtils.lerp(ref.current.material.uniforms.mouse.value.x, 0.5, 0.05)
@@ -124,8 +130,10 @@ export default function KeyVisual({}) {
   })
 
   return(<>
+    {/* @ts-ignore */}
     <mesh ref={ref} 
     onPointerOver={(e) => hover(true)} onPointerOut={() => hover(false)} onClick={e=>router.push('/post/continuous-award-winning')}>
+      {/* @ts-ignore */}
       <roundedPlaneGeometry args={[geoSize.width, geoSize.height, 0.05]}/>
       <Suspense fallback={<FallbackMaterial url="/qt.png" />}>
         <VideoMaterial url="/prj.mp4" />
@@ -134,15 +142,17 @@ export default function KeyVisual({}) {
   </>)
 }
 
-function VideoMaterial({ url }) {
+function VideoMaterial({ url }: any) {
   
   const texture = useVideoTexture(url)
   const [hovered, setHover] = useState(false)
+  {/* @ts-ignore */}
   return <imageFadeMaterial tex={texture} mouse={[0.5, 0.5]} toneMapped={false} />
 }
 
-function FallbackMaterial({ url }) {
+function FallbackMaterial({ url }: any) {
   const texture = useTexture(url)
+  {/* @ts-ignore */}
   return <meshBasicMaterial map={texture} toneMapped={false} />
 }
 

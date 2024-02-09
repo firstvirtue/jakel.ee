@@ -1,6 +1,5 @@
 /** @jsxImportSource @emotion/react */
 'use client'
-import LinkTransition from "@/components/LinkTransition"
 import Link from "next/link"
 import Menu from "@/components/ProjectList/Menu"
 import { css } from "@emotion/react"

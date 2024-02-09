@@ -2,7 +2,7 @@
 import { css } from "@emotion/react"
 import Item from "@/components/ProjectList/Item"
 
-export default function RelatedPost(props) {
+export default function RelatedPost(props: any) {
   const { prev, next } = props
 
   return (

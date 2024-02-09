@@ -17,4 +17,6 @@ const Wheel = forwardRef(({ radius = 0.7, leftSide, ...props }, ref) => {
   );
 });
 
+Wheel.displayName = 'Wheel'
+
 export default Wheel;

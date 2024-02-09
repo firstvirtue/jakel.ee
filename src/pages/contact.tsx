@@ -1,5 +1,4 @@
 'use client'
-import LinkTransition from "@/components/LinkTransition"
 import Link from "next/link";
 
 export default function Contact() {

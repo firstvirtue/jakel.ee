@@ -14,7 +14,7 @@ extend(geometry)
 // const regular = import('@pmndrs/assets/fonts/inter_regular.woff')
 // const medium = import('@pmndrs/assets/fonts/inter_medium.woff')
 
-export default function SceneContainer(props) {
+export default function SceneContainer() {
   const isView = useIntoStore((state) => state.isView)
   const setIsView = useIntoStore((state) => state.setIsView)
   const setIsHelloWorld = useIntoStore((state) => state.setIsHelloWorld)
@@ -50,10 +50,12 @@ export default function SceneContainer(props) {
       <Canvas
         colorManagement
         shadows // highlight-lines
+        // @ts-ignore
         camera={{ fov: 70, position: cameraVector }} eventPrefix="client">
 
         <KeyVisual />
 
+        {/* @ts-ignore */}
         <Frame id="02" name={`Hello\nWorld`} author="@seoeunggyo5">
           <AppScene />
         </Frame>
@@ -63,7 +65,7 @@ export default function SceneContainer(props) {
   )
 }
 
-function Frame({ id, name, author, bg, width = 1.3, height = 1, children, ...props }) {
+function Frame({ id, name, author, bg, width = 1.3, height = 1, children, ...props }: any) {
   const isHelloWorld = useIntoStore((state) => state.isHelloWorld)
   const setIsHelloWorld = useIntoStore((state) => state.setIsHelloWorld)
 
@@ -86,8 +88,10 @@ function Frame({ id, name, author, bg, width = 1.3, height = 1, children, ...pro
   useEffect(() => {
     const updateR3FMesh = () => {
 
+      // @ts-ignore
       const fov = camera.fov * (Math.PI / 180)
       const viewport_height = 2 * Math.tan(fov / 2) * camera.position.z
+      // @ts-ignore
       const viewport_width = viewport_height * camera.aspect
       setViewportSize({
         width: viewport_width,
@@ -98,8 +102,8 @@ function Frame({ id, name, author, bg, width = 1.3, height = 1, children, ...pro
 
       // const htmlElement = htmlElementr3fMesh.current;
       const htmlElement = document.querySelector('#portal-visual')
-
-      const r3fMesh = ref.current
+      const r3fMesh = ref.current as any
+      if(!htmlElement|| !r3fMesh) return
 
       // Get the position and size of the HTML element
       const htmlRect = htmlElement.getBoundingClientRect()
@@ -135,7 +139,7 @@ function Frame({ id, name, author, bg, width = 1.3, height = 1, children, ...pro
   }, [])
 
   const portal = useRef()
-  
+  // @ts-ignore
   useFrame((state, dt) => easing.damp(portal.current, 'blend', isView ? 1 : 0, 0.2, dt))
   return (
     <group {...props} ref={ref}>
@@ -152,7 +156,9 @@ function Frame({ id, name, author, bg, width = 1.3, height = 1, children, ...pro
       <mesh name={id} onClick={(e) => (e.stopPropagation(), window.history.pushState('', '', '/hello-world'), setIsView(true))}
       onPointerOver={(e) => hover(true)} onPointerOut={() => hover(false)}
       >
+        {/* @ts-ignore */}
         <roundedPlaneGeometry args={[frameSize.width, frameSize.height, 0.05]} />
+        {/* @ts-ignore */}
         <MeshPortalMaterial ref={portal} side={THREE.DoubleSide}>
           <color attach="background" args={[bg]} />
           {children}
@@ -169,14 +175,17 @@ function Rig({ position = new THREE.Vector3(cameraVector[0], cameraVector[1], ca
   useEffect(() => {
     const active = scene.getObjectByName('02')
     if (isView) {
-      active.parent.localToWorld(position.set(0, 0.5, 0.25))
-      active.parent.localToWorld(focus.set(0, 0.5, 0))
+      active?.parent?.localToWorld(position.set(0, 0.5, 0.25))
+      active?.parent?.localToWorld(focus.set(0, 0.5, 0))
     }
+    // @ts-ignore
     controls?.setLookAt(...position.toArray(), ...focus.toArray(), true)
 
     // console.log('CameraControls:: ', controls)
   }, [isView])
+  // @ts-ignore
   controls && (controls.mouseButtons.wheel = 0)
+  // @ts-ignore
   controls && (controls.mouseButtons.left = 0)
 
   return <CameraControls makeDefault minPolarAngle={0} maxPolarAngle={Math.PI / 2} />

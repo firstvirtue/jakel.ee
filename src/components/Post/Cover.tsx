@@ -5,7 +5,7 @@ import { useEffect, useRef } from "react"
 import { RevealText } from "@/lib/RevealText"
 import { Fragment } from "react"
 
-export default function Cover(props) {
+export default function Cover(props: any) {
 
   const { project } = props
   const refMo = useRef()
@@ -13,8 +13,11 @@ export default function Cover(props) {
 
   useEffect(() => {
     if(!refMo.current) {
+      // @ts-ignore
       refMo.current = new RevealText(refT.current)
+      // @ts-ignore
       refMo.current.reset()
+      // @ts-ignore
       setTimeout(() => { refMo.current.startAnimating() }, 700)
     }
     
@@ -58,6 +61,7 @@ export default function Cover(props) {
                 `}
                 >
                   <span
+                  // @ts-ignore
                   ref={refT}
                   className="cover-transition-el"
                   css={{
@@ -66,6 +70,7 @@ export default function Cover(props) {
                     marginBottom: '1rem',
                   }}
                   >
+                    {/* @ts-ignore */}
                     { project.keywords.map((keyword, i) => <Fragment key={`keyword_${i}`}>{ `#${keyword} ` }</Fragment>) }
                   </span>
                   <h1

@@ -7,7 +7,7 @@ import { useRouter } from 'next/router'
 import { RevealText } from '../../lib/RevealText'
 import { Fragment } from 'react'
 
-export default function Item(props) {
+export default function Item(props: any) {
   const { project, index, related, prev, next } = props
   const router = useRouter()
   const refImg = useRef()

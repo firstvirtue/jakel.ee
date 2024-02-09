@@ -1,6 +1,5 @@
 /** @jsxImportSource @emotion/react */
 'use client'
-import LinkTransition from "@/components/LinkTransition"
 import Link from "next/link"
 import LayoutWork from "@/components/Post/LayoutWork"
 import Cover from "@/components/Post/Cover"

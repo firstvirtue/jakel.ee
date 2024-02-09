@@ -50,10 +50,10 @@ export default function KeyMessage() {
     I want to touch people with my art. <span css={{fontSize: '3rem', fontWeight: 100, marginLeft: '3rem', marginRight: '3rem', }}>+</span>
     </span>
       {/* I want to touch people<br/> with my art.<br/>  */}
-      "
+      &ldquo;
       I want them to say:<br/> 
       He feels deeply,<br/> 
-      He feels tenderly."<br/>
+      He feels tenderly.&rdquo;<br/>
       <span css={{display: 'block', position: 'absolute', bottom: '18rem', right: 0, textAlign: 'right', fontSize: '2rem'}}>Loving Vincent</span>
 
       <span 

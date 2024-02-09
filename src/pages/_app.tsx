@@ -6,15 +6,15 @@ import { appWithTranslation } from 'next-i18next'
 import type { AppProps } from 'next/app'
 import { useRouter } from "next/router";
 import { useNextRouterViewTransitions } from 'use-view-transitions/next'
-import { usePathname } from "next/navigation"
+// import { usePathname } from "next/navigation"
 import useViewTransitionRouter from '@/hooks/useViewTransitionRouter'
 import Layout from '@/components/Layout';
 
-const app = ({ Component, pageProps }: AppProps) => {
+const App = ({ Component, pageProps }: AppProps) => {
   const router = useRouter();
   useNextRouterViewTransitions(router);
   // const transitionRouter = useViewTransitionRouter(router)
-  const pathname = usePathname();
+  // const pathname = usePathname();
   
   return (
     <Layout>
@@ -23,4 +23,4 @@ const app = ({ Component, pageProps }: AppProps) => {
   )
 }
 
-export default appWithTranslation(app)
+export default appWithTranslation(App)

@@ -8,7 +8,7 @@ import { useRouter } from "next/router"
 import { motion, useScroll } from "framer-motion"
 import useInterval from '@/hooks/useInterval'
 
-export default function PostMenu(props) {
+export default function PostMenu(props: any) {
   const { project } = props
   // const project = projectData[8]
   const [isOpen, setIsOpen] = useState(false)
@@ -102,6 +102,7 @@ export default function PostMenu(props) {
 
                 <span className="block text-sm opacity-50 pt-4">Tech</span>
                 <p className="menu__list text-base opacity-100">
+                  {/* @ts-ignore */}
                   { project.keywords.map((keyword, i) => <span css={{display: "block"}} key={`keyword${i}`}>{ `${keyword} ` }</span>) }
                 </p>
 
@@ -111,6 +112,7 @@ export default function PostMenu(props) {
                 { project.awards &&
                 <>
                 <span className="block text-sm opacity-50 pt-4">Awards</span>
+                {/* @ts-ignore */}
                 <p className="menu__list text-base opacity-100">{ project.awards.map((award, i) => {
                   return <span key={`award-${i}`} className='block'>{award}</span>
                 }) }</p>

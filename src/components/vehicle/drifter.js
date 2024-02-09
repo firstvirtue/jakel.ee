@@ -52,4 +52,6 @@ const Drifter = forwardRef(({ args = [0.5, 0.5, 1.4], mass = 1500, setVisible, .
   );
 });
 
+Drifter.displayName = 'Drifter'
+
 export default Drifter;

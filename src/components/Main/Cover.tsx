@@ -7,7 +7,7 @@ import SceneUI from "./SceneUI"
 import AppBanner from "./AppBanner"
 import { useIntoStore } from './store'
 
-export default function MainCover(props) {
+export default function MainCover() {
 
   const isView = useIntoStore((state) => state.isView)
 

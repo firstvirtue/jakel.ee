@@ -1,7 +1,6 @@
 'use client'
 
 import Image from 'next/image'
-import LinkTransition from '@/components/LinkTransition'
 // import Link from 'next/link'
 import Link from '@/components/transition-link'
 import MainCover from '../components/Main/Cover'

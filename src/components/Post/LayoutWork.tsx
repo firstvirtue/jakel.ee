@@ -3,7 +3,7 @@
 import PostMenu from "@/components/Post/PostMenu"
 import { css } from "@emotion/react"
 
-export default function LayoutWork(props) {
+export default function LayoutWork(props: any) {
 
   const { children, project } = props
 
