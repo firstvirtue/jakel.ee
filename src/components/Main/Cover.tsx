@@ -12,7 +12,7 @@ export default function MainCover(props) {
   const isView = useIntoStore((state) => state.isView)
 
   const dd = (() => {
-    const date = new Date('2024-02-12')
+    const date = new Date()
 
     return `${date.getFullYear()}/${date.getMonth() + 1}/${date.getDate()}`
   })()

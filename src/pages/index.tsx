@@ -11,7 +11,18 @@ import PlayGround from '../components/Main/PlayGround'
 // import { useIntoStore } from '@/components/Main/store'
 // import { useEffect } from 'react'
 
-export default function Home() {
+import type {
+  GetServerSideProps,
+  InferGetServerSidePropsType,
+} from 'next'
+import type { GetStaticProps, InferGetStaticPropsType } from 'next'
+import { useTranslation, Trans } from 'next-i18next'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+
+export default function Home(
+  _props: InferGetServerSidePropsType<typeof getServerSideProps>
+) {
+  const { t } = useTranslation(['common', 'second-page'])
   // const setIsHelloWorld = useIntoStore((state) => state.setIsHelloWorld)
   // const isView = useIntoStore((state) => state.isView)
 
@@ -24,6 +35,9 @@ export default function Home() {
 
       <MainCover />
       <KeyMessage />
+
+      {t('second-page:h1')}
+
       <ProjectList />
 
       <div className='spacer'></div>
@@ -43,3 +57,18 @@ export default function Home() {
     </main>
   )
 }
+
+type Props = {
+  // Add custom props here
+}
+
+export const getServerSideProps: GetServerSideProps<Props> = async ({
+  locale,
+}) => ({
+  props: {
+    ...(await serverSideTranslations(locale ?? 'en', [
+      'second-page',
+      'footer',
+    ])),
+  },
+})
