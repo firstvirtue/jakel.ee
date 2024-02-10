@@ -1,75 +1,75 @@
-"use client";
+// "use client";
 
-import { transitionHelper } from "@/lib/TransitionHelper";
-import React, { TransitionFunction, use, useEffect, useLayoutEffect, useRef, useTransition } from "react";
+// import { transitionHelper } from "@/lib/TransitionHelper";
+// import React, { TransitionFunction, use, useEffect, useLayoutEffect, useRef, useTransition } from "react";
 
-const TransitionProvder = ({ children }: { children: React.ReactNode }) => {
-  const [isLoading, startTransition] = useTransition();
+// const TransitionProvder = ({ children }: { children: React.ReactNode }) => {
+//   const [isLoading, startTransition] = useTransition();
 
-  const promiseCallbacks = useRef<Record<
-    "resolve" | "reject",
-    (value: unknown) => void
-  > | null>(null);
-
-  useEffect(() => {
-    
-
-    window.onpopstate = function () {
-         console.log("TRANSITIONER - POPSTATE");
-        // transitionHelper({
-        //     updateDOM: () => {
-        //         return new Promise((resolve, reject) => {
-        //             // @ts-ignore
-        //             promiseCallbacks.current = { resolve, reject };
-        //         });
-        //     }
-        // });
-        document.startViewTransition((e) => {
-            // return new Promise((resolve, reject) => {
-            //     // @ts-ignore
-            //     promiseCallbacks.current = { resolve, reject };
-            // });
-        });
-        startTransition(() => {});
-    };
-  }, []);
-
-  useLayoutEffect(() => {
-    console.log("LAYOUT EFFECT PROVIDER");
-
-    return () => {
-        console.log("TRANSITIONER - END");
-        if (promiseCallbacks.current) {
-            console.log("TRANSITIONER - RESOLVE");
-            promiseCallbacks.current.resolve(undefined);
-            promiseCallbacks.current = null;
-        }
-        };
-  });
-    
+//   const promiseCallbacks = useRef<Record<
+//     "resolve" | "reject",
+//     (value: unknown) => void
+//   > | null>(null);
 
 //   useEffect(() => {
-//     console.log("TRANSITIONER - START");
     
-//     if (isLoading && !promiseCallbacks.current) {
-//         console.log("TRANSITIONER - SETUP");
-//         promiseCallbacks.current = {
-//             resolve: () => {},
-//             reject: () => {},
-//         };
-//     }
+
+//     window.onpopstate = function () {
+//          console.log("TRANSITIONER - POPSTATE");
+//         // transitionHelper({
+//         //     updateDOM: () => {
+//         //         return new Promise((resolve, reject) => {
+//         //             // @ts-ignore
+//         //             promiseCallbacks.current = { resolve, reject };
+//         //         });
+//         //     }
+//         // });
+//         document.startViewTransition((e) => {
+//             // return new Promise((resolve, reject) => {
+//             //     // @ts-ignore
+//             //     promiseCallbacks.current = { resolve, reject };
+//             // });
+//         });
+//         startTransition(() => {});
+//     };
+//   }, []);
+
+//   useLayoutEffect(() => {
+//     console.log("LAYOUT EFFECT PROVIDER");
 
 //     return () => {
 //         console.log("TRANSITIONER - END");
 //         if (promiseCallbacks.current) {
 //             console.log("TRANSITIONER - RESOLVE");
-//           promiseCallbacks.current.resolve(undefined);
-//           promiseCallbacks.current = null;
+//             promiseCallbacks.current.resolve(undefined);
+//             promiseCallbacks.current = null;
 //         }
-//       };
-//   }, [isLoading]);
+//         };
+//   });
+    
 
-  return children;
-};
+// //   useEffect(() => {
+// //     console.log("TRANSITIONER - START");
+    
+// //     if (isLoading && !promiseCallbacks.current) {
+// //         console.log("TRANSITIONER - SETUP");
+// //         promiseCallbacks.current = {
+// //             resolve: () => {},
+// //             reject: () => {},
+// //         };
+// //     }
 
-export default TransitionProvder;
+// //     return () => {
+// //         console.log("TRANSITIONER - END");
+// //         if (promiseCallbacks.current) {
+// //             console.log("TRANSITIONER - RESOLVE");
+// //           promiseCallbacks.current.resolve(undefined);
+// //           promiseCallbacks.current = null;
+// //         }
+// //       };
+// //   }, [isLoading]);
+
+//   return children;
+// };
+
+// export default TransitionProvder;

@@ -24,11 +24,11 @@ const config: Config = {
     },
   },
   plugins: [
-    plugin(function({ addBase }) {
-      addBase({
-        // 'html': { fontSize: "10px" }
-      })
-    })
+    // plugin(function({ addBase }) {
+    //   addBase({
+    //     // 'html': { fontSize: "10px" }
+    //   })
+    // })
   ],
 }
 export default config

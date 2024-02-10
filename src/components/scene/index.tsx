@@ -10,11 +10,13 @@ import { Geometry } from "three-stdlib";
 import Vehicle from '../vehicle'
 
 // extend(geometry)
-
+// @ts-ignore
 type TerrainGLTF = GLTF & {
   materials: {}
   nodes: {
+    // @ts-ignore
     terrain003: Mesh & {
+      // @ts-ignore
       geometry: BufferGeometry & { index: ArrayLike<number> }
     }
   }
@@ -32,7 +34,7 @@ type TerrainGLTF = GLTF & {
 //   play: () => set({ isPaused: false }),
 // }))
 
-function toConvexProps(bufferGeometry) {
+function toConvexProps(bufferGeometry: any) {
   const geo = new Geometry().fromBufferGeometry(bufferGeometry);
   // Merge duplicate vertices resulting from glTF export.
   // Cannon assumes contiguous, closed meshes to work
@@ -67,6 +69,7 @@ const Terrain = ({ position }: Pick<TrimeshProps, 'position'>) => {
       mass: 0,
       position
     }),
+    // @ts-ignore
     useRef<Mesh>(null),
   )
 
@@ -100,6 +103,7 @@ const Bowl = ({ rotation }: Pick<TrimeshProps, 'rotation'>) => {
     nodes: {
       'bowl': { geometry },
     },
+    // @ts-ignore
   } = useGLTF('/assets/model/bowl.glb') as BowlGLTF
   const {
     attributes: {
@@ -116,6 +120,7 @@ const Bowl = ({ rotation }: Pick<TrimeshProps, 'rotation'>) => {
       mass: 0,
       rotation,
     }),
+    // @ts-ignore
     useRef<Mesh>(null),
   )
 
@@ -129,10 +134,11 @@ const Bowl = ({ rotation }: Pick<TrimeshProps, 'rotation'>) => {
   )
 }
 
-const Obje = (props) => {
+const Obje = (props: any) => {
   const [ref] = useCylinder(() => ({ mass: 0.3, args: [1, 1, 2, 16], ...props }));
 
   return (
+    // @ts-ignore
     <mesh ref={ref}>
       <Gltf castShadow src={props.src} scale={1} position={[0, -1, 0]} />
     </mesh>
@@ -140,7 +146,7 @@ const Obje = (props) => {
 };
 
 export const AppScene = () => {
-
+  // @ts-ignore
   const boxRef = useRef<Mesh>(null);
   useFrame(() => {
     boxRef.current.rotation.y += 0.004;

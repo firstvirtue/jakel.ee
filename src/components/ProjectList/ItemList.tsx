@@ -36,9 +36,9 @@ export default function ItemList() {
     if(currentProject === '') {
       setSelectedItems(projectData) 
     } else {
-      const refine = projectData.reduce((acc, cur) => {
+      const refine = projectData.reduce((acc: any, cur: any) => {
         // console.log(acc, cur.keywords, currentProject)
-        if (cur.keywords.filter(x => x === currentProject).length > 0) {
+        if (cur.keywords.filter((x: any) => x === currentProject).length > 0) {
           acc.push(cur)
         }
   
@@ -51,7 +51,7 @@ export default function ItemList() {
     // console.log(currentProject, refine)
   }, [currentProject])
 
-  function arrangeMasonryLayout(items, containerWidth, columnWidth) {
+  function arrangeMasonryLayout(items: any, containerWidth: any, columnWidth: any) {
     // console.log('::: ', items, containerWidth, columnWidth)
 
     if(items.length === 0) {
@@ -66,7 +66,7 @@ export default function ItemList() {
     let h = 0
     let maxH = 0
 
-    items.forEach((item, index) => {
+    items.forEach((item: any, index: number) => {
         // Find the shortest column
         let shortestColumn = 0;
         for (let i = 1; i < numColumns; i++) {
@@ -109,7 +109,8 @@ export default function ItemList() {
           $container?.clientWidth,
           document.querySelector('.card')?.clientWidth
         )
-    
+        
+        {/* @ts-ignore */}
         $container.parentNode.style.height = `${h + 96 + 96}px`
         // console.log(h)
       }
@@ -142,7 +143,7 @@ export default function ItemList() {
         exit="leaving"
         >
         
-        { selectedItems.map((item, i) => {
+        { selectedItems.map((item: any, i: number) => {
           return <li 
             className="card 2xl:w-1/4 xl:w-1/3 lg:w-1/2 p-2"
             css={{

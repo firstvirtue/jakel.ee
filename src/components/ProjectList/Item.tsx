@@ -56,8 +56,11 @@ export default function Item(props: any) {
 
   useEffect(() => {
     if(!refMo.current) {
+      // @ts-ignore
       refMo.current = new RevealText(refT.current)
+      // @ts-ignore
       refMo.current.reset()
+      // @ts-ignore
       setTimeout(() => { refMo.current.startAnimating() }, 200)
     }
   }, [])
@@ -67,6 +70,7 @@ export default function Item(props: any) {
     <Link
       href={project.link ? project.link : '#'}
       className='project-item block relative text-black pb-28 rounded-3xl overflow-hidden hover:bg-black shadow-lg'
+      // @ts-ignore
       ref={refWrap}
       css={{
         'backgroundColor': project.cardColor ?? '#ffffff',
@@ -88,17 +92,24 @@ export default function Item(props: any) {
         e.preventDefault()
 
         // [NOTE] 모션 간섭이 일어나서 시각 효과에서 제거
+        // @ts-ignore
         document.querySelector('.menu').style.opacity = 0
 
         // Remove duplicate transition
+        {/* @ts-ignore */}
         document.querySelectorAll('.cover-transition-el').forEach((x, i) => x.style.viewTransitionName = `xx${i}` )
 
         if(refImg.current) {
+          // @ts-ignore
           refImg.current.style.viewTransitionName = 'item_img'
         }
+        // @ts-ignore
         refT.current.style.viewTransitionName = 'item_t'
+        // @ts-ignore
         refH.current.style.viewTransitionName = 'item_h'
+        // @ts-ignore
         refD.current.style.viewTransitionName = 'item_d'
+        // @ts-ignore
         refWrap.current.style.viewTransitionName = 'item_wrap'
 
         
@@ -107,13 +118,16 @@ export default function Item(props: any) {
       }}
 
       onMouseEnter={e => {
+        // @ts-ignore
         refMo.current.reset()
+        // @ts-ignore
         refMo.current.startAnimating()
       }}
     >
 
       { (project.coverVideo || project.coverImage) &&
         <div className='v-wrap relative overflow-hidden rounded-2xl'
+        // @ts-ignore
           ref={refImg}
           css={{
             aspectRatio: `1 / ${ project.aspect }`,
@@ -136,21 +150,25 @@ export default function Item(props: any) {
       }
       
       <div className={`${related ? 'pl-7 pr-7 pt-5 w-full' : 'pt-5'}`}>
+        {/* @ts-ignore */}
         <div ref={refT} className=''>
-          { project.keywords.map((x, i) => {
+          { project.keywords.map((x: any, i: number) => {
             return <Fragment key={`keyword_${i}`}>{`#${x}`} </Fragment>
           }) }
         </div>
 
+        {/* @ts-ignore */}
         <div ref={refH}
         className=" pt-1 text-3xl font-bold">
             { project.title }
         </div>
+        {/* @ts-ignore */}
         <div ref={refD} className=' text-lg pt-2'>
             { project.desc }
         </div>
       </div>
-      
+
+      {/* @ts-ignore */}
       <div ref={refBot} className='num absolute text-white left-0 -bottom-14 text-10xl leading-none text font-bold pt-2 text-center w-full'
       css={{
         color: project.cardColor ? undefined : '#f3f3f3',

@@ -7,8 +7,6 @@ import RelatedPost from "@/components/Post/RelatedPost"
 import Image from "next/image"
 import { css } from "@emotion/react"
 
-import { H3, Paragraph, Figure } from "@/components/Post/Elements"
-
 
 import projectData from '../../data/project-data.json'
 

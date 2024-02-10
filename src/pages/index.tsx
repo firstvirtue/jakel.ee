@@ -2,7 +2,6 @@
 
 import Image from 'next/image'
 // import Link from 'next/link'
-import Link from '@/components/transition-link'
 import MainCover from '../components/Main/Cover'
 import KeyMessage from '../components/Main/KeyMessage'
 import ProjectList from '@/components/ProjectList'
