@@ -28,18 +28,22 @@ export default function Item(props: any) {
   useEffect(() => {
     if(related) {
       try {
-        refWrap.current.style.display = 'flex'
-        refWrap.current.style.flex = 1
-        refWrap.current.style.paddingBottom = '24px'
-        refImg.current.style.width = '130px'
-        refImg.current.style.minWidth = '130px'
-        refImg.current.style.height = '130px'
-        refImg.current.style.aspectRatio = '1 / 1'
+        const $wrap = refWrap.current as any
+        const $img = refImg.current as any
+        const $bot = refBot.current as any
 
-        refBot.current.style.fontSize = '5rem'
-        refBot.current.style.transformOrigin = 'right'
-        refBot.current.style.textAlign = 'left'
-        refBot.current.style.transform = 'rotateZ(-90deg) translate(100%, -25%)'
+        $wrap.style.display = 'flex'
+        $wrap.style.flex = 1
+        $wrap.style.paddingBottom = '24px'
+        $img.style.width = '130px'
+        $img.style.minWidth = '130px'
+        $img.style.height = '130px'
+        $img.style.aspectRatio = '1 / 1'
+
+        $bot.style.fontSize = '5rem'
+        $bot.style.transformOrigin = 'right'
+        $bot.style.textAlign = 'left'
+        $bot.style.transform = 'rotateZ(-90deg) translate(100%, -25%)'
 
         // refH.current.style.fontSize = '1rem'
         
