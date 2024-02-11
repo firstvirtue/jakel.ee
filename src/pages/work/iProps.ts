@@ -22,13 +22,5 @@ export const getServerSideProps: GetServerSideProps<Props> = async ({
   },
 })
 
-export const getStaticProps = async ({ locale }: any) => ({
-  props: {
-    ...(await serverSideTranslations(locale ?? 'en', [
-      'second-page',
-      'footer',
-    ])),
-  },
-})
-
 // Not work..
+// How to use getStaticProps?
