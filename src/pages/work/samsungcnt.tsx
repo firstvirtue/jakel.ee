@@ -8,12 +8,23 @@ import Image from "next/image"
 import { css } from "@emotion/react"
 
 import projectData from '../../data/project-data.json'
+import { getProjectInformation } from "@/lib/helper"
 
-export default function Post() {
-  
-  const currentProject = projectData.find(x => x.id === 'samsungcnt')
-  const prevProject = projectData.find(x => x.id === 'vyvydstudio')
-  const nextProject = projectData.find(x => x.id === 'kodex')
+import type {
+  GetServerSideProps,
+  InferGetServerSidePropsType,
+} from 'next'
+import type { GetStaticProps, InferGetStaticPropsType } from 'next'
+import { useTranslation, Trans, i18n } from 'next-i18next'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+
+export default function Post(
+  _props: InferGetServerSidePropsType<typeof getServerSideProps>
+) {
+  const { t } = useTranslation(['common', 'second-page'])
+  const currentProject = getProjectInformation('samsungcnt')
+  const prevProject = getProjectInformation('vyvydstudio')
+  const nextProject = getProjectInformation('kodex')
 
   return (
     <>
@@ -22,7 +33,6 @@ export default function Post() {
 
       <div className="flex pl-24 pr-24 pt-32">
         <div className="content w-full">
-
           <h2 className="text-6xl font-bold text-center">Create Value for Your World</h2>
 
           <h3>심리스한 페이지 트랜지션</h3>
@@ -55,3 +65,18 @@ export default function Post() {
     </>
   )
 }
+
+type Props = {
+  // Add custom props here
+}
+
+export const getServerSideProps: GetServerSideProps<Props> = async ({
+  locale,
+}) => ({
+  props: {
+    ...(await serverSideTranslations(locale ?? 'en', [
+      'second-page',
+      'footer',
+    ])),
+  },
+})

@@ -7,6 +7,7 @@ import projectData from '../../data/project-data.json'
 import { useRouter } from "next/router"
 import { motion, useScroll } from "framer-motion"
 import useInterval from '@/hooks/useInterval'
+import { useTranslation, Trans, i18n } from 'next-i18next'
 
 export default function PostMenu(props: any) {
   const { project } = props
@@ -15,6 +16,7 @@ export default function PostMenu(props: any) {
   const [progress, setProgress] = useState(0)
   const [isUp, setIsUp] = useState(false)
   const [isDown, setIsDown] = useState(false)
+  const { t } = useTranslation(['second-page'])
 
   function handleProgress() {
     if(progress >= 0.99) {
@@ -72,7 +74,7 @@ export default function PostMenu(props: any) {
             >
               <span className="text-sm opacity-50">Selected Work</span>
               <h2 className="text-2xl uppercase font-normal pb-2 opacity-100">
-                { project.title }
+                { t(`second-page:projects.${project.id}.title`) }
               </h2>
               <hr className="opacity-30 my-2" />
             </div>
@@ -93,7 +95,7 @@ export default function PostMenu(props: any) {
                 }}
               >
                 <span className="text-sm opacity-50">Client</span>
-                <p className="menu__list text-base opacity-100">{ project.client }</p>
+                <p className="menu__list text-base opacity-100">{t(`second-page:projects.${project.id}.client`)}</p>
                 
                 <span className="block text-sm opacity-50 pt-4">Role</span>
                 <p className="menu__list text-base opacity-100">

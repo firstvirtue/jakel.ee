@@ -99,7 +99,7 @@ export default function ItemList() {
 
   useEffect(() => {
 
-    console.log(selectedItems)
+    // console.log(selectedItems)
 
     const arrangeLayout = debounce(() => {
       const $container = document.querySelector('.item-container')
@@ -170,7 +170,7 @@ export default function ItemList() {
       (;-;)
       </div>
       <p className='block text-center'>
-      May be preparing..
+      Organizing..
       </p>
       </>
       

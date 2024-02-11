@@ -46,8 +46,8 @@ export default function Menu() {
             })}
           </ul>
           <hr className="opacity-30 my-2" />
-          <button className="text-lg text-left" type='button' onClick={e => setCurrentProject('personal_project')}>
-            <span> Personal Project</span>
+          <button className="text-lg text-left" type='button' onClick={e => setCurrentProject('side_project')}>
+            <span> Side Projects</span>
           </button>
           <br />
           <button className="text-lg pt-2 pb-2" type='button' onClick={e => setCurrentProject('awards')}>

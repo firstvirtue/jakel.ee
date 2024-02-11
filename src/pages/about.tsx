@@ -1,4 +1,15 @@
-export default function About() {
+import type {
+  GetServerSideProps,
+  InferGetServerSidePropsType,
+} from 'next'
+import type { GetStaticProps, InferGetStaticPropsType } from 'next'
+import { useTranslation, Trans, i18n } from 'next-i18next'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+
+
+export default function About(
+  _props: InferGetServerSidePropsType<typeof getServerSideProps>
+) {
   return (
     <>
     <div className="max-w-3xl mr-auto ml-auto mt-64">
@@ -108,3 +119,18 @@ export default function About() {
     </>
   )
 }
+
+type Props = {
+  // Add custom props here
+}
+
+export const getServerSideProps: GetServerSideProps<Props> = async ({
+  locale,
+}) => ({
+  props: {
+    ...(await serverSideTranslations(locale ?? 'en', [
+      'second-page',
+      'footer',
+    ])),
+  },
+})

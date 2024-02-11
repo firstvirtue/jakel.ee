@@ -8,12 +8,22 @@ import Image from "next/image"
 import { css } from "@emotion/react"
 
 import projectData from '../../data/project-data.json'
+import { getProjectInformation } from "@/lib/helper"
+import type {
+  GetServerSideProps,
+  InferGetServerSidePropsType,
+} from 'next'
+import type { GetStaticProps, InferGetStaticPropsType } from 'next'
+import { useTranslation, Trans, i18n } from 'next-i18next'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
-export default function Post() {
-  
-  const currentProject = projectData.find(x => x.id === 'vyvydstudio')
-  const prevProject = projectData.find(x => x.id === 'galleria')
-  const nextProject = projectData.find(x => x.id === 'samsungcnt')
+
+export default function Post(
+  _props: InferGetServerSidePropsType<typeof getServerSideProps>
+) {
+  const currentProject = getProjectInformation('vyvydstudio')
+  const prevProject = getProjectInformation('galleria')
+  const nextProject = getProjectInformation('samsungcnt')
 
   return (
     <>
@@ -66,3 +76,19 @@ export default function Post() {
     </>
   )
 }
+
+
+type Props = {
+  // Add custom props here
+}
+
+export const getServerSideProps: GetServerSideProps<Props> = async ({
+  locale,
+}) => ({
+  props: {
+    ...(await serverSideTranslations(locale ?? 'en', [
+      'second-page',
+      'footer',
+    ])),
+  },
+})

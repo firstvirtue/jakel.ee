@@ -14,7 +14,7 @@ import type {
   InferGetServerSidePropsType,
 } from 'next'
 import type { GetStaticProps, InferGetStaticPropsType } from 'next'
-import { useTranslation, Trans } from 'next-i18next'
+import { useTranslation, Trans, i18n } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
 export default function Home(
@@ -33,9 +33,6 @@ export default function Home(
 
       <MainCover />
       <KeyMessage />
-
-      {t('second-page:h1')}
-
       <ProjectList />
 
       <div className='spacer'></div>

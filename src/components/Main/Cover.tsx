@@ -56,7 +56,7 @@ export default function MainCover() {
               <div className="goo text-right">
               2년 연속 Web Award Korea
               <br />
-              최고 대상 수상!
+              최고 대상 수상
               </div>
             }
             

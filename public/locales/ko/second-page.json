@@ -1,5 +1,102 @@
 {
   "h1": "Eine zweite Seite, um das Routing zu demonstrieren",
   "back-to-home": "Zurück zur Hauptseite",
-  "title": "Zweite Seite | next-i18next"
+  "title": "Zweite Seite | next-i18next",
+  "projects": {
+    "samsungcnt": {
+      "title": "삼성물산 상사부문",
+      "desc": "심리스한 화면 전환",
+      "role": ["프론트엔드 파트 리딩"],
+      "client": "삼성물산"
+    },
+    "kodex": {
+      "title": "삼성자산운용",
+      "desc": "데이터 기반 렌더링 역대급 프로젝트",
+      "awards": ["2023 앤어워드 Grand Prix", "Web Award Korea 2023 최고대상"],
+      "role": ["프론트엔드 파트 리딩"],
+      "client": "삼성자산운용"
+    },
+    "casscool": {
+      "title": "카스 쿨/월드컵",
+      "desc": "작지만 강한 미니 프로젝트",
+      "role": ["UI 개발"],
+      "client": "CASS"
+    },
+    "lotteshopping": {
+      "title": "롯데백화점 웹 메인",
+      "desc": "Vanilla 상태 관리로 유려한 UI",
+      "role": ["Web 메인 개발"],
+      "client": "롯데백화점"
+    },
+    "hanwhadefense": {
+      "title": "한화디펜스(에어로스페이스) 버츄얼 쇼룸",
+      "desc": "실무 레벨의 WebGL",
+      "awards": ["2023 앤어워드 과학기술정보통신부 장관상"],
+      "role": ["프론트엔드 파트 리딩"],
+      "client": "한화에어로스페이스"
+    },
+    "hankooktire": {
+      "title": "한국타이어 글로벌/세일즈 플랫폼",
+      "desc": "수 많은 컴포넌트와 템플릿 관리",
+      "awards": ["Web Award Korea 2022 제조업분야 대상", "2022 앤어워드 Grand Prix", "iF DESIGN AWARD 2023", "Red Dot Design Award 2023"],
+      "role": ["프론트엔드 파트 리딩"],
+      "client": "한국타이어"
+    },
+    "iconic20": {
+      "title": "스마일게이트 아이코닉20",
+      "desc": "모션그래픽 수준의 비주얼",
+      "awards": ["2022 앤어워드 Grand Prix"],
+      "role": ["UI 개발"],
+      "bracket": "(현재 메인으로 리다이렉팅 되는 경우가 있는데 한 번 더 링크 이동해주세요🙏)",
+      "client": "스마일게이트"
+    },
+    "galaxystudio": {
+      "title": "삼성 내 손안에 갤럭시 스튜디오",
+      "desc": "긴박했지만 안정적인 론칭",
+      "role": ["UI 개발"],
+      "client": "삼성전자"
+    },
+    "bespoke": {
+      "title": "삼성 비스포크 나답게 집꾸",
+      "desc": "모듈 조합 마이크로 UX",
+      "role": ["UI 개발"],
+      "client": "삼성전자",
+      "awards": ["Red Dot Design Award 2022"]
+    },
+    "kia-worldwide": {
+      "title": "기아 브랜드 글로벌 쇼케이스",
+      "desc": "기아의 환골탈태 브랜드 리론칭",
+      "client": "기아",
+      "role": ["프론트엔드 리드"],
+      "awards": ["Web Award Korea 2022 final winner😁"]
+    },
+    "fujifilm": {
+      "title": "후지필름",
+      "desc": "캔버스 엘리먼트를 처음 적용해 본 프로젝트",
+      "client": "후지필름",
+      "role": ["UI 개발"]
+    },
+    "laneige": {
+      "title": "라네즈",
+      "desc": "3개국 언어로 구축된 아모레 퍼시픽의 글로벌 뷰티 웹사이트",
+      "client": "아모레퍼시픽",
+      "role": ["UI 개발"],
+      "strikeThrough": "(리뉴얼 되었습니다)"
+    },
+    "galleria": {
+      "title": "Hanwha Galleria",
+      "desc": "방대한 통합 사이트 그리고 첫 PL 역할",
+      "client": "한화 갤러리아",
+      "awards": ["Web Award Korea 2019 최우수상"],
+      "role": ["UI 개발"]
+    },
+    "vyvydstudio": {
+      "title": "비비드 스튜디오",
+      "desc": "밀레니얼 인싸들을 위한 코스메틱 브랜드",
+      "client": "비비드웍스",
+      "awards": ["Web Award Korea 2019 최우수상"],
+      "role": ["UI 개발"],
+      "strikeThrough": "(폐쇄되었습니다ㅠㅠ)"
+    }
+  }
 }

@@ -1,4 +1,5 @@
 import React, { useState, useRef, useLayoutEffect, useEffect } from 'react';
+import { useProjectStore } from './store';
 
 function ImageLoader(callback) {
   const images = [
@@ -33,8 +34,9 @@ function ImageLoader(callback) {
 }
 
 function Loader() {
+  const isLoaded = useProjectStore((state) => state.isLoaded)
+  const setIsLoaded = useProjectStore((state) => state.setIsLoaded)
   const [status, setStatus] = useState(0)
-  const [visibility, setVisibility] = useState(true)
 
   const firstUpdate = useRef(true)
   useLayoutEffect(() => {
@@ -42,11 +44,10 @@ function Loader() {
       firstUpdate.current = false
       document.body.style.overflow = 'hidden'
       ImageLoader(count => {
-        // console.log(count)
         setStatus(count)
         if(count === 100) {
           setTimeout(() => {
-            setVisibility(false)
+            setIsLoaded(true)
             document.body.style = ''
           }, 500)
         }
@@ -95,7 +96,7 @@ function Loader() {
 
   return(
     <>
-      {visibility ? 
+      {!isLoaded ? 
       <div style={loadingPanel}>
         <div style={progressContainer}>
           <div style={progressBar}></div>

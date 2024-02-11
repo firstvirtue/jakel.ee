@@ -8,12 +8,13 @@ import Image from "next/image"
 import { css } from "@emotion/react"
 
 import projectData from '../../data/project-data.json'
+import { getProjectInformation } from "@/lib/helper"
 
 export default function Post() {
   
-  const currentProject = projectData.find(x => x.id === 'casscool')
-  const prevProject = projectData.find(x => x.id === 'kodex')
-  const nextProject = projectData.find(x => x.id === 'lotteshopping')
+  const currentProject = getProjectInformation('casscool')
+  const prevProject = getProjectInformation('kodex')
+  const nextProject = getProjectInformation('lotteshopping')
 
   return (
     <>
