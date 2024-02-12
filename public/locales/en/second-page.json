@@ -61,7 +61,13 @@
       "desc": "Manage numerous components and templates",
       "awards": ["Web Award Korea 2022 Manufacturing Grand Prize", "2022 A.N.D Award Grand Prix", "iF DESIGN AWARD 2023 Winner", "Red Dot Design Award 2023 Winner"],
       "role": ["Front-end part leader"],
-      "client": "Hankook Tire"
+      "client": "Hankook Tire",
+      "h01": "Hankook Tire Global/Sales Platform",
+      "p01": "The Hankook Tire project was divided into a brand-centered global and product-centered sales platform, and was a large-scale project that took a long time and involved a lot of people.",
+      "p02": "My roles and responsibilities in this project were to design AEM components to manage large amounts of pages, develop a front-end build system to build them, and recruit and train external personnel.",
+      "p03": "Developing visual specialized pages such as Inside Hankook and technoring was also an essential role. I remember this project as being quite difficult as there were many quantitative and qualitative challenging moments.",
+      "p04": "However, we designed a component system with minimal help from libraries and coordinated development by communicating with external partners. UI development External human resources team building and training. Aside from the awards, it was a project that achieved great results, including practical experience with WebGL.",
+      "p05": "During operation, there was a CDN performance issue, which caused major problems for pages that used image sequences. CDN resource loading performance is a problem that cannot be solved in the frontend, but I came up with the idea to split the loading and treat it as complete when only 40% is loaded, and buy time for the rest to load while the user scrolls down. For the remaining 60%, the loading order was deemed important, so load promises were processed synchronously using a generator."
     },
     "iconic20": {
       "title": "Smilegate Iconic20",
