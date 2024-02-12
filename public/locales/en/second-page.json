@@ -42,20 +42,24 @@
       "role": ["Web main development"],
       "client": "Lotte Department Store",
       "h01": "Main state management",
-      "p01": "The highly complex main page was processed without a separate library. Flexible view states were defined, such as being fixed to fixed in the middle, objects scrolling backwards, and returning to page scrolling depending on the state.",
+      "p01": "The highly complex main page was processed without a separate library. Flexible view states were defined, such as being fixed when entering middle area, returning to page scrolling when objects scrolling backwards depending on the state.",
       "p02": "When entering the intermediate area, the state was managed stably through various variables such as timers and flags."
     },
     "hanwhadefense": {
       "title": "Hanwha Defense (Aerospace) Virtual Showroom",
-      "desc": "Practical level WebGL",
+      "desc": "Handling WebGL 3D models",
       "awards": ["2023 A.N.D Award Minister of Science and ICT Award"],
       "role": ["Front-end part leader"],
-      "client": "Hanwha Aerospace"
+      "client": "Hanwha Aerospace",
+      "h01": "Handling WebGL 3D models",
+      "p01": "I have often touched 3D models for personal work, but experiencing a full-scale practical project like this was a new experience.",
+      "p02": "While the previous Hankook Tire 3D model was a relatively lightweight and simple model, this showroom had more models and the resulting requirements were a bit more complex, so there were more challenges than before.",
+      "p03": "It was a fruitful project that allowed us to apply quite a variety of 3D technologies and UI techniques, such as split loading of assets, view switching, lighting, animation, and sprite processing, beyond point clicking and UI integration!"
     },
     "hankooktire": {
       "title": "Hankook Tire Global/Sales Platform",
       "desc": "Manage numerous components and templates",
-      "awards": ["Web Award Korea 2022 Manufacturing Grand Prize", "2022 A.N.D Award Grand Prix", "iF DESIGN AWARD 2023", "Red Dot Design Award 2023"],
+      "awards": ["Web Award Korea 2022 Manufacturing Grand Prize", "2022 A.N.D Award Grand Prix", "iF DESIGN AWARD 2023 Winner", "Red Dot Design Award 2023 Winner"],
       "role": ["Front-end part leader"],
       "client": "Hankook Tire"
     },
