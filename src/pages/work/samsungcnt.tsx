@@ -35,9 +35,9 @@ export default function Post(
         <div className="content w-full">
           <h2 className="text-6xl font-bold text-center">Create Value for Your World</h2>
 
-          <h3>심리스한 페이지 트랜지션</h3>
+          <h3>{t('second-page:projects.samsungcnt.h01')}</h3>
           <p>
-            개발 특이점으로는 메인과 주요 페이지인 비즈니스 소개 페이지 간의 심리스한 페이지 전환이었습니다. 백엔드 레거시인 Spring boot 위에 처리되어야 했기에 SPA 프레임워크를 사용할 수는 없었고 상태관리만 React로 하고 history API의 pushState와 popstate event listener를 통해 처리했습니다.
+          {t('second-page:projects.samsungcnt.p01')}
           </p>
 
           <figure data-size="lg">
@@ -49,10 +49,10 @@ export default function Post(
           </figure>
 
           <p className="standalone">
-            비즈니스 소개 상세의 게이트와 같은 진입점 페이지가 있었는데 공통으로 사용하는 background image를 오버레이 해 두었습니다. 겹쳐놓은 이미지들을 마스킹해서 애니메이션을 구현했는데 데스크탑에선 별 문제가 없었지만 모바일에선 자꾸 페이지가 죽는 것이었습니다.
+          {t('second-page:projects.samsungcnt.p02')}
           </p>
           <p>
-          해당 사항이 없는 부분은 display: none 처리해서 결국 해결했는데 페이지가 죽는 치명적인 오류가 나서 진땀나는 순간이었습니다. 모바일은 렌더링 최적화에 매우 예민하다는 것을 또 다시 확인하게 되었습니다.
+          {t('second-page:projects.samsungcnt.p03')}
           </p>
         </div>
 

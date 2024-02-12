@@ -4,14 +4,28 @@
       "title": "Samsung C&T Trading & Investment Group",
       "desc": "Seamless screen transitions",
       "role": ["Front-end part leader"],
-      "client": "Samsung C&T"
+      "client": "Samsung C&T",
+      "h01": "Seamless page transitions",
+      "p01": "A unique feature of the development was the seamless page transition between the main page and the business introduction page, which is the main page. Because it had to be processed on top of the backend legacy Spring boot, the SPA framework could not be used, and only state management was done with React and processed through the history API's pushState and popstate event listener.",
+      "p02": "There was an entry point page like the gate for business introduction details, and a commonly used background image was overlaid. I created an animation by masking the overlapping images, and there was no problem on the desktop, but the page kept crashing on mobile.",
+      "p03": "I eventually solved the problem by handling display: none for the parts that didn't apply, but it was a frustrating moment when a fatal error occurred that caused the page to crash. I once again confirmed that mobile devices are very sensitive to rendering optimization."
     },
     "kodex": {
       "title": "Samsung Asset Management",
       "desc": "The best data-driven rendering project ever",
       "awards": ["2023 A.N.D Award Grand Prix", "Web Award Korea 2023 Best Grand Prize😁"],
       "role": ["Front-end part leader"],
-      "client": "Samsung Asset Management"
+      "client": "Samsung Asset Management",
+      "p01": "In order to connect with the backend team and meet customer requirements, React was used in the necessary parts in the form of a view library on top of Spring boot. <br />Except for simple post lists, all parts for data integration were handled with React.",
+      "h01": "Main transition",
+      "p02": "ETF/Fund is divided into two domains, so there are two main pages.",
+      "p03": "To enable users to interactively move between two pages by clicking, the screen was switched using pushState, and the cards in Key Visual were classified according to the design guide.",
+      "h02": "Product list parameters",
+      "p04": "One of the key features of this project was to retrieve appropriate product data by calling numerous parameters through the API and elegantly render the product list.",
+      "p05": "Filter properties were made into a common state to be shared between components, and in active, an advancement project, <strong>zustand and provider</strong> were used to make components render according to changes in the filter property bundle.",
+      "p06": "Due to the tight schedule, we were unable to properly define the interface of the product model, so it was unfortunate that we were unable to take full advantage of typescript.",
+      "h03": "Product component/template",
+      "p07": "Another key feature, componentization/templating of product pages, also benefited from React's strong structural capabilities. I created about 20 components according to the previous screen design/design components and then combined them and rendered them according to the data and product type."
     },
     "casscool": {
       "title": "Cassool/World Cup",
