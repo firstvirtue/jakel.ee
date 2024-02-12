@@ -37,7 +37,7 @@
       "p02": "It was easy to work with because it was a mobile-oriented page. It is a familiar work pattern that places UI on top of video elements, and was defined for ease of maintenance through layer placement."
     },
     "lotteshopping": {
-      "title": "Lotte Department Store web main",
+      "title": "Lotte Department Store (Web Main)",
       "desc": "Stylish UI with vanilla state management",
       "role": ["Web main development"],
       "client": "Lotte Department Store",
