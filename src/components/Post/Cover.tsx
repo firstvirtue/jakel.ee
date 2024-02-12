@@ -4,12 +4,13 @@ import Image from "next/image"
 import { useEffect, useRef } from "react"
 import { RevealText } from "@/lib/RevealText"
 import { Fragment } from "react"
+import { useTranslation, Trans, i18n } from 'next-i18next'
 
 export default function Cover(props: any) {
-
   const { project } = props
   const refMo = useRef()
   const refT = useRef()
+  const { t } = useTranslation(['second-page'])
 
   useEffect(() => {
     if(!refMo.current) {
@@ -76,11 +77,11 @@ export default function Cover(props: any) {
                   <h1
                   className="cover-transition-el text-5xl font-bold"
                   css={css`view-transition-name: item_h;`}
-                  >{ project.title }</h1>
+                  >{ t(`second-page:projects.${project.id}.title`) }</h1>
                   <p
                   className="cover-transition-el text-xl mt-7"
                   css={css`view-transition-name: item_d;`}>
-                    { project.desc }
+                    { t(`second-page:projects.${project.id}.desc`) }
                   </p>
                 </div>
               </div>

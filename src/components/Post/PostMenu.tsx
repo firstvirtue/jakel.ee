@@ -38,6 +38,9 @@ export default function PostMenu(props: any) {
 
   useInterval(handleProgress, progress !== 0 ? 100 : null)
 
+  const awards = t(`second-page:projects.${project.id}.awards`, { returnObjects: true });
+  const role = t(`second-page:projects.${project.id}.role`, { returnObjects: true })
+
   return (
     <>
     <div
@@ -99,7 +102,7 @@ export default function PostMenu(props: any) {
                 
                 <span className="block text-sm opacity-50 pt-4">Role</span>
                 <p className="menu__list text-base opacity-100">
-                  { project.role }
+                  { role as String }
                 </p>
 
                 <span className="block text-sm opacity-50 pt-4">Tech</span>
@@ -111,11 +114,10 @@ export default function PostMenu(props: any) {
                 <span className="block text-sm opacity-50 pt-4">Completed</span>
                 <p className="menu__list text-base opacity-100">{ project.completed }</p>
 
-                { project.awards &&
+                { Array.isArray(awards) &&
                 <>
                 <span className="block text-sm opacity-50 pt-4">Awards</span>
-                {/* @ts-ignore */}
-                <p className="menu__list text-base opacity-100">{ project.awards.map((award, i) => {
+                <p className="menu__list text-base opacity-100">{ awards.map((award, i) => {
                   return <span key={`award-${i}`} className='block'>{award}</span>
                 }) }</p>
                 </>

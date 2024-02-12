@@ -6,6 +6,7 @@ import { css } from '@emotion/react'
 import { useRouter } from 'next/router'
 import { RevealText } from '../../lib/RevealText'
 import { Fragment } from 'react'
+import { useTranslation, Trans, i18n } from 'next-i18next'
 
 export default function Item(props: any) {
   const { project, index, related, prev, next } = props
@@ -17,6 +18,7 @@ export default function Item(props: any) {
   const refWrap = useRef()
   const refBot = useRef()
   const refMo = useRef()
+  const { t } = useTranslation(['second-page'])
 
   function setBottomText() {
     if(prev) return 'Prev'
@@ -138,7 +140,7 @@ export default function Item(props: any) {
             <video className='object-cover h-full w-full rounded-2xl' 
               src={ project.coverVideo } autoPlay muted loop playsInline></video>
             :
-            <Image 
+            <Image
               // ref={refImg}
               className='object-cover h-full w-full rounded-2xl'
               src={ project.coverImage ?? "/1.jpeg" } alt=''
@@ -160,11 +162,11 @@ export default function Item(props: any) {
         {/* @ts-ignore */}
         <div ref={refH}
         className=" pt-1 text-3xl font-bold">
-            { project.title }
+            { t(`second-page:projects.${project.id}.title`) }
         </div>
         {/* @ts-ignore */}
         <div ref={refD} className=' text-lg pt-2'>
-            { project.desc }
+        { t(`second-page:projects.${project.id}.desc`) }
         </div>
       </div>
 
