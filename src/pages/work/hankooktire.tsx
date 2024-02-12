@@ -22,7 +22,7 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 export default function Post(
   _props: InferGetServerSidePropsType<typeof getServerSideProps>
 ) {
-  const { t } = useTranslation(['common', 'second-page'])  
+  const { t } = useTranslation(['common', 'second-page'])
   const currentProject = getProjectInformation('hankooktire')
   const prevProject = getProjectInformation('hanwhadefense')
   const nextProject = getProjectInformation('iconic20')

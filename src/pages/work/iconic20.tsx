@@ -43,7 +43,7 @@ export default function Post(
 
           <h3>{t('second-page:projects.iconic20.h01')}</h3>
           <p>
-            {t('second-page:projects.iconic20.p01')}
+            <Trans i18nKey={'second-page:projects.iconic20.p01'} />
           </p>
 
           <p>{t('second-page:projects.iconic20.p02')} </p>
