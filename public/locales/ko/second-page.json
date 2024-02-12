@@ -1,7 +1,4 @@
 {
-  "h1": "Eine zweite Seite, um das Routing zu demonstrieren",
-  "back-to-home": "Zurück zur Hauptseite",
-  "title": "Zweite Seite | next-i18next",
   "projects": {
     "samsungcnt": {
       "title": "삼성물산 상사부문",

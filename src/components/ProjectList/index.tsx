@@ -12,15 +12,8 @@ function ProjectList() {
       style={{ 'background': 'rgba(0, 0, 0, 0.44)' }}
       ></div>
     </div> */}
-    <div className="guide z-10">
-      <div style={{display: 'flex', justifyContent: 'center', alignItems: 'flex-start', gap: '2rem', paddingLeft: '4rem', paddingRight: '4rem'}}>
-        {/* <img src='/assets/img/menu.png' width={'24%'} height={'auto'} />
-        <img src='/assets/img/sc-no-menu.png' width={'70%'} /> */}
-        {/* <img src="/assets/screen.png" width={'100%'} alt="" /> */}
-      </div>
-    </div>
 
-    <div className="flex w-full max-w-screen-2xl rounded-3xl shadow-xl overflow-hidden"
+    <div className="flex w-full max-w-screen-2xl rounded-3xl shadow-xl overflow-hidden ml-auto mr-auto"
     style={{
       minHeight: '44rem',
     }}
@@ -29,7 +22,7 @@ function ProjectList() {
       <ItemList />
     </div>
 
-    <div className="mt-16">
+    <div className="mt-16 text-center">
       <Link className="bg-white px-12 py-4 rounded-full overflow-hidden shadow-xl" href="/work">More</Link>
     </div>
     </>

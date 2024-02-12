@@ -140,8 +140,8 @@ export default function PostMenu(props: any) {
                   </span>
                 </Link>
                 }
-                { project.bracket && <div className='text-xs'>{ project.bracket }</div> }
-                { project.strikeThrough && <div className='text-xs'>{ project.strikeThrough }</div> }
+                { project.bracket && <div className='text-xs'>{t(`second-page:projects.${project.id}.bracket`)}</div> }
+                { project.strikeThrough && <div className='text-xs'>{t(`second-page:projects.${project.id}.strikeThrough`)}</div> }
               </div>
 
               <div 
@@ -276,7 +276,7 @@ export default function PostMenu(props: any) {
                   }}
                   >
                     <div className="text-white font-normal opacity-70">
-                      { project.title }
+                      { t(`second-page:projects.${project.id}.title`) }
                     </div>
                   </Link>
                 })}

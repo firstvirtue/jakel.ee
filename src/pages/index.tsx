@@ -29,7 +29,7 @@ export default function Home(
   // }, [isView])
 
   return (
-    <main className="page flex min-h-screen flex-col items-center justify-between pr-24 pl-24">
+    <main className="page min-h-screen pr-24 pl-24">
 
       <MainCover />
       <KeyMessage />
@@ -63,7 +63,7 @@ export const getServerSideProps: GetServerSideProps<Props> = async ({
   props: {
     ...(await serverSideTranslations(locale ?? 'en', [
       'second-page',
-      'footer',
+      'common',
     ])),
   },
 })

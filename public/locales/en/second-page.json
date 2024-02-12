@@ -1,7 +1,4 @@
 {
-  "h1": "A second page, to demonstrate routing",
-  "back-to-home": "Back to home",
-  "title": "Second page | next-i18next",
   "projects": {
     "samsungcnt": {
       "title": "Samsung C&T Trading & Investment Group",
@@ -11,8 +8,8 @@
     },
     "kodex": {
       "title": "Samsung Asset Management",
-      "desc": "Data-based rendering project of all time",
-      "awards": ["2023 A.N.D Award Grand Prix", "Web Award Korea 2023 Best Grand Prize"],
+      "desc": "The best data-driven rendering project ever",
+      "awards": ["2023 A.N.D Award Grand Prix", "Web Award Korea 2023 Best Grand Prize😁"],
       "role": ["Front-end part leader"],
       "client": "Samsung Asset Management"
     },
@@ -23,80 +20,80 @@
       "client": "CASS"
     },
     "lotteshopping": {
-      "title": "롯데백화점 웹 메인",
-      "desc": "Vanilla 상태 관리로 유려한 UI",
-      "role": ["Web 메인 개발"],
-      "client": "롯데백화점"
+      "title": "Lotte Department Store web main",
+      "desc": "Stylish UI with vanilla state management",
+      "role": ["Web main development"],
+      "client": "Lotte Department Store"
     },
     "hanwhadefense": {
-      "title": "한화디펜스(에어로스페이스) 버츄얼 쇼룸",
-      "desc": "실무 레벨의 WebGL",
-      "awards": ["2023 앤어워드 과학기술정보통신부 장관상"],
-      "role": ["프론트엔드 파트 리딩"],
-      "client": "한화에어로스페이스"
+      "title": "Hanwha Defense (Aerospace) Virtual Showroom",
+      "desc": "Practical level WebGL",
+      "awards": ["2023 A.N.D Award Minister of Science and ICT Award"],
+      "role": ["Front-end part leader"],
+      "client": "Hanwha Aerospace"
     },
     "hankooktire": {
-      "title": "한국타이어 글로벌/세일즈 플랫폼",
-      "desc": "수 많은 컴포넌트와 템플릿 관리",
-      "awards": ["Web Award Korea 2022 제조업분야 대상", "2022 앤어워드 Grand Prix", "iF DESIGN AWARD 2023", "Red Dot Design Award 2023"],
-      "role": ["프론트엔드 파트 리딩"],
-      "client": "한국타이어"
+      "title": "Hankook Tire Global/Sales Platform",
+      "desc": "Manage numerous components and templates",
+      "awards": ["Web Award Korea 2022 Manufacturing Grand Prize", "2022 A.N.D Award Grand Prix", "iF DESIGN AWARD 2023", "Red Dot Design Award 2023"],
+      "role": ["Front-end part leader"],
+      "client": "Hankook Tire"
     },
     "iconic20": {
-      "title": "스마일게이트 아이코닉20",
-      "desc": "모션그래픽 수준의 비주얼",
-      "awards": ["2022 앤어워드 Grand Prix"],
-      "role": ["UI 개발"],
-      "bracket": "(현재 메인으로 리다이렉팅 되는 경우가 있는데 한 번 더 링크 이동해주세요🙏)",
-      "client": "스마일게이트"
+      "title": "Smilegate Iconic20",
+      "desc": "Motion graphics-level visuals",
+      "awards": ["2022 A.N.D Award Grand Prix"],
+      "role": ["UI development"],
+      "bracket": "(Currently, you may be redirected to the main page. Please go to the link one more time.🙏)",
+      "client": "Smilegate"
     },
     "galaxystudio": {
-      "title": "삼성 내 손안에 갤럭시 스튜디오",
-      "desc": "긴박했지만 안정적인 론칭",
-      "role": ["UI 개발"],
-      "client": "삼성전자"
+      "title": "Samsung Galaxy Studio in my hand",
+      "desc": "A tense but stable launch",
+      "role": ["UI development"],
+      "client": "Samsung"
     },
     "bespoke": {
-      "title": "삼성 비스포크 나답게 집꾸",
-      "desc": "모듈 조합 마이크로 UX",
-      "role": ["UI 개발"],
-      "client": "삼성전자",
+      "title": "Samsung Bespoke, Be my own way",
+      "desc": "Module Combination Micro UX",
+      "role": ["UI development"],
+      "client": "Samsung",
       "awards": ["Red Dot Design Award 2022"]
     },
     "kia-worldwide": {
-      "title": "기아 브랜드 글로벌 쇼케이스",
-      "desc": "기아의 환골탈태 브랜드 리론칭",
-      "client": "기아",
-      "role": ["프론트엔드 리드"],
+      "title": "Kia Brand Global Showcase",
+      "desc": "Kia’s transformational brand relaunch",
+      "client": "Kia",
+      "role": ["Front-end part leader"],
       "awards": ["Web Award Korea 2022 final winner😁"]
     },
     "fujifilm": {
-      "title": "후지필름",
-      "desc": "캔버스 엘리먼트를 처음 적용해 본 프로젝트",
-      "client": "후지필름",
-      "role": ["UI 개발"]
+      "title": "Fujifilm",
+      "desc": "Project where I applied the canvas element for the first time",
+      "client": "Fujifilm",
+      "role": ["UI development"]
     },
     "laneige": {
-      "title": "라네즈",
-      "desc": "3개국 언어로 구축된 아모레 퍼시픽의 글로벌 뷰티 웹사이트",
-      "client": "아모레퍼시픽",
-      "role": ["UI 개발"],
-      "strikeThrough": "(리뉴얼 되었습니다)"
+      "title": "Laneige",
+      "desc": "Amore Pacific's global beauty website built in three languages",
+      "client": "Amore Pacific",
+      "role": ["UI development"],
+      "strikeThrough": "(It has been renewed)"
     },
     "galleria": {
       "title": "Hanwha Galleria",
-      "desc": "방대한 통합 사이트 그리고 첫 PL 역할",
-      "client": "한화 갤러리아",
-      "awards": ["Web Award Korea 2019 최우수상"],
-      "role": ["UI 개발"]
+      "desc": "Massive integrated site and first PL role",
+      "client": "Hanwha Galleria",
+      "awards": ["Web Award Korea 2019 Grand Prize"],
+      "role": ["UI development"]
     },
     "vyvydstudio": {
       "title": "VYVYD STUDIO",
       "desc": "Cosmetic brand for millennial insiders",
       "client": "Vyvydworks",
       "awards": ["Web Award Korea 2019 Grand Prize"],
-      "role": ["UI 개발"],
-      "strikeThrough": "(폐쇄되었습니다ㅠㅠ)"
+      "role": ["UI development"],
+      "strikeThrough": "(It's closed T.T)"
     }
   }
 }

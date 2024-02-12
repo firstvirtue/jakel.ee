@@ -6,10 +6,12 @@ import SceneContainer from "./SceneContainer"
 import SceneUI from "./SceneUI"
 import AppBanner from "./AppBanner"
 import { useIntoStore } from './store'
+import { useTranslation, Trans, i18n } from 'next-i18next'
 
 export default function MainCover() {
 
   const isView = useIntoStore((state) => state.isView)
+  const { t } = useTranslation(['common', 'second-page'])
 
   const dd = (() => {
     const date = new Date()
@@ -30,7 +32,7 @@ export default function MainCover() {
         </defs>
     </svg>
 
-      <div className="key-visual w-full max-w-screen-2xl">
+      <div className="key-visual relative w-full max-w-screen-2xl ml-auto mr-auto">
         <div className="flex pt-40 pb-24 gap-8">
           <div className="relative visual w-2/3 pt-32 pb-16">
             <div className="absolute top-0 text-8xl font-bold italic capitalize"
@@ -50,13 +52,14 @@ export default function MainCover() {
 
               <div id="key-visual" className="w-full h-full object-cover rounded-2xl shadow-xl"></div>
 
-            <div className="absolute top-12 left-16 z-10" css={{pointerEvents: 'none'}}>
+            <div className="absolute top-12 left-16 z-10" css={{
+              pointerEvents: 'none',
+              maxWidth: '90%'
+            }}>
             
             { !isView &&
-              <div className="goo text-right">
-              2년 연속 Web Award Korea
-              <br />
-              최고 대상 수상
+              <div className="goo">
+                <Trans i18nKey={'common:main-cover'} />
               </div>
             }
             
@@ -86,18 +89,18 @@ export default function MainCover() {
             }
           </div>
         </div>
-      </div>
 
-      <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', pointerEvents: 'none' }}>
-        <div style={{ position: 'absolute', bottom: 40, right: 40, fontSize: '13px' }}>
-          
-          {/* 
-            [TODO] get last published
-            https://github.com/orgs/vercel/discussions/587 
-          */}
-          { `Last published ${dd}` }
+        <div style={{ position: 'absolute', width: '100%', bottom: 0, left: 0, pointerEvents: 'none' }}>
+          <div style={{ position: 'absolute', bottom: 40, right: 40, fontSize: '13px' }}>
+            
+            {/* 
+              [TODO] get last published
+              https://github.com/orgs/vercel/discussions/587 
+            */}
+            { `Last published ${dd}` }
+          </div>
         </div>
-      </div>{' '}
+      </div>
 
       <SceneContainer />
       {isView && <SceneUI />}

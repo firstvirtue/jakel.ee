@@ -16,7 +16,7 @@ export default function About(
       <h1 className="text-7xl font-bold uppercase">About</h1>
       <hr />
 
-      <h2 className="text-3xl mt-10">What I do</h2>
+      <h2 className="text-3xl mt-10">What I Do</h2>
       <p>
         지난 10여 년간 UI 프론트엔드 개발 분야에서 삼성, 현대, 기아와 같은 국내 대형 클라이언트의 웹 프로젝트들이 우수한 품질의 결과물로 현실화 되게 하는 것이 저의 책임이었습니다.
       </p>
