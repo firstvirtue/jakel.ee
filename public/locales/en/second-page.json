@@ -75,7 +75,14 @@
       "awards": ["2022 A.N.D Award Grand Prix"],
       "role": ["UI development"],
       "bracket": "(Currently, you may be redirected to the main page. Please go to the link one more time.🙏)",
-      "client": "Smilegate"
+      "client": "Smilegate",
+      "h01": "Interactive Visuals",
+      "p01": "I wasn't originally a TF at Smilegate, but when I saw the Iconic 20 page draft video, I had a desire to take on the challenge.<br /> This is because the distorted movement and presentation of the card required the use of WebGL and Shader, which was a milestone in the technology roadmap I drew.",
+      "p02": "Since it was not a personal project, I checked the feasibility of the shader effect. After sharing it with the designer/planner, I received feedback that it would be a good idea to try it.",
+      "p03": "I had a hard time with the layout due to the layout being tilted by about 20 degrees rather than the shader and distortion effects.",
+      "p04": "It was not easy to move parts that would have been easy with an HTML structure to WebGL space, but I created a layout in HTML, imported it, converted it to the WebGL coordinate system, and placed card objects.",
+      "p05": "When going to List - Details, calculating the card rotation was more difficult than I thought. Since the slanted part is based on the card list, the coordinates/tilt of the card and parent containers had to be taken into account for it to work as intended.",
+      "p06": "As expected, going back from the details to the list was not easy. I had a hard time because the values I had to remember were very complicated. When the last algorithm was solved and everything was resolved, I was so happy that even though it was 3 a.m., I didn't immediately catch a taxi to go home and I remember dancing and walking along the Gyeongui Line forest path front of the office. :)"
     },
     "galaxystudio": {
       "title": "Samsung Galaxy Studio in my hand",
