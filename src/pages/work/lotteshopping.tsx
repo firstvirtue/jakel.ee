@@ -22,7 +22,7 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 export default function Post(
   _props: InferGetServerSidePropsType<typeof getServerSideProps>
 ) {
-  
+  const { t } = useTranslation(['common', 'second-page'])
   const currentProject = getProjectInformation('lotteshopping')
   const prevProject = getProjectInformation('casscool')
   const nextProject = getProjectInformation('hanwhadefense')
@@ -37,9 +37,9 @@ export default function Post(
 
           <h2 className="text-6xl font-bold text-center">Inspire Your Lifestyle</h2>
 
-          <h3>메인 상태 관리</h3>
+          <h3>{t('second-page:projects.lotteshopping.h01')}</h3>
           <p>
-            복잡도가 높은 메인페이지를 별도의 라이브러리 없이 처리하였습니다. 중간에 fixed 로 고정되거나 오브젝트들이 역방향으로 스크롤 되고 또 상태에 따라 다시 페이지 스크롤로 복귀되는 등 유연한 뷰 상태를 정의했습니다.
+          {t('second-page:projects.lotteshopping.p01')}
           </p>
 
           <figure data-size="lg">
@@ -51,7 +51,7 @@ export default function Post(
           </figure>
 
           <p>
-            중간 영역에 진입 시 타이머와 플래그 등 여러 변수를 통해 안정적으로 상태를 관리하였습니다.
+          {t('second-page:projects.lotteshopping.p02')}
           </p>
 
           <figure data-size="lg">

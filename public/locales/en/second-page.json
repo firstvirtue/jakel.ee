@@ -31,13 +31,19 @@
       "title": "Cassool/World Cup",
       "desc": "Small but powerful mini project",
       "role": ["UI Development"],
-      "client": "CASS"
+      "client": "CASS",
+      "h01": "On/offline events",
+      "p01": "Beer brand Cass has created a mobile page for online and offline events. Since this was a project tailored to a designated offline event so tight, I used react to complete it quickly.",
+      "p02": "It was easy to work with because it was a mobile-oriented page. It is a familiar work pattern that places UI on top of video elements, and was defined for ease of maintenance through layer placement."
     },
     "lotteshopping": {
       "title": "Lotte Department Store web main",
       "desc": "Stylish UI with vanilla state management",
       "role": ["Web main development"],
-      "client": "Lotte Department Store"
+      "client": "Lotte Department Store",
+      "h01": "Main state management",
+      "p01": "The highly complex main page was processed without a separate library. Flexible view states were defined, such as being fixed to fixed in the middle, objects scrolling backwards, and returning to page scrolling depending on the state.",
+      "p02": "When entering the intermediate area, the state was managed stably through various variables such as timers and flags."
     },
     "hanwhadefense": {
       "title": "Hanwha Defense (Aerospace) Virtual Showroom",

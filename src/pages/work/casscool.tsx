@@ -22,7 +22,7 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 export default function Post(
   _props: InferGetServerSidePropsType<typeof getServerSideProps>
 ) {
-  
+  const { t } = useTranslation(['common', 'second-page'])
   const currentProject = getProjectInformation('casscool')
   const prevProject = getProjectInformation('kodex')
   const nextProject = getProjectInformation('lotteshopping')
@@ -37,9 +37,9 @@ export default function Post(
 
           <h2 className="text-6xl font-bold text-center">Blue Splash!</h2>
 
-          <h3>온/오프라인 이벤트</h3>
+          <h3>{t('second-page:projects.casscool.h01')}</h3>
           <p>
-          맥주 브랜드 카스에서 온/오프라인 이벤트를 위해 모바일 페이지를 만들었습니다. 정해진 오프라인 행사에 맞춰진 프로젝트여서 빠른 시간에 완성을 하기 위해 react 를 사용했습니다.
+          {t('second-page:projects.casscool.p01')}
           </p>
 
           <figure data-size="lg" className="flex justify-center">
@@ -47,7 +47,7 @@ export default function Post(
           </figure>
 
           <p>
-            모바일 위주의 페이지여서 작업하는데는 수월한 편이었습니다. 많이 사용한 패턴인 유려한 영상 위에 UI를 배치하여 레이어 배치를 통해 유지보수가 용이하도록 정의했습니다.
+          {t('second-page:projects.casscool.p02')}
           </p>
 
           <figure data-size="lg" className="flex justify-center">
