@@ -17,6 +17,7 @@
     "aspect": "0.8",
     "outlink": "https://trading.samsungcnt.com/main.do",
     "coverVideo": "/assets/projects/samsungcnt/cover.mp4",
+    "featured": "true",
     "category": "project"
   },
   {
@@ -40,6 +41,7 @@
     "aspect": "1.4",
     "outlink": "https://www.samsungfund.com/etf/main.do",
     "coverVideo": "/assets/projects/kodex/main.mp4",
+    "featured": "true",
     "category": "project"
   },
   {
@@ -57,6 +59,7 @@
     "cardColor": "#CFE4FF",
     "aspect": "0.8",
     "coverImage": "/assets/projects/casscool/main_poster.png",
+    "featured": "true",
     "category": "project"
   },
   {
@@ -76,6 +79,7 @@
     "aspect": "1",
     "outlink": "https://www.lotteshopping.com/main",
     "coverImage": "/assets/projects/lotteshopping/cover-sm.png",
+    "featured": "true",
     "category": "project"
   },
   {
@@ -98,6 +102,7 @@
     "textColor": "#ffffff",
     "outlink": "https://www.hanwhaaerospace.co.kr/eng/showroom.do",
     "coverImage": "/assets/projects/hanwhadefense/redback.jpeg",
+    "featured": "true",
     "category": "project"
   },
   {
@@ -117,6 +122,7 @@
     "aspect": "1.3",
     "completed": "3. 2022",
     "coverImage": "/assets/projects/hankooktire/14_Outro_Image.avif",
+    "featured": "true",
     "category": "project"
   },
   {
@@ -141,6 +147,7 @@
     "cardColor": "#72D837",
     "textColor": "#ffffff",
     "coverVideo": "/assets/projects/iconic20/cover.mp4",
+    "featured": "true",
     "category": "project"
   },
   {
@@ -197,6 +204,7 @@
     "keywords": ["awards", "canvas", "webpack", "es6"],
     "coverImage": "/assets/projects/kia-worldwide/cover-lg.jpg",
     "aspect": "1.3",
+    "featured": "true",
     "category": "project"
   },
   {
@@ -283,11 +291,18 @@
   },
   {
     "id": "continuous-award-winning",
-    "link": "/work/continuous-award-winning",
+    "link": "/post/continuous-award-winning",
     "completed": "12. 2023",
     "keywords": ["awards"],
     "coverVideo": "/prj.mp4",
     "aspect": "1",
-    "category": "project"
+    "category": "post"
+  },
+  {
+    "id": "hello-world",
+    "link": "/hello-world",
+    "category": "post",
+    "keywords": ["side_project"],
+    "featured": "true"
   }
 ]

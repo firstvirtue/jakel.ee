@@ -9,10 +9,12 @@ import MasonryLayout from '../MasonryLayout'
 import { debounce } from '@/lib/helper'
 import { css } from '@emotion/react'
 
-export default function ItemList() {
+export default function ItemList(props: any) {
+  const { featured } = props
   const currentProject = useProjectStore((state) => state.currentProject)
 
-  const [selectedItems, setSelectedItems] = useState<any>(projectData)
+  const pData = featured ? projectData.filter(x => x.featured) : projectData
+  const [selectedItems, setSelectedItems] = useState<any>(pData)
   const [isNoData, setIsNoData] = useState<boolean>(false)
 
   const boxVariants = {
@@ -34,9 +36,9 @@ export default function ItemList() {
 
   useEffect(() => {
     if(currentProject === '') {
-      setSelectedItems(projectData) 
+      setSelectedItems(pData.filter(x=>x.category === 'project'))
     } else {
-      const refine = projectData.reduce((acc: any, cur: any) => {
+      const refine = pData.reduce((acc: any, cur: any) => {
         // console.log(acc, cur.keywords, currentProject)
         if (cur.keywords.filter((x: any) => x === currentProject).length > 0) {
           acc.push(cur)
@@ -135,6 +137,7 @@ export default function ItemList() {
       'marginRight': '-0.8rem',
     }}
     >
+      { selectedItems?.length > 0 && 
       <motion.ul 
         className="relative item-list flex flex-wrap mt-24 mb-24"
         variants={boxVariants}
@@ -158,6 +161,7 @@ export default function ItemList() {
           </li>
         })}
       </motion.ul>
+      }
 
       { isNoData &&
       <>
@@ -166,7 +170,7 @@ export default function ItemList() {
         textAlign: 'center',
         fontWeight: 'bold',
         fontSize: '20rem',
-      }}>
+      }} className='mt-24'>
       (;-;)
       </div>
       <p className='block text-center'>

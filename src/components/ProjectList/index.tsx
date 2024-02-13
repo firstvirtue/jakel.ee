@@ -2,7 +2,9 @@ import Menu from "./Menu"
 import ItemList from "./ItemList"
 import Link from 'next/link'
 
-function ProjectList() {
+function ProjectList(props: any) {
+  const { featured } = props
+
   return (
     <>
     {/* <div className="fixed w-full h-full top-0">
@@ -18,13 +20,15 @@ function ProjectList() {
       minHeight: '44rem',
     }}
     >
-      <Menu />
-      <ItemList />
+      <Menu featured={featured} />
+      <ItemList featured={featured} />
     </div>
 
+    { featured &&
     <div className="mt-16 text-center">
       <Link className="bg-white px-12 py-4 rounded-full overflow-hidden shadow-xl" href="/work">More</Link>
     </div>
+    }
     </>
   )
 }

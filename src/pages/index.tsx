@@ -33,7 +33,7 @@ export default function Home(
 
       <MainCover />
       <KeyMessage />
-      <ProjectList />
+      <ProjectList featured={true} />
 
       <div className='spacer'></div>
       
