@@ -102,7 +102,19 @@
       "desc": "Kia’s transformational brand relaunch",
       "client": "Kia",
       "role": ["Front-end part leader"],
-      "awards": ["Web Award Korea 2022 final winner😁"]
+      "awards": ["Web Award Korea 2022 final winner😁"],
+      "h01": "Brand Relaunch",
+      "p01": "In 2021, Kia Motors changed its name to Kia and began a large-scale relaunch of the brand, including changes to CI and BI. During the materialization phase, a showcase website that dynamically displays content emerged as a requirement.",
+      "p02": "The first page created was a page that showed a countdown until the time of the event D-day, and when the time was up, it converted to a showcase where you could view the content. All on one page.",
+      "c01": "Particle motion was an unfortunate interaction that could only be seen for a moment as the event time passed.",
+      "h02": "Particle Interaction",
+      "p03": "When the event time comes and the content switches to a showcase, the circular object shows exploding particle motion. The motion of the circular object disappearing into particles meant that the circular object surrounding the existing Kia logo disappeared and a new logo was created. (Of course, that was not my intention.)",
+      "p04": "Particle interaction is implemented with the canvas element. After testing to ensure comfortable motion even on older devices, the number of particles was set at 2000. When the time is up, they are randomly generated within a set range and then spread and disappear through simple physical calculations.",
+      "p05": "Within the rendering loop, each particle has an each acceleration and mass for uniform rotational motion. Based on this updated value, the particles move little by little using the cos and sin functions. Adding a damping constant for deceleration to the acceleration results in plausible particle movement.",
+      "p06": "Since then, pages have been added according to the event schedule, and the website showing Kia's brand concept has changed. It doesn't change dynamically like the previous page, though.",
+      "p07": "Although the number of pages was small, there were a lot of design elements and motions and a lot of requirements, so it was a difficult project.",
+      "p08": "While working on the brand slogan “movement that inspires,” I also prepared for a movement called job change to gain inspiration.",
+      "p09": "Of course it's a joke haha :)"
     },
     "fujifilm": {
       "title": "Fujifilm",
