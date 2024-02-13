@@ -88,14 +88,14 @@
       "title": "삼성 내 손안에 갤럭시 스튜디오",
       "desc": "긴박했지만 안정적인 론칭",
       "role": ["UI 개발"],
-      "client": "삼성전자"
+      "client": "삼성전자",
+      "awards": ["Red Dot Design Award 2022"]
     },
     "bespoke": {
       "title": "삼성 비스포크 나답게 집꾸",
       "desc": "모듈 조합 마이크로 UX",
       "role": ["UI 개발"],
-      "client": "삼성전자",
-      "awards": ["Red Dot Design Award 2022"]
+      "client": "삼성전자"
     },
     "kia-worldwide": {
       "title": "기아 브랜드 글로벌 쇼케이스",

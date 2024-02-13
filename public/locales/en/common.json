@@ -1,3 +1,49 @@
 {
-  "main-cover": "Web Award Korea <br/> Best Grand Prize <br/> for 2 consecutive years"
+  "main-cover": "Web Award Korea <br/> Best Grand Prize <br/> for 2 consecutive years",
+  "about": {
+    "what-i-do-01": "In the field of UI front-end development for the past 10 years, my responsibility has been to ensure that web projects for large domestic clients such as Samsung, Hyundai, and Kia are realized with excellent quality results.",
+    "what-i-do-02": "The UI front-end world that I belong to has been going through a lot of changes like a whirlwind since it was called RIA when I started my career.",
+    "what-i-do-03": "In this exciting world of technology, there have been times when I had to give up what I had and choose the latest technology to survive.",
+    "what-i-do-04": "The process of discarding existing technologies and replacing them with new ones was very painful, but this process gave me insight that the technologies, especially the UI/front-end part, are not dependent on any library and are essentially the same.",
+    "what-i-do-05": "Putting a component on the screen, connecting it in various directions, managing its state, and processing it with a rendering loop if high-level animation like a game is needed are all the same, and the library is just a tool that makes it more efficient.",
+    "what-i-do-06": "Additionally, as I worked with the exceptionally talented people I met on this technology and project journey, thinking about problems and sometimes wrestling with them all night long to solve them, I surprisingly discovered people who were passionate, solid, and dedicated to the team.",
+
+    "strengths-01": "I have special strengths in the following areas.",
+    "strengths-02": "UX Engineering",
+    "strengths-03": "I am more specialized in the presentation layer on the front end, including motion, interaction, and 3D, and I like collaborating with designers. I am confident in understanding and implementing the value of developing functional and aesthetically beautiful applications.",
+    "strengths-04": "Semi Full stack",
+    "strengths-05": "I have experience designing DB tables, creating and servicing APIs, and analyzing accumulated data with statistical queries. Knowing the overall structure and flow of the web is a great asset to me.",
+
+    "conclusion-01": "Currently, I am thinking about optimizing React, which I mainly use, and making it faster. In addition, I am thinking about how the Web will be expressed in the current AI era and especially in the upcoming spatial computing world.",
+    "conclusion-02": "If you have anything interesting to say about me, please feel free to contact me.",
+    "conclusion-03": "We are ready to contribute new ideas.",
+    "conclusion-04": "Let's create something awesome together!",
+
+    "award-010": "2023 A.N.D Award Minister of Science and ICT Award",
+    "award-011": "Hanwha Aerospace Platform",
+    "award-020": "2023 A.N.D Award Grand Prix",
+    "award-021": "Samsung Asset Management",
+    "award-030": "Web Award Korea 2023 Best Grand Prize",
+    "award-031": "Samsung Asset Management",
+    "award-040": "Red Dot Design Award 2023 Winner",
+    "award-041": "Hankook Tire Global/Sales Platform",
+    "award-050": "iF DESIGN AWARD 2023 Winner",
+    "award-051": "Hankook Tire Global/Sales Platform",
+    "award-060": "2022 A.N.D Award Grand Prix",
+    "award-061": "Hankook Tire Global Platform",
+    "award-070": "2022 A.N.D Grand Prix",
+    "award-071": "Smilegate",
+    "award-080": "Web Award Korea 2022 Best Grand Prize",
+    "award-081": "Kia Worldwide",
+    "award-090": "Web Award Korea 2022 Manufacturing Grand Prize",
+    "award-091": "Hankook Tire Global Platform",
+    "award-100": "Red Dot Design Award 2022",
+    "award-101": "Samsung Galaxy Studio in my hand",
+    "award-110": "Web Award Korea 2019 Grand Prize",
+    "award-111": "Hanwha Galleria",
+    "award-120": "Web Award Korea 2019 Grand Prize",
+    "award-121": "Hanwha Galleria Digital Communication Channel",
+    "award-130": "Web Award Korea 2019 Grand Prize",
+    "award-131": "VYVYD STUDIO"
+  }
 }

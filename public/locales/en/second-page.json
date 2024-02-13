@@ -88,14 +88,14 @@
       "title": "Samsung Galaxy Studio in my hand",
       "desc": "A tense but stable launch",
       "role": ["UI development"],
-      "client": "Samsung"
+      "client": "Samsung",
+      "awards": ["Red Dot Design Award 2022 Winner"]
     },
     "bespoke": {
       "title": "Samsung Bespoke, Be my own way",
       "desc": "Module Combination Micro UX",
       "role": ["UI development"],
-      "client": "Samsung",
-      "awards": ["Red Dot Design Award 2022"]
+      "client": "Samsung"
     },
     "kia-worldwide": {
       "title": "Kia Brand Global Showcase",
