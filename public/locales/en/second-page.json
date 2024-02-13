@@ -1,7 +1,7 @@
 {
   "projects": {
     "samsungcnt": {
-      "title": "Samsung C&T Trading & Investment Group",
+      "title": "Samsung C&T",
       "desc": "Seamless screen transitions",
       "role": ["Front-end part leader"],
       "client": "Samsung C&T",
@@ -37,7 +37,7 @@
       "p02": "It was easy to work with because it was a mobile-oriented page. It is a familiar work pattern that places UI on top of video elements, and was defined for ease of maintenance through layer placement."
     },
     "lotteshopping": {
-      "title": "Lotte Department Store (Web Main)",
+      "title": "Lotte Shopping Web Main",
       "desc": "Stylish UI with vanilla state management",
       "role": ["Web main development"],
       "client": "Lotte Department Store",
@@ -46,7 +46,7 @@
       "p02": "When entering the intermediate area, the state was managed stably through various variables such as timers and flags."
     },
     "hanwhadefense": {
-      "title": "Hanwha Defense (Aerospace) Virtual Showroom",
+      "title": "Hanwha Aerospace Virtual Showroom",
       "desc": "Handling WebGL 3D models",
       "awards": ["2023 A.N.D Award Minister of Science and ICT Award"],
       "role": ["Front-end part leader"],
@@ -131,6 +131,15 @@
       "awards": ["Web Award Korea 2019 Grand Prize"],
       "role": ["UI development"],
       "strikeThrough": "(It's closed T.T)"
+    },
+    "continuous-award-winning": {
+      "title": "Best Grand Prize for 2 consecutive years",
+      "client": "Samsung Asset Management, Kia",
+      "desc": "",
+      "role": ["UI Development"],
+      "p01": "The project which I’ve paticiparted and led won the final winners at Web Award Korea aka i-awards, one of Korea's most prestigious web awards, for consecutive years in 2022 and 2023!",
+      "p02": "Samsung Fund was to show beautiful visualizations so many data using react. <br/> Kia Worldwide introduced a new concept design through the several front-end stack.",
+      "p03": "I’m so lucky with incredible creative people! I would appreciate. 😄"
     }
   }
 }

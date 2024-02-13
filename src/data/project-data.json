@@ -16,7 +16,8 @@
     "coverImage": "/3.jpeg",
     "aspect": "0.8",
     "outlink": "https://trading.samsungcnt.com/main.do",
-    "coverVideo": "/assets/projects/samsungcnt/cover.mp4"
+    "coverVideo": "/assets/projects/samsungcnt/cover.mp4",
+    "category": "project"
   },
   {
     "id": "kodex",
@@ -38,7 +39,8 @@
     "textColor": "#ffffff",
     "aspect": "1.4",
     "outlink": "https://www.samsungfund.com/etf/main.do",
-    "coverVideo": "/assets/projects/kodex/main.mp4"
+    "coverVideo": "/assets/projects/kodex/main.mp4",
+    "category": "project"
   },
   {
     "id": "casscool",
@@ -54,7 +56,8 @@
     "keywords": ["next.js", "react", "webgl", "CSS"],
     "cardColor": "#CFE4FF",
     "aspect": "0.8",
-    "coverImage": "/assets/projects/casscool/main_poster.png"
+    "coverImage": "/assets/projects/casscool/main_poster.png",
+    "category": "project"
   },
   {
     "id": "lotteshopping",
@@ -72,7 +75,8 @@
     "keywords": ["jacascript", "CSS"],
     "aspect": "1",
     "outlink": "https://www.lotteshopping.com/main",
-    "coverImage": "/assets/projects/lotteshopping/cover-sm.png"
+    "coverImage": "/assets/projects/lotteshopping/cover-sm.png",
+    "category": "project"
   },
   {
     "id": "hanwhadefense",
@@ -93,7 +97,8 @@
     "cardColor": "#FB781E",
     "textColor": "#ffffff",
     "outlink": "https://www.hanwhaaerospace.co.kr/eng/showroom.do",
-    "coverImage": "/assets/projects/hanwhadefense/redback.jpeg"
+    "coverImage": "/assets/projects/hanwhadefense/redback.jpeg",
+    "category": "project"
   },
   {
     "id": "hankooktire",
@@ -111,7 +116,8 @@
     "keywords": ["webgl", "webpack", "awards"],
     "aspect": "1.3",
     "completed": "3. 2022",
-    "coverImage": "/assets/projects/hankooktire/14_Outro_Image.avif"
+    "coverImage": "/assets/projects/hankooktire/14_Outro_Image.avif",
+    "category": "project"
   },
   {
     "id": "iconic20",
@@ -134,7 +140,8 @@
     "outlink": "https://smilegate.com/en/company/iconic20.do",
     "cardColor": "#72D837",
     "textColor": "#ffffff",
-    "coverVideo": "/assets/projects/iconic20/cover.mp4"
+    "coverVideo": "/assets/projects/iconic20/cover.mp4",
+    "category": "project"
   },
   {
     "id": "galaxystudio",
@@ -153,7 +160,8 @@
     "awards": ["Red Dot Design Award 2022"],
     "cardColor": "#0076DA",
     "textColor": "#ffffff",
-    "coverImage": "/assets/projects/galaxystudio/galaxystudio-cover.jpeg"
+    "coverImage": "/assets/projects/galaxystudio/galaxystudio-cover.jpeg",
+    "category": "project"
   },
   {
     "id": "bespoke",
@@ -169,7 +177,8 @@
     "keywords": ["webpack", "jacascript", "GSAP"],
     "aspect": "1",
     "completed": "6. 2021",
-    "coverImage": "/assets/projects/bespoke/bespoke-cover.jpeg"
+    "coverImage": "/assets/projects/bespoke/bespoke-cover.jpeg",
+    "category": "project"
   },
   {
     "id": "kia-worldwide",
@@ -187,7 +196,8 @@
     "outlink": "https://worldwide.kia.com",
     "keywords": ["awards", "canvas", "webpack", "es6"],
     "coverImage": "/assets/projects/kia-worldwide/cover-lg.jpg",
-    "aspect": "1.3"
+    "aspect": "1.3",
+    "category": "project"
   },
   {
     "id": "fujifilm",
@@ -204,7 +214,8 @@
     "outlink": "https://fujifilm-korea.co.kr",
     "keywords": ["canvas", "webpack", "es6"],
     "coverImage": "/assets/projects/fujifilm/cover-lg.jpg",
-    "aspect": "1"
+    "aspect": "1",
+    "category": "project"
   },
   {
     "id": "laneige",
@@ -223,7 +234,8 @@
     "outlink": "https://www.laneige.com",
     "keywords": ["gulp", "webpack", "es6"],
     "coverImage": "/assets/projects/laneige/cover-lg.png",
-    "aspect": "1"
+    "aspect": "1",
+    "category": "project"
   },
   {
     "id": "galleria",
@@ -244,7 +256,8 @@
     "strikeThrough": false,
     "keywords": ["rxjs", "pjax", "gulp", "webpack"],
     "coverVideo": "/assets/projects/galleria/main.mp4",
-    "aspect": "1"
+    "aspect": "1",
+    "category": "project"
   },
   {
     "id": "vyvydstudio",
@@ -265,6 +278,16 @@
     "outlink": "https://www.vyvydstudio.com/",
     "keywords": ["gulp", "webpack", "es6"],
     "coverVideo": "/assets/projects/vyvydstudio/cover.mp4",
-    "aspect": "0.7"
+    "aspect": "0.7",
+    "category": "project"
+  },
+  {
+    "id": "continuous-award-winning",
+    "link": "/work/continuous-award-winning",
+    "completed": "12. 2023",
+    "keywords": ["awards"],
+    "coverVideo": "/prj.mp4",
+    "aspect": "1",
+    "category": "project"
   }
 ]

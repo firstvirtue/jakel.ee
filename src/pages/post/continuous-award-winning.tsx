@@ -10,11 +10,23 @@ import { css } from "@emotion/react"
 import projectData from '../../data/project-data.json'
 import { getProjectInformation } from "@/lib/helper"
 
-export default function Post() {
+import type {
+  GetServerSideProps,
+  InferGetServerSidePropsType,
+} from 'next'
+import type { GetStaticProps, InferGetStaticPropsType } from 'next'
+import { useTranslation, Trans, i18n } from 'next-i18next'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+
+
+export default function Post(
+  _props: InferGetServerSidePropsType<typeof getServerSideProps>
+) {
+  const { t } = useTranslation(['common', 'second-page'])
   
-  const currentProject = getProjectInformation('casscool')
+  const currentProject = getProjectInformation('continuous-award-winning')
   const prevProject = getProjectInformation('kodex')
-  const nextProject = getProjectInformation('lotteshopping')
+  const nextProject = getProjectInformation('kia-worldwide')
 
   return (
     <>
@@ -24,15 +36,13 @@ export default function Post() {
       <div className="flex pl-24 pr-24 pt-32">
         <div className="content w-full">
 
-          <h2 className="text-6xl font-bold text-center">Blue Splash!</h2>
+          <h2 className="text-6xl font-bold text-center">Award Winner!</h2>
 
-          <figure data-size="lg">
-            {/* <img src="/assets/projects/iconic20/shot-01.png" alt=""/> */}
-          </figure>
+          <p><Trans i18nKey={'second-page:projects.continuous-award-winning.p01'} /></p>
 
-          <figure data-size="lg">
-            {/* <img src="/assets/projects/iconic20/shot-02.png" alt=""/> */}
-          </figure>
+          <p><Trans i18nKey={'second-page:projects.continuous-award-winning.p02'} /></p>
+
+          <p><Trans i18nKey={'second-page:projects.continuous-award-winning.p03'} /></p>
         </div>
 
       </div>
@@ -44,3 +54,18 @@ export default function Post() {
     </>
   )
 }
+
+type Props = {
+  // Add custom props here
+}
+
+export const getServerSideProps: GetServerSideProps<Props> = async ({
+  locale,
+}) => ({
+  props: {
+    ...(await serverSideTranslations(locale ?? 'en', [
+      'second-page',
+      'footer',
+    ])),
+  },
+})
