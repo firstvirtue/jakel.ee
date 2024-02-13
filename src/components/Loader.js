@@ -9,6 +9,14 @@ function ImageLoader(callback) {
     loadImage('/assets/projects/galleria/main.png'),
     loadImage('/assets/projects/vyvydstudio/cover.png'),
     loadImage('/assets/projects/vyvydstudio/shot-02.png'),
+    loadImage('/assets/projects/hello-world/keyboard.png'),
+    loadImage('/assets/projects/samsungcnt/cover.png'),
+    loadImage('/assets/projects/casscool/main_poster.png'),
+    loadImage('/assets/projects/lotteshopping/cover-sm.png'),
+    loadImage('/assets/projects/hanwhadefense/redback.jpeg'),
+    loadImage('/assets/projects/hankooktire/14_Outro_Image.avif'),
+    loadImage('/assets/projects/galaxystudio/galaxystudio-cover.jpeg'),
+    loadImage('/assets/projects/bespoke/bespoke-cover.jpeg'),
   ]
 
   let count = 0

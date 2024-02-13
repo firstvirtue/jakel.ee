@@ -13,7 +13,7 @@
     "completed": "12. 2023",
     "cardColor": "#F5DB28",
     "keywords": ["react", "typescript"],
-    "coverImage": "/3.jpeg",
+    "coverImage": "/assets/projects/samsungcnt/cover.png",
     "aspect": "0.8",
     "outlink": "https://trading.samsungcnt.com/main.do",
     "coverVideo": "/assets/projects/samsungcnt/cover.mp4",
