@@ -3,10 +3,13 @@ import Link from "next/link"
 import { css } from "@emotion/react"
 import { useEffect, useState } from "react"
 import { useIntoStore } from "./Main/store"
+import { useRouter } from 'next/router'
 
 export function Header() {
+  const isView = useIntoStore((state) => state.isView)
   const setIsView = useIntoStore((state) => state.setIsView)
   const [isMore, setIsMore] = useState(false)
+  const router = useRouter()
 
   useEffect(() => {
     console.log(isMore)
@@ -15,7 +18,11 @@ export function Header() {
   return (
     <header className="header">
       <div className="left">
-        <Link className="" href="/" onClick={e=>{setIsView(false)}}>
+        <Link className="" href="/" onClick={e=>{
+          if(isView) {
+            setIsView(false)
+          }
+        }}>
           {/* <img src="/assets/img/j-logo2.png" alt="" /> */}
           <strong>
             Jake

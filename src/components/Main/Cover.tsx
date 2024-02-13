@@ -7,6 +7,7 @@ import SceneUI from "./SceneUI"
 import AppBanner from "./AppBanner"
 import { useIntoStore } from './store'
 import { useTranslation, Trans, i18n } from 'next-i18next'
+import { motion, AnimatePresence } from "framer-motion"
 
 export default function MainCover() {
 
@@ -78,15 +79,25 @@ export default function MainCover() {
             >
             </div>
 
+            <AnimatePresence>
             { !isView &&
-              <Link href="/work/iconic20" className="h-2/4 rounded-2xl overflow-hidden shadow-xl"
+              <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="h-2/4 rounded-2xl overflow-hidden shadow-xl z-20"
+              >
+              <Link
+              href="/work/iconic20"
               style={{
                 backgroundColor: '#83936F',
                 zIndex: '10'
               }}>
                 <video className="w-full h-full object-cover" src="/assets/projects/iconic20/cover.mp4" autoPlay loop muted playsInline></video>
               </Link>
+              </motion.div>
             }
+            </AnimatePresence>
           </div>
         </div>
 

@@ -48,7 +48,7 @@ function Loader() {
         if(count === 100) {
           setTimeout(() => {
             setIsLoaded(true)
-            document.body.style = ''
+            document.body.style.overflow = ''
           }, 500)
         }
       })
