@@ -96,31 +96,44 @@ export default function About(
         </dl>
 
 
-        <div className="text-5xl mt-20 mb-20" css={{
+        <div className="mt-20 mb-20" css={{
           display: 'flex',
           justifyContent: 'space-between',
           'h3': {
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'stretch',
             textAlign: 'center',
+            lineHeight: 1.1,
+            flex: 1,
+          },
+          'strong': {
+            flex: 1,
             fontWeight: 400,
+            fontSize: '2rem',
+            display: 'inline-flex',
+            alignItems: 'center',
+            justifyContent: 'center',
           },
           'span': {
             display: 'block',
             marginTop: '1rem',
-            color: '#E06D72'
+            color: '#E06D72',
+            fontSize: '4rem',
           }
         }}>
           <h3>
-          Years <br/>
+          <strong>Years of Experience</strong>
           <span>13</span>
           </h3>
         
           <h3>
-          Projects <br/>
+          <strong>Projects</strong>
           <span>23+</span>
           </h3>
 
           <h3>
-          Awards <br/>
+          <strong>Awards</strong>
           <span>13</span>
           </h3>
         </div>

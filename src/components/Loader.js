@@ -34,6 +34,7 @@ function ImageLoader(callback) {
     })
   }
 
+
   Promise.all(images)
   .then(res => {
     // console.log('load', res)
