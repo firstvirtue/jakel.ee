@@ -59,6 +59,18 @@
     "cardColor": "#CFE4FF",
     "aspect": "0.8",
     "coverImage": "/assets/projects/casscool/main_poster.png",
+    "category": "project"
+  },
+  {
+    "id": "cloth-simulation",
+    "link": "/work/cloth-simulation",
+    "role": ["UI 개발"],
+    "roleEn": ["UI Development"],
+    "completed": "10. 2020",
+    "keywords": ["webgl", "physics"],
+    "cardColor": "#CFE4FF",
+    "aspect": "0.8",
+    "coverImage": "/assets/projects/casscool/main_poster.png",
     "featured": "true",
     "category": "project"
   },
@@ -102,6 +114,19 @@
     "textColor": "#ffffff",
     "outlink": "https://www.hanwhaaerospace.co.kr/eng/showroom.do",
     "coverImage": "/assets/projects/hanwhadefense/redback.jpeg",
+    "featured": "true",
+    "category": "project"
+  },
+  {
+    "id": "iropke-batang",
+    "link": "/work/iropke-batang",
+    "role": ["UI 개발"],
+    "roleEn": ["UI Development"],
+    "completed": "10. 2019",
+    "keywords": ["canvas"],
+    "cardColor": "#CFE4FF",
+    "aspect": "0.8",
+    "coverImage": "/assets/projects/casscool/main_poster.png",
     "featured": "true",
     "category": "project"
   },

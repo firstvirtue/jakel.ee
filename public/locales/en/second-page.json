@@ -36,6 +36,14 @@
       "p01": "Beer brand Cass has created a mobile page for online and offline events. Since this was a project tailored to a designated offline event so tight, I used react to complete it quickly.",
       "p02": "It was easy to work with because it was a mobile-oriented page. It is a familiar work pattern that places UI on top of video elements, and was defined for ease of maintenance through layer placement."
     },
+    "cloth-simulation": {
+      "title": "Cloth Simulation",
+      "desc": "Physics based spring simulation",
+      "role": ["UI Development"],
+      "h01": "온/오프라인 이벤트",
+      "p01": "맥주 브랜드 카스에서 온/오프라인 이벤트를 위해 모바일 페이지를 만들었습니다. 정해진 오프라인 행사에 맞춰진 프로젝트여서 빠른 시간에 완성을 하기 위해 react 를 사용했습니다.",
+      "p02": "모바일 위주의 페이지여서 작업하는데는 수월한 편이었습니다. 많이 사용한 패턴인 유려한 영상 위에 UI를 배치하여 레이어 배치를 통해 유지보수가 용이하도록 정의했습니다."
+    },
     "lotteshopping": {
       "title": "Lotte Shopping Web Main",
       "desc": "Stylish UI with vanilla state management",
@@ -55,6 +63,14 @@
       "p01": "I have often touched 3D models for personal work, but experiencing a full-scale practical project like this was a new experience.",
       "p02": "While the previous Hankook Tire 3D model was a relatively lightweight and simple model, this showroom had more models and the resulting requirements were a bit more complex, so there were more challenges than before.",
       "p03": "It was a fruitful project that allowed us to apply quite a variety of 3D technologies and UI techniques, such as split loading of assets, view switching, lighting, animation, and sprite processing, beyond point clicking and UI integration!"
+    },
+    "iropke-batang": {
+      "title": "Iropke Batang Animation",
+      "desc": "React based interactive motion tool",
+      "role": ["UI Development"],
+      "h01": "온/오프라인 이벤트",
+      "p01": "맥주 브랜드 카스에서 온/오프라인 이벤트를 위해 모바일 페이지를 만들었습니다. 정해진 오프라인 행사에 맞춰진 프로젝트여서 빠른 시간에 완성을 하기 위해 react 를 사용했습니다.",
+      "p02": "모바일 위주의 페이지여서 작업하는데는 수월한 편이었습니다. 많이 사용한 패턴인 유려한 영상 위에 UI를 배치하여 레이어 배치를 통해 유지보수가 용이하도록 정의했습니다."
     },
     "hankooktire": {
       "title": "Hankook Tire Global/Sales Platform",
