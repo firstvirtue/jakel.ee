@@ -67,8 +67,9 @@
     "completed": "10. 2020",
     "keywords": ["webgl", "physics"],
     "cardColor": "#CFE4FF",
-    "aspect": "0.8",
-    "coverImage": "/assets/projects/casscool/main_poster.png",
+    "aspect": "1",
+    "coverVideo": "/assets/projects/cloth-simulation/play-01.mp4",
+    "outlink": "https://firstvirtue.github.io/cloth-simulation",
     "featured": "true",
     "category": "project"
   },

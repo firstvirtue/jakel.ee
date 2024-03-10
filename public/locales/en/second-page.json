@@ -40,9 +40,12 @@
       "title": "Cloth Simulation",
       "desc": "Physics based spring simulation",
       "role": ["UI Development"],
-      "h01": "온/오프라인 이벤트",
-      "p01": "맥주 브랜드 카스에서 온/오프라인 이벤트를 위해 모바일 페이지를 만들었습니다. 정해진 오프라인 행사에 맞춰진 프로젝트여서 빠른 시간에 완성을 하기 위해 react 를 사용했습니다.",
-      "p02": "모바일 위주의 페이지여서 작업하는데는 수월한 편이었습니다. 많이 사용한 패턴인 유려한 영상 위에 UI를 배치하여 레이어 배치를 통해 유지보수가 용이하도록 정의했습니다."
+      "h01": "Cloth swing simulation/rendering",
+      "p01": "As part of the technology R&D of the former Amore Pacific project, I prepared an interaction that moves soft cloth.",
+      "p02": "Cloth is made up of points with dozens of positions and are organically connected to each other. Hooke's law is applied to this connection, which simulates an elastic body without a physics engine by allowing it to be affected by expansion or contraction by external forces.",
+      "p03": "The rendering was initially developed using canvas, but as the sense of space was not at all possible, I used three.js to do texture mapping to express the texture of the cloth that looked good.",
+      "p04": "Although I couldn't use it in an actual project, I was very personally satisfied with being able to produce results by directly coding physical mathematics such as Hooke's law and integrals.😁",
+      "p05": "Tech explanation"
     },
     "lotteshopping": {
       "title": "Lotte Shopping Web Main",

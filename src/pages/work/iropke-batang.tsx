@@ -24,8 +24,8 @@ export default function Post(
 ) {
   const { t } = useTranslation(['common', 'second-page'])
   const currentProject = getProjectInformation('iropke-batang')
-  const prevProject = getProjectInformation('iconic20')
-  const nextProject = getProjectInformation('galaxystudio')
+  const prevProject = getProjectInformation('cloth-simulation')
+  const nextProject = getProjectInformation('iconic20')
 
   return (
     <>
