@@ -40,6 +40,7 @@ export default function PostMenu(props: any) {
 
   const awards = t(`second-page:projects.${project.id}.awards`, { returnObjects: true });
   const role = t(`second-page:projects.${project.id}.role`, { returnObjects: true })
+  const client = t(`second-page:projects.${project.id}.client`)
 
   return (
     <>
@@ -97,8 +98,12 @@ export default function PostMenu(props: any) {
                   minHeight: '350px',
                 }}
               >
+                { !client.match(/\b(?:projects|client)\b|\*/g) &&
+                <>
                 <span className="text-sm opacity-50">Client</span>
                 <p className="menu__list text-base opacity-100">{t(`second-page:projects.${project.id}.client`)}</p>
+                </>
+                }
                 
                 <span className="block text-sm opacity-50 pt-4">Role</span>
                 <p className="menu__list text-base opacity-100">
