@@ -65,12 +65,14 @@
       "p03": "It was a fruitful project that allowed us to apply quite a variety of 3D technologies and UI techniques, such as split loading of assets, view switching, lighting, animation, and sprite processing, beyond point clicking and UI integration!"
     },
     "iropke-batang": {
-      "title": "Iropke Batang Animation",
-      "desc": "React based interactive motion tool",
+      "title": "Iropke Batang Typo Motion",
+      "desc": "React-based interactive motion tool",
       "role": ["UI Development"],
-      "h01": "온/오프라인 이벤트",
-      "p01": "맥주 브랜드 카스에서 온/오프라인 이벤트를 위해 모바일 페이지를 만들었습니다. 정해진 오프라인 행사에 맞춰진 프로젝트여서 빠른 시간에 완성을 하기 위해 react 를 사용했습니다.",
-      "p02": "모바일 위주의 페이지여서 작업하는데는 수월한 편이었습니다. 많이 사용한 패턴인 유려한 영상 위에 UI를 배치하여 레이어 배치를 통해 유지보수가 용이하도록 정의했습니다."
+      "h01": "React-based motion tool",
+      "p01": "When I had to develop a typography motion, I implemented the keyframe editing method such as After Effects in React and developed a masking motion tool so that it could be used when a similar motion was given.",
+      "p02": "In edit mode, keyframes can be inserted in the form of nodes to set long and short delays for motion, and grouped so they can be played sequentially or simultaneously.",
+      "p03": "The position of the inserted keyframe node can be moved by dragging or removed by right-clicking, and the masking effect is reflected in real time.",
+      "p04": "In motion preview mode, you can check the edited content with keyframes inserted, and it can be saved in json format, at distribution, the json is loaded and the motion is executed."
     },
     "hankooktire": {
       "title": "Hankook Tire Global/Sales Platform",

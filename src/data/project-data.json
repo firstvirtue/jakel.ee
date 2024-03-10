@@ -64,8 +64,6 @@
   {
     "id": "cloth-simulation",
     "link": "/work/cloth-simulation",
-    "role": ["UI 개발"],
-    "roleEn": ["UI Development"],
     "completed": "10. 2020",
     "keywords": ["webgl", "physics"],
     "cardColor": "#CFE4FF",
@@ -120,13 +118,10 @@
   {
     "id": "iropke-batang",
     "link": "/work/iropke-batang",
-    "role": ["UI 개발"],
-    "roleEn": ["UI Development"],
     "completed": "10. 2019",
-    "keywords": ["canvas"],
-    "cardColor": "#CFE4FF",
-    "aspect": "0.8",
-    "coverImage": "/assets/projects/casscool/main_poster.png",
+    "keywords": ["react", "canvas"],
+    "aspect": "1",
+    "coverVideo": "/assets/projects/iropke-batang/anim.mp4",
     "featured": "true",
     "category": "project"
   },
