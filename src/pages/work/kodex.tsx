@@ -37,7 +37,9 @@ export default function Post(
           <h2 className="text-6xl font-bold text-center">All investments in the world</h2>
 
           <h3>Hybrid React</h3>
-          <p>{t('second-page:projects.kodex.p01')}</p>
+          <p>
+          <Trans i18nKey={'second-page:projects.kodex.p01'} transKeepBasicHtmlNodesFor={['em', 'br']} />
+          </p>
 
           <figure data-size="lg">
             <video src="/assets/projects/kodex/play-01.mp4" poster="/assets/projects/kodex/play-01.png" autoPlay muted loop playsInline></video>
