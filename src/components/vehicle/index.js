@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, forwardRef, useEffect } from 'react';
 import { useFrame } from '@react-three/fiber';
 import { usePlane, useBox, useCylinder, useRaycastVehicle } from '@react-three/cannon';
 import { Gltf } from '@react-three/drei'
@@ -7,7 +7,7 @@ import Wheel from './wheel';
 import Drifter from './drifter';
 import useFollowCam from './utils/useFollowCam'
 
-const Vehicle = ({ radius = 0.2, width = 0.3, height = 0, front = 0.38, back = -0.35, steer = 0.6, force = 4000, maxBrake = 1e5, ...props }) => {
+const Vehicle = forwardRef(({ radius = 0.2, width = 0.3, height = 0, front = 0.38, back = -0.35, steer = 0.6, force = 4000, maxBrake = 1e5, ...props }, ref) => {
   const [planeRef] = usePlane(() => ({ mass: 0, position: [0, -1, 0], rotation: [Math.PI / -2, 0, 0]}))
 
   const chassis = useRef();
@@ -56,6 +56,46 @@ const Vehicle = ({ radius = 0.2, width = 0.3, height = 0, front = 0.38, back = -
     chassis.current.api.rotation.set(0, -Math.PI / 5, 0);
   };
 
+  // Position and rotation subscription for bubble system
+  useEffect(() => {
+    if (chassis.current && chassis.current.api) {
+      const unsubscribePosition = chassis.current.api.position.subscribe((pos) => {
+        // pos is [x, y, z] array - store for bubble system
+        if (window.vehiclePosition) {
+          window.vehiclePosition.x = pos[0];
+          window.vehiclePosition.y = pos[1];
+          window.vehiclePosition.z = pos[2];
+        } else {
+          window.vehiclePosition = { x: pos[0], y: pos[1], z: pos[2] };
+        }
+      });
+
+      const unsubscribeRotation = chassis.current.api.rotation.subscribe((rot) => {
+        // rot is [x, y, z] array - store for bubble system
+        if (window.vehicleRotation) {
+          window.vehicleRotation.x = rot[0];
+          window.vehicleRotation.y = rot[1];
+          window.vehicleRotation.z = rot[2];
+        } else {
+          window.vehicleRotation = { x: rot[0], y: rot[1], z: rot[2] };
+        }
+      });
+      
+      return () => {
+        unsubscribePosition();
+        unsubscribeRotation();
+      };
+    }
+  }, [chassis.current]);
+
+  useEffect(() => {
+    const unsubscribe = chassis.current.api.position.subscribe((pos) => {
+      // pos is [x, y, z]
+      // Use or save position here
+    });
+    return unsubscribe;
+  }, []);
+
   useFrame(() => {
     const { forward, backward, left, right, brake, reset } = controls.current;
     for (let e = 2; e < 4; e++) api.applyEngineForce(forward || backward ? force * (forward && !backward ? -1 : 1) : 0, 2);
@@ -73,7 +113,7 @@ const Vehicle = ({ radius = 0.2, width = 0.3, height = 0, front = 0.38, back = -
 
   return (
     <>
-      <group ref={vehicle} position={[0, 0, 0]}>
+      <group ref={ref || vehicle} position={[0, 0, 0]}>
         <Drifter name={'vehicle'} ref={chassis} rotation={props.rotation} position={props.position} angularVelocity={props.angularVelocity} />
         <Wheel ref={wheel1} radius={radius} leftSide />
         <Wheel ref={wheel2} radius={radius} />
@@ -82,6 +122,8 @@ const Vehicle = ({ radius = 0.2, width = 0.3, height = 0, front = 0.38, back = -
       </group>
     </>
   );
-};
+});
+
+Vehicle.displayName = 'Vehicle';
 
 export default Vehicle;
